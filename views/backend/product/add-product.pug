@@ -1,0 +1,95 @@
+extend ../layout/layout.pug
+block content
+	// MAIN CONTENT
+	.main-content
+		.section__content.section__content--p30
+			.container-fluid
+				.row
+					.col-lg-12
+						.card
+							.card-header
+								strong Th&ecirc;m s&#x1EA3;n ph&#x1EA9;m
+							.card-body.card-block
+								form.form-horizontal(action='', method='post', enctype='multipart/form-data')
+									.row.form-group
+										.col.col-md-3
+											label.form-control-label(for='text-input') T&ecirc;n s&aacute;ch
+										.col-12.col-md-9
+											input#text-input.form-control(type='text', name='', placeholder='')
+											small.form-text.text-muted Tr&#x1EE3; gi&uacute;p
+									.row.form-group
+										.col.col-md-3
+											label.form-control-label(for='select') Danh m&#x1EE5;c s&aacute;ch
+										.col-12.col-md-9
+											select#select.form-control(name='select')
+												option(value='0') Ti&#x1EC3;u thuy&#x1EBF;t
+												option(value='1') Truy&#x1EC7;n tranh
+												option(value='2') Ho&#x1EA1;t h&igrave;nh
+											small.form-text.text-muted Tr&#x1EE3; gi&uacute;p
+									.row.form-group
+										.col.col-md-3
+											label.form-control-label(for='text-input') Nh&agrave; cung c&#x1EA5;p
+										.col-12.col-md-9
+											input#text-input.form-control(type='text', name='', placeholder='')
+											small.form-text.text-muted Tr&#x1EE3; gi&uacute;p
+									.row.form-group
+										.col.col-md-3
+											label.form-control-label(for='text-input') Nh&agrave; xu&#x1EA5;t b&#x1EA3;n
+										.col-12.col-md-9
+											input#password-input.form-control(type='text', name='', placeholder='')
+											small.help-block.form-text Tr&#x1EE3; gi&uacute;p
+									.row.form-group
+										.col.col-md-3
+											label.form-control-label(for='text-input') N&abreve;m xu&#x1EA5;t b&#x1EA3;n
+										.col-12.col-md-9
+											input#password-input.form-control(type='text', name='', placeholder='')
+											small.help-block.form-text Tr&#x1EE3; gi&uacute;p
+									.row.form-group
+										.col.col-md-3
+											label.form-control-label(for='text-input') T&aacute;c gi&#x1EA3;
+										.col-12.col-md-9
+											input#password-input.form-control(type='text', name='', placeholder='')
+											small.help-block.form-text Tr&#x1EE3; gi&uacute;p
+									.row.form-group
+										.col.col-md-3
+											label.form-control-label(for='text-input') S&#x1ED1; trang
+										.col-12.col-md-9
+											input#password-input.form-control(type='text', name='', placeholder='')
+											small.help-block.form-text Tr&#x1EE3; gi&uacute;p
+									.row.form-group
+										.col.col-md-3
+											label.form-control-label(for='text-input') S&#x1ED1; lượng
+										.col-12.col-md-9
+											input#password-input.form-control(type='text', name='', placeholder='')
+											small.help-block.form-text Tr&#x1EE3; gi&uacute;p
+									.row.form-group
+										.col.col-md-3
+											label.form-control-label(for='text-input') Gi&aacute; ti&#x1EC1;n
+										.col-12.col-md-9
+											input#password-input.form-control(type='text', name='', placeholder='')
+											small.help-block.form-text Tr&#x1EE3; gi&uacute;p
+									.row.form-group
+										.col.col-md-3
+											label.form-control-label(for='text-input') Gi&#x1EA3;m gi&aacute;
+										.col-12.col-md-9
+											input#password-input.form-control(type='text', name='', placeholder='')
+											small.help-block.form-text Tr&#x1EE3; gi&uacute;p
+									.row.form-group
+										.col.col-md-3
+											label.form-control-label(for='textarea-input') Chi ti&#x1EBF;t s&aacute;ch
+										.col-12.col-md-9
+											textarea#textarea-input.form-control(name='textarea-input', rows='9', placeholder='...')
+									.row.form-group
+										.col.col-md-3
+											label.form-control-label(for='file-input') Th&ecirc;m h&igrave;nh &#x1EA3;nh
+										.col-12.col-md-9
+											input#file-input.form-control-file(type='file', name='')
+							.card-footer
+								button.btn.btn-primary.btn-sm(type='submit')
+									i.fa.fa-dot-circle-o
+									|  Th&ecirc;m s&aacute;ch
+								button.btn.btn-danger.btn-sm(type='reset')
+									i.fa.fa-ban
+									|  L&agrave;m m&#x1EDB;i
+
+

@@ -1,0 +1,108 @@
+extend ../layout/layout.pug
+block content
+	.main-content
+		.section__content.section__content--p30
+			.container-fluid
+				.row
+					.col-lg-12
+						// USER DATA
+						.user-data.m-b-30
+							h3.title-3.m-b-30
+								i.zmdi.zmdi-account-calendar
+								| Danh m&#x1EE5;c ng&#x1B0;&#x1EDD;i d&ugrave;ng
+							.filters.m-b-45
+								.rs-select2--dark.rs-select2--md.m-r-10.rs-select2--border
+									select.js-select2(name='property')
+										option(selected='selected') All Properties
+										option(value='') Products
+										option(value='') Services
+									.dropDownSelect2
+								.rs-select2--dark.rs-select2--sm.rs-select2--border
+									select.js-select2.au-select-dark(name='time')
+										option(selected='selected') All Time
+										option(value='') By Month
+										option(value='') By Day
+									.dropDownSelect2
+							.table-responsive.table-data
+								table.table
+									thead
+										tr
+											td
+												label.au-checkbox
+													input(type='checkbox')
+													span.au-checkmark
+											td T&ecirc;n ng&#x1B0;&#x1EDD;i d&ugrave;ng
+											td Email
+											td Quy&#x1EC1;n h&#x1EA1;n
+											td
+									tbody
+										tr
+											td
+												label.au-checkbox
+													input(type='checkbox')
+													span.au-checkmark
+											td
+												.table-data__info
+													h6 lori lynch
+											td
+												span
+													| johndoe@gmail.com
+											td
+												span.role.admin admin
+											td
+												.table-data-feature(style='width: 50px;')
+													button.item(data-toggle='tooltip', data-placement='top', title='Delete')
+														i.zmdi.zmdi-delete
+										tr
+											td
+												label.au-checkbox
+													input(type='checkbox')
+													span.au-checkmark
+											td
+												.table-data__info
+													h6 lori lynch
+											td
+												span
+													| johndoe@gmail.com
+											td
+												span.role.admin admin
+											td
+												.table-data-feature(style='width: 50px;')
+													button.item(data-toggle='tooltip', data-placement='top', title='Delete')
+														i.zmdi.zmdi-delete
+										tr
+											td
+												label.au-checkbox
+													input(type='checkbox')
+													span.au-checkmark
+											td
+												.table-data__info
+													h6 lori lynch
+											td
+												span
+													| johndoe@gmail.com
+											td
+												span.role.admin admin
+											td
+												.table-data-feature(style='width: 50px;')
+													button.item(data-toggle='tooltip', data-placement='top', title='Delete')
+														i.zmdi.zmdi-delete
+										tr
+											td
+												label.au-checkbox
+													input(type='checkbox')
+													span.au-checkmark
+											td
+												.table-data__info
+													h6 lori lynch
+											td
+												span
+													| johndoe@gmail.com
+											td
+												span.role.admin admin
+											td
+												.table-data-feature(style='width: 50px;')
+													button.item(data-toggle='tooltip', data-placement='top', title='Delete')
+														i.zmdi.zmdi-delete
+							.user-data__footer
+								button.au-btn.au-btn-load load more

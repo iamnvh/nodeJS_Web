@@ -1,0 +1,236 @@
+extend ./layout/layout.pug
+block content
+	// mini cart start
+	.sidebar-cart-active
+		.sidebar-cart-all
+			a.cart-close(href='#')
+				i.icofont-close-line
+			.cart-content
+				h3 Shopping Cart
+				ul
+					li.single-product-cart
+						.cart-img
+							a(href='#')
+								img(src='/images/cart/cart-1.jpg', alt='')
+						.cart-title
+							h4
+								a(href='#') Awesome Mobile
+							span  1 &times; $49.00&#x9;
+						.cart-delete
+							a(href='#') &times;
+					li.single-product-cart
+						.cart-img
+							a(href='#')
+								img(src='/images/cart/cart-2.jpg', alt='')
+						.cart-title
+							h4
+								a(href='#') Smart Watch
+							span  1 &times; $49.00&#x9;
+						.cart-delete
+							a(href='#') &times;
+				.cart-total
+					h4
+						| Subtotal: 
+						span $170.00
+				.cart-checkout-btn
+					a.btn-hover.cart-btn-style(href='cart.html') view cart
+					a.no-mrg.btn-hover.cart-btn-style(href='checkout.html') checkout
+	// Mobile menu start
+	.mobile-menu-active.clickalbe-sidebar-wrapper-style-1
+		.clickalbe-sidebar-wrap
+			a.sidebar-close
+				i.icofont-close-line
+			.mobile-menu-content-area.sidebar-content-100-percent
+				.mobile-search
+					form.search-form(action='#')
+						input(type='text', placeholder='Search here…')
+						button.button-search
+							i.icofont-search-1
+				.clickable-mainmenu-wrap.clickable-mainmenu-style1
+					nav
+						ul
+							li.has-sub-menu
+								a(href='#') Home
+								ul.sub-menu-2
+									li.has-sub-menu
+										a(href='#') Demo Group #01
+										ul.sub-menu-2
+											li
+												a(href='index.html') Home Multipurpose
+											li
+												a(href='index-megashop.html') Home Mega Shop
+											li
+												a(href='index-fashion.html') Home Fashion
+											li
+												a(href='index-fashion-2.html') Home Fashion 2 
+											li
+												a(href='index-automobile.html') Home Automobile
+											li
+												a(href='index-furniture.html') Home Furniture
+											li
+												a(href='index-electric.html') Home Electric
+									li.has-sub-menu
+										a(href='#') Demo Group #02
+										ul.sub-menu-2
+											li
+												a(href='index-electric-2.html') Home Electric 2
+											li
+												a(href='index-handcraft.html') Home Hand Craft
+											li
+												a(href='index-book.html') Home Book
+											li
+												a(href='index-book-2.html') Home Book 2
+											li
+												a(href='index-cake.html') Home cake
+											li
+												a(href='index-organic.html') Home Organic
+									li.has-sub-menu
+										a(href='#') Demo Group #03
+										ul.sub-menu-2
+											li
+												a(href='index-flower.html') Home Flower
+											li
+												a(href='index-treeplant.html') Home Tree plant
+											li
+												a(href='index-pet-food.html') Home Pet Food
+											li
+												a(href='index-kids.html') Home Kids
+											li
+												a(href='index-kids-2.html') Home Kids 2
+											li
+												a(href='index-kids-3.html') Home Kids 3
+							li.has-sub-menu
+								a(href='#') shop
+								ul.sub-menu-2
+									li.has-sub-menu
+										a(href='#') Shop Layout
+										ul.sub-menu-2
+											li
+												a(href='shop.html') Shop Grid Style 1
+											li
+												a(href='shop-2.html') Shop Grid Style 2
+											li
+												a(href='shop-3.html') Shop Grid Style 3
+											li
+												a(href='shop-4.html') Shop Grid Style 4
+											li
+												a(href='shop-5.html') Shop Grid Style 5
+											li
+												a(href='shop-6.html') Shop Grid Style 6
+											li
+												a(href='shop-list.html') Shop List Style 1
+											li
+												a(href='shop-list-no-sidebar.html') Shop List Style 2
+									li.has-sub-menu
+										a(href='#') Product Layout
+										ul.sub-menu-2
+											li
+												a(href='product-details.html') Product Layout 1
+											li
+												a(href='product-details-2.html') Product Layout 2
+											li
+												a(href='product-details-3.html') Product Layout 3
+											li
+												a(href='product-details-4.html') Product Layout 4
+											li
+												a(href='product-details-5.html') Product Layout 5
+											li
+												a(href='product-details-6.html') Product Layout 6
+											li
+												a(href='product-details-7.html') Product Layout 7
+											li
+												a(href='product-details-8.html') Product Layout 8
+											li
+												a(href='product-details-9.html') Product Layout 9
+									li.has-sub-menu
+										a(href='#') Shop Page
+										ul.sub-menu-2
+											li
+												a(href='my-account.html') My Account
+											li
+												a(href='checkout.html') Check Out
+											li
+												a(href='cart.html') Shopping Cart
+											li
+												a(href='wishlist.html') Wishlist
+											li
+												a(href='order-tracking.html') Order Tracking
+											li
+												a(href='compare.html') Compare
+											li
+												a(href='store.html') Store
+											li
+												a(href='empty-cart.html') Empty Cart
+											li
+												a(href='login-register.html') login / register
+							li.has-sub-menu
+								a(href='#') Pages
+								ul.sub-menu-2
+									li
+										a(href='about-us.html') About Us
+									li
+										a(href='contact-us.html') Contact Us
+									li
+										a(href='contact-us-2.html') Contact Us 2
+									li
+										a(href='404.html') 404 Page
+							li
+								a(href='shop.html') Collections
+							li.has-sub-menu
+								a(href='#') Blog
+								ul.sub-menu-2
+									li
+										a(href='blog.html') Blog Page
+									li
+										a(href='blog-no-sidebar.html') Blog No sidebar
+									li
+										a(href='blog-right-sidebar.html') Blog Right Sidebar
+									li
+										a(href='blog-details.html') Blog Details
+							li
+								a(href='contact-us.html') Contact
+				.mobile-curr-lang-wrap
+					.single-mobile-curr-lang
+						a.mobile-language-active(href='#')
+							| Language 
+							i.icofont-simple-down
+						.lang-curr-dropdown.lang-dropdown-active
+							ul
+								li
+									a(href='#') English
+								li
+									a(href='#') Spanish
+								li
+									a(href='#') Hindi 
+				.aside-contact-info
+					ul
+						li
+							i.icofont-clock-time
+							| Monday - Friday: 9:00 - 19:00
+						li
+							i.icofont-envelope
+							| Info@example.com
+						li
+							i.icofont-stock-mobile
+							| (+55) 254. 254. 254
+						li
+							i.icofont-home
+							| Helios Tower 75 Tam Trinh Hoang - Ha Noi - Viet Nam
+	.login-register-area.bg-gray.pt-155.pb-160
+		.container
+			.row
+				.col-lg-7.col-md-12.ml-auto.mr-auto
+					.login-register-wrapper
+						.login-register-tab-list.nav
+							a(data-toggle='tab', href='#lg2')
+								h4  Đăng Ký
+						.tab-content
+							#lg2.tab-pane.active
+								.login-form-container
+									.login-register-form
+										form(action='', method='post')
+											input(type='text', name='user_name', placeholder='Tên')
+											input(type='password', name='user_password', placeholder='Mật Khẩu')
+											input(name='user_email', placeholder='Email', type='email')
+											.button-box
+												button(type='submit') Đăng ký

@@ -1,0 +1,812 @@
+extend ./layout/layout.pug
+block content
+	.clickalbe-sidebar-wrapper-active.clickalbe-sidebar-wrapper-style-1
+		.clickalbe-sidebar-wrap
+			a.sidebar-close
+				i.icofont-close-line
+			.clickable-mainmenu-wrap.clickable-mainmenu-style1.sidebar-content-100-percent
+				nav
+					ul
+						li.has-sub-menu
+							a(href='#') Home
+							ul.sub-menu-2
+								li.has-sub-menu
+									a(href='#') Demo Group 01
+									ul.sub-menu-2
+										li
+											a(href='index.html') Home Electronic
+										li
+											a(href='index-book.html') Home Book
+										li
+											a(href='index-fashion.html') Home Fashion
+										li
+											a(href='index-flower.html') Home Flower
+										li
+											a(href='index-cake.html') Home Cake
+								li.has-sub-menu
+									a(href='#') Demo Group 02
+									ul.sub-menu-2
+										li
+											a(href='index-furniture.html') Home Furniture
+										li
+											a(href='index-handmade.html') Home Handmade
+										li
+											a(href='index-kids.html') Home Kids
+										li
+											a(href='index-organic.html') Home Organic
+										li
+											a(href='index-pet.html') Home Pet
+						li.has-sub-menu
+							a(href='#') Pages
+							ul.sub-menu-2
+								li
+									a(href='about-us.html') About Us
+								li
+									a(href='contact.html') Contact Page
+								li
+									a(href='404.html') 404 Page
+								li
+									a(href='faq.html') FAQ
+								li
+									a(href='coming-soon.html') Comming Soon
+								li
+									a(href='empty-cart.html') Empty Cart
+						li.has-sub-menu
+							a(href='#') shop
+							ul.sub-menu-2
+								li.has-sub-menu
+									a(href='#') Shop Layout
+									ul.sub-menu-2
+										li
+											a(href='shop-fullwide.html') Shop Fullwidth
+										li
+											a(href='shop-sidebar.html') Shop Sidebar
+										li
+											a(href='shop-3-col.html') Shop 03 Columns
+										li
+											a(href='shop-2-col.html') Shop 02 Columns
+										li
+											a(href='shop-list-style.html') Shop List Style
+										li
+											a(href='shop-collection.html') Shop Collection
+										li
+											a(href='shop-instagram.html') Shop Instagram
+								li.has-sub-menu
+									a(href='#') Product Layout
+									ul.sub-menu-2
+										li
+											a(href='product-details.html') Single 01
+										li
+											a(href='product-details-2.html') Single 02
+										li
+											a(href='product-details-group.html') Grouped
+										li
+											a(href='product-details-sticky.html') Sticky Info
+										li
+											a(href='product-details-configurable.html') Configurable
+										li
+											a(href='product-details-thumbnail.html') Thumbnail
+										li
+											a(href='product-details-video.html') Video
+										li
+											a(href='product-details-affiliate.html') Affiliate
+								li.has-sub-menu
+									a(href='#') Shop Page
+									ul.sub-menu-2
+										li
+											a(href='my-account.html') My Account
+										li
+											a(href='checkout.html') Check Out
+										li
+											a(href='cart.html') Shopping Cart
+										li
+											a(href='wishlist.html') Wishlist
+										li
+											a(href='order-tracking.html') Order Tracking
+										li
+											a(href='compare.html') Compare
+										li
+											a(href='store.html') Store
+										li
+											a(href='login-register.html') login / register
+						li
+							a(href='shop-fullwide.html') Collections
+						li.has-sub-menu
+							a(href='#') Blog
+							ul.sub-menu-2
+								li
+									a(href='blog.html') Blog Page
+								li
+									a(href='blog-no-sidebar.html') Blog No sidebar
+								li
+									a(href='blog-right-sidebar.html') Blog Right Sidebar
+								li
+									a(href='blog-details.html') Blog Details
+						li
+							a(href='contact.html') Contact
+	// mini cart start
+	.sidebar-cart-active
+		.sidebar-cart-all
+			a.cart-close(href='#')
+				i.icofont-close-line
+			.cart-content
+				h3 Shopping Cart
+				ul
+					li.single-product-cart
+						.cart-img
+							a(href='#')
+								img(src='/cart/cart-1.jpg', alt='')
+						.cart-title
+							h4
+								a(href='#') Awesome Mobile
+							span  1 &times; $49.00&#x9;
+						.cart-delete
+							a(href='#') &times;
+					li.single-product-cart
+						.cart-img
+							a(href='#')
+								img(src='/cart/cart-2.jpg', alt='')
+						.cart-title
+							h4
+								a(href='#') Smart Watch
+							span  1 &times; $49.00&#x9;
+						.cart-delete
+							a(href='#') &times;
+				.cart-total
+					h4
+						| Subtotal: 
+						span $170.00
+				.cart-checkout-btn
+					a.btn-hover.cart-btn-style(href='cart.html') view cart
+					a.no-mrg.btn-hover.cart-btn-style(href='checkout.html') checkout
+	// Mobile menu start
+	.mobile-menu-active.clickalbe-sidebar-wrapper-style-1
+		.clickalbe-sidebar-wrap
+			a.sidebar-close
+				i.icofont-close-line
+			.mobile-menu-content-area.sidebar-content-100-percent
+				.mobile-search
+					form.search-form(action='#')
+						input(type='text', placeholder='Search here…')
+						button.button-search
+							i.icofont-search-1
+				.clickable-mainmenu-wrap.clickable-mainmenu-style1
+					nav
+						ul
+							li.has-sub-menu
+								a(href='#') Home
+								ul.sub-menu-2
+									li.has-sub-menu
+										a(href='#') Demo Group #01
+										ul.sub-menu-2
+											li
+												a(href='index.html') Home Multipurpose
+											li
+												a(href='index-megashop.html') Home Mega Shop
+											li
+												a(href='index-fashion.html') Home Fashion
+											li
+												a(href='index-fashion-2.html') Home Fashion 2 
+											li
+												a(href='index-automobile.html') Home Automobile
+											li
+												a(href='index-furniture.html') Home Furniture
+											li
+												a(href='index-electric.html') Home Electric
+									li.has-sub-menu
+										a(href='#') Demo Group #02
+										ul.sub-menu-2
+											li
+												a(href='index-electric-2.html') Home Electric 2
+											li
+												a(href='index-handcraft.html') Home Hand Craft
+											li
+												a(href='index-book.html') Home Book
+											li
+												a(href='index-book-2.html') Home Book 2
+											li
+												a(href='index-cake.html') Home cake
+											li
+												a(href='index-organic.html') Home Organic
+									li.has-sub-menu
+										a(href='#') Demo Group #03
+										ul.sub-menu-2
+											li
+												a(href='index-flower.html') Home Flower
+											li
+												a(href='index-treeplant.html') Home Tree plant
+											li
+												a(href='index-pet-food.html') Home Pet Food
+											li
+												a(href='index-kids.html') Home Kids
+											li
+												a(href='index-kids-2.html') Home Kids 2
+											li
+												a(href='index-kids-3.html') Home Kids 3
+							li.has-sub-menu
+								a(href='#') shop
+								ul.sub-menu-2
+									li.has-sub-menu
+										a(href='#') Shop Layout
+										ul.sub-menu-2
+											li
+												a(href='shop.html') Shop Grid Style 1
+											li
+												a(href='shop-2.html') Shop Grid Style 2
+											li
+												a(href='shop-3.html') Shop Grid Style 3
+											li
+												a(href='shop-4.html') Shop Grid Style 4
+											li
+												a(href='shop-5.html') Shop Grid Style 5
+											li
+												a(href='shop-6.html') Shop Grid Style 6
+											li
+												a(href='shop-list.html') Shop List Style 1
+											li
+												a(href='shop-list-no-sidebar.html') Shop List Style 2
+									li.has-sub-menu
+										a(href='#') Product Layout
+										ul.sub-menu-2
+											li
+												a(href='product-details.html') Product Layout 1
+											li
+												a(href='product-details-2.html') Product Layout 2
+											li
+												a(href='product-details-3.html') Product Layout 3
+											li
+												a(href='product-details-4.html') Product Layout 4
+											li
+												a(href='product-details-5.html') Product Layout 5
+											li
+												a(href='product-details-6.html') Product Layout 6
+											li
+												a(href='product-details-7.html') Product Layout 7
+											li
+												a(href='product-details-8.html') Product Layout 8
+											li
+												a(href='product-details-9.html') Product Layout 9
+									li.has-sub-menu
+										a(href='#') Shop Page
+										ul.sub-menu-2
+											li
+												a(href='my-account.html') My Account
+											li
+												a(href='checkout.html') Check Out
+											li
+												a(href='cart.html') Shopping Cart
+											li
+												a(href='wishlist.html') Wishlist
+											li
+												a(href='order-tracking.html') Order Tracking
+											li
+												a(href='compare.html') Compare
+											li
+												a(href='store.html') Store
+											li
+												a(href='empty-cart.html') Empty Cart
+											li
+												a(href='login-register.html') login / register
+							li.has-sub-menu
+								a(href='#') Pages
+								ul.sub-menu-2
+									li
+										a(href='about-us.html') About Us
+									li
+										a(href='contact-us.html') Contact Us
+									li
+										a(href='contact-us-2.html') Contact Us 2
+									li
+										a(href='404.html') 404 Page
+							li
+								a(href='shop.html') Collections
+							li.has-sub-menu
+								a(href='#') Blog
+								ul.sub-menu-2
+									li
+										a(href='blog.html') Blog Page
+									li
+										a(href='blog-no-sidebar.html') Blog No sidebar
+									li
+										a(href='blog-right-sidebar.html') Blog Right Sidebar
+									li
+										a(href='blog-details.html') Blog Details
+							li
+								a(href='contact-us.html') Contact
+				.mobile-curr-lang-wrap
+					.single-mobile-curr-lang
+						a.mobile-language-active(href='#')
+							| Language 
+							i.icofont-simple-down
+						.lang-curr-dropdown.lang-dropdown-active
+							ul
+								li
+									a(href='#') English
+								li
+									a(href='#') Spanish
+								li
+									a(href='#') Hindi 
+				.aside-contact-info
+					ul
+						li
+							i.icofont-clock-time
+							| Monday - Friday: 9:00 - 19:00
+						li
+							i.icofont-envelope
+							| Info@example.com
+						li
+							i.icofont-stock-mobile
+							| (+55) 254. 254. 254
+						li
+							i.icofont-home
+							| Helios Tower 75 Tam Trinh Hoang - Ha Noi - Viet Nam
+	.product-details-area.slider-mt-7.pt-120.pb-95
+		.container
+			.product-details-top-content
+				.product-details-content
+					h2 Electronic Shop
+					p.pro-dec-paragraph-2
+						| Seamlessly predominate enterprise metrics without performance based process improvements.
+				.product-details-content
+					.product-ratting-review-wrap.product-ratting-mrg-none
+						.product-ratting-digit-wrap
+							.product-ratting
+								i.icon-rating
+								i.icon-rating
+								i.icon-rating
+								i.icon-rating
+								i.icon-star-empty
+							.product-digit
+								span 4.0
+						.product-review-order
+							span 62 Reviews
+							span 242 orders
+		.section-padding-7
+			.container-fluid
+				.row
+					.col-lg-7.col-md-6
+						.pro-details-6-img.pro-details-img-zoom
+							img(src='/product-details/product-details-slider-6.png', alt='')
+					.col-lg-5.col-md-6
+						.product-details-content.product-details-content-6
+							.pro-details-price.pro-details-price-4
+								span US $75.72
+								span.old-price US $95.72
+							.pro-details-color-wrap
+								span Color:
+								.pro-details-color-content
+									ul
+										li
+											a.white(href='#') Black
+										li
+											a.azalea(href='#') Blue
+										li
+											a.dolly(href='#') Green
+										li
+											a.peach-orange(href='#') Orange
+										li
+											a.mona-lisa.active(href='#') Pink
+										li
+											a.cupid(href='#') gray
+							.pro-details-size
+								span Size:
+								.pro-details-size-content
+									ul
+										li
+											a(href='#') XS
+										li
+											a(href='#') S
+										li
+											a(href='#') M
+										li
+											a(href='#') L
+										li
+											a(href='#') XL
+										li
+											a(href='#') XXL
+							.pro-details-quality
+								span Quantity:
+								.cart-plus-minus
+									input.cart-plus-minus-box(type='text', name='qtybutton', value='1')
+							.product-details-meta
+								ul
+									li
+										span Model:
+										a(href='#') Odsy-1000
+									li
+										span Ship To
+										a(href='#') 2834 Laurel Lane
+										| , 
+										a(href='#') Mentone
+										|  , 
+										a(href='#') Texas
+							.pro-details-action-wrap
+								.pro-details-buy-now
+									a(href='#') Buy Now
+								.pro-details-action
+									a(title='Add to Cart', href='#')
+										i.icon-basket
+									a(title='Add to Wishlist', href='#')
+										i.icon-heart
+									a.social(title='Social', href='#')
+										i.icon-share
+									.product-dec-social
+										a.facebook(title='Facebook', href='#')
+											i.icon-social-facebook-square
+										a.twitter(title='Twitter', href='#')
+											i.icon-social-twitter
+										a.instagram(title='Instagram', href='#')
+											i.icon-social-instagram
+										a.pinterest(title='Pinterest', href='#')
+											i.icon-social-pinterest
+	.description-review-wrapper.pb-155
+		.container
+			.row
+				.col-lg-12
+					.dec-review-topbar.nav.mb-65
+						a.active(data-toggle='tab', href='#des-details1') Description
+						a(data-toggle='tab', href='#des-details2') Specification
+						a(data-toggle='tab', href='#des-details3') Meterials 
+						a(data-toggle='tab', href='#des-details4') Reviews and Ratting 
+					.tab-content.dec-review-bottom
+						#des-details1.tab-pane.active
+							.description-wrap
+								p
+									| Crafted in premium watch quality, fenix Chronos is the first Garmin timepiece to combine a durable metal case with integrated performance GPS to support navigation and sport. In the tradition of classic tool watches it features a tough design and a set of modern meaningful tools like Elevate wrist heart rate, various sports apps.
+								p
+									| advanced performance metrics for endurance sports, Garmin quality navigation features and smart notifications. In fenix Chronos top-tier performance meets sophisticated design in a highly evolved timepiece that fits your style anywhere, anytime. Solid brushed 316L stainless steel case with brushed stainless steel bezel and integrated EXOTM antenna for GPS + GLONASS support. High-strength scratch resistant sapphire crystal. Brown vintage leather strap with hand-sewn contrast stitching and nubuck inner lining and quick release mechanism.
+						#des-details2.tab-pane
+							.specification-wrap.table-responsive
+								table
+									tbody
+										tr
+											td.width1 Name
+											td Salwar Kameez
+										tr
+											td SKU
+											td 0x48e2c
+										tr
+											td.width1 Models
+											td FX 829 v1
+										tr
+											td.width1 Categories
+											td Digital Print
+										tr
+											td.width1 Size
+											td 60&rsquo;&rsquo; x 40&rsquo;&rsquo;
+										tr
+											td.width1 Brand 
+											td Individual Collections
+										tr
+											td.width1 Color
+											td Black, White
+						#des-details3.tab-pane
+							.specification-wrap.table-responsive
+								table
+									tbody
+										tr
+											td.width1 Top
+											td Cotton Digital Print Chain Stitch Embroidery Work
+										tr
+											td Bottom
+											td Cotton Cambric
+										tr
+											td.width1 Dupatta
+											td Digital Printed Cotton Malmal With Chain Stitch
+						#des-details4.tab-pane
+							.review-wrapper
+								h2 1 review for Sleeve Button Cowl Neck
+								.single-review
+									.review-img
+										img(src='/product-details/client-1.png', alt='')
+									.review-content
+										.review-top-wrap
+											.review-name
+												h5
+													span John Snow
+													|  - March 14, 2019
+											.review-rating
+												i.yellow.icon-rating
+												i.yellow.icon-rating
+												i.yellow.icon-rating
+												i.yellow.icon-rating
+												i.yellow.icon-rating
+										p
+											| Donec accumsan auctor iaculis. Sed suscipit arcu ligula, at egestas magna molestie a. Proin ac ex maximus, ultrices justo eget, sodales orci. Aliquam egestas libero ac turpis pharetra, in vehicula lacus scelerisque
+							.ratting-form-wrapper
+								span Add a Review
+								p
+									| Your email address will not be published. Required fields are marked 
+									span *
+								.ratting-form
+									form(action='#')
+										.row
+											.col-lg-3.col-md-6
+												.rating-form-style.mb-20
+													label
+														| Name 
+														span *
+													input(type='text')
+											.col-lg-3.col-md-6
+												.rating-form-style.mb-20
+													label
+														| Email 
+														span *
+													input(type='email')
+											.col-lg-12
+												.star-box-wrap
+													.single-ratting-star
+														a(href='#')
+															i.icon-rating
+													.single-ratting-star
+														a(href='#')
+															i.icon-rating
+														a(href='#')
+															i.icon-rating
+													.single-ratting-star
+														a(href='#')
+															i.icon-rating
+														a(href='#')
+															i.icon-rating
+														a(href='#')
+															i.icon-rating
+													.single-ratting-star
+														a(href='#')
+															i.icon-rating
+														a(href='#')
+															i.icon-rating
+														a(href='#')
+															i.icon-rating
+														a(href='#')
+															i.icon-rating
+													.single-ratting-star
+														a(href='#')
+															i.icon-rating
+														a(href='#')
+															i.icon-rating
+														a(href='#')
+															i.icon-rating
+														a(href='#')
+															i.icon-rating
+														a(href='#')
+															i.icon-rating
+											.col-md-12
+												.rating-form-style.mb-20
+													label
+														| Your review 
+														span *
+													textarea(name='Your Review')
+											.col-lg-12
+												.form-submit
+													input(type='submit', value='Submit')
+	.product-area.pb-155
+		.container
+			.section-title-8.mb-65
+				h2 You May Like Also
+			.product-slider-active-4
+				.product-wrap-plr-1
+					.product-wrap
+						.product-img.product-img-zoom.mb-25
+							a(href='product-details.html')
+								img(src='/product/product-151.jpg', alt='')
+						.product-content
+							h4
+								a(href='product-details.html') Product Title
+							.product-price
+								span $ 124
+								span.old-price $ 130
+						.product-action-position-1.text-center
+							.product-content
+								h4
+									a(href='product-details.html') Product Title
+								.product-price
+									span $ 124
+									span.old-price $ 130
+							.product-action-wrap
+								.product-action-cart
+									button(title='Add to Cart') Add to cart
+								button(data-toggle='modal', data-target='#exampleModal')
+									i.icon-zoom
+								button(title='Add to Compare')
+									i.icon-compare
+								button(title='Add to Wishlist')
+									i.icon-heart-empty
+				.product-wrap-plr-1
+					.product-wrap
+						.product-img.product-img-zoom.mb-25
+							a(href='product-details.html')
+								img(src='/product/product-152.jpg', alt='')
+						.product-content
+							h4
+								a(href='product-details.html') Product Title
+							.product-price
+								span $ 124
+								span.old-price $ 130
+						.product-action-position-1.text-center
+							.product-content
+								h4
+									a(href='product-details.html') Product Title
+								.product-price
+									span $ 124
+									span.old-price $ 130
+							.product-action-wrap
+								.product-action-cart
+									button(title='Add to Cart') Add to cart
+								button(data-toggle='modal', data-target='#exampleModal')
+									i.icon-zoom
+								button(title='Add to Compare')
+									i.icon-compare
+								button(title='Add to Wishlist')
+									i.icon-heart-empty
+				.product-wrap-plr-1
+					.product-wrap
+						.product-img.product-img-zoom.mb-25
+							a(href='product-details.html')
+								img(src='/product/product-153.jpg', alt='')
+						.product-content
+							h4
+								a(href='product-details.html') Product Title
+							.product-price
+								span $ 124
+								span.old-price $ 130
+						.product-action-position-1.text-center
+							.product-content
+								h4
+									a(href='product-details.html') Product Title
+								.product-price
+									span $ 124
+									span.old-price $ 130
+							.product-action-wrap
+								.product-action-cart
+									button(title='Add to Cart') Add to cart
+								button(data-toggle='modal', data-target='#exampleModal')
+									i.icon-zoom
+								button(title='Add to Compare')
+									i.icon-compare
+								button(title='Add to Wishlist')
+									i.icon-heart-empty
+				.product-wrap-plr-1
+					.product-wrap
+						.product-img.product-img-zoom.mb-25
+							a(href='product-details.html')
+								img(src='/product/product-154.jpg', alt='')
+						.product-content
+							h4
+								a(href='product-details.html') Product Title
+							.product-price
+								span $ 124
+								span.old-price $ 130
+						.product-action-position-1.text-center
+							.product-content
+								h4
+									a(href='product-details.html') Product Title
+								.product-price
+									span $ 124
+									span.old-price $ 130
+							.product-action-wrap
+								.product-action-cart
+									button(title='Add to Cart') Add to cart
+								button(data-toggle='modal', data-target='#exampleModal')
+									i.icon-zoom
+								button(title='Add to Compare')
+									i.icon-compare
+								button(title='Add to Wishlist')
+									i.icon-heart-empty
+				.product-wrap-plr-1
+					.product-wrap
+						.product-img.product-img-zoom.mb-25
+							a(href='product-details.html')
+								img(src='/product/product-152.jpg', alt='')
+						.product-content
+							h4
+								a(href='product-details.html') Product Title
+							.product-price
+								span $ 124
+								span.old-price $ 130
+						.product-action-position-1.text-center
+							.product-content
+								h4
+									a(href='product-details.html') Product Title
+								.product-price
+									span $ 124
+									span.old-price $ 130
+							.product-action-wrap
+								.product-action-cart
+									button(title='Add to Cart') Add to cart
+								button(data-toggle='modal', data-target='#exampleModal')
+									i.icon-zoom
+								button(title='Add to Compare')
+									i.icon-compare
+								button(title='Add to Wishlist')
+									i.icon-heart-empty
+	// Modal
+	#exampleModal.modal.fade(tabindex='-1', role='dialog')
+		.modal-dialog(role='document')
+			.modal-content
+				.modal-header
+					button.close(type='button', data-dismiss='modal', aria-label='Close')
+						span(aria-hidden='true') x
+				.modal-body
+					.row
+						.col-lg-5.col-md-5.col-12.col-sm-6
+							.quickview-img
+								img(src='/product/product-3.jpg', alt='')
+						.col-lg-7.col-md-7.col-12.col-sm-6
+							.product-details-content.quickview-content
+								h2 Electronic Shop
+								.product-ratting-review-wrap
+									.product-ratting-digit-wrap
+										.product-ratting
+											i.icon-rating
+											i.icon-rating
+											i.icon-rating
+											i.icon-rating
+											i.icon-star-empty
+										.product-digit
+											span 4.0
+									.product-review-order
+										span 62 Reviews
+										span 242 orders
+								p
+									| Seamlessly predominate enterprise metrics without performance based process improvements.
+								.pro-details-price
+									span US $75.72
+									span.old-price US $95.72
+								.pro-details-color-wrap
+									span Color:
+									.pro-details-color-content
+										ul
+											li
+												a.white(href='#') Black
+											li
+												a.azalea(href='#') Blue
+											li
+												a.dolly(href='#') Green
+											li
+												a.peach-orange(href='#') Orange
+											li
+												a.mona-lisa.active(href='#') Pink
+											li
+												a.cupid(href='#') gray
+								.pro-details-size
+									span Size:
+									.pro-details-size-content
+										ul
+											li
+												a(href='#') XS
+											li
+												a(href='#') S
+											li
+												a(href='#') M
+											li
+												a(href='#') L
+											li
+												a(href='#') XL
+											li
+												a(href='#') XXL
+								.pro-details-quality
+									.cart-plus-minus
+										input.cart-plus-minus-box(type='text', name='qtybutton', value='1')
+								.product-details-meta
+									ul
+										li
+											span Model:
+											a(href='#') Odsy-1000
+										li
+											span Ship To
+											a(href='#') 2834 Laurel Lane
+											| , 
+											a(href='#') Mentone
+											|  , 
+											a(href='#') Texas
+								.pro-details-action-wrap
+									.pro-details-buy-now
+										a(href='#') Buy Now
+									.pro-details-action
+										a(title='Add to Cart', href='#')
+											i.icon-basket
+										a(title='Add to Wishlist', href='#')
+											i.icon-heart
+										a.social(title='Social', href='#')
+											i.icon-share
+	// Modal end

@@ -1,0 +1,1501 @@
+extend ./layout/layout.pug
+block content
+	.sidebar-cart-active
+		.sidebar-cart-all
+			a.cart-close(href='#')
+				i.icofont-close-line
+			.cart-content
+				h3 Shopping Cart
+				ul
+					li.single-product-cart
+						.cart-img
+							a(href='#')
+								img(src='/images/cart/cart-1.jpg', alt='')
+						.cart-title
+							h4
+								a(href='#') Awesome Mobile
+							span  1 &times; $49.00&#x9;
+						.cart-delete
+							a(href='#') &times;
+					li.single-product-cart
+						.cart-img
+							a(href='#')
+								img(src='/images/cart/cart-2.jpg', alt='')
+						.cart-title
+							h4
+								a(href='#') Smart Watch
+							span  1 &times; $49.00&#x9;
+						.cart-delete
+							a(href='#') &times;
+				.cart-total
+					h4
+						| Subtotal: 
+						span $170.00
+				.cart-checkout-btn
+					a.btn-hover.cart-btn-style(href='cart.html') view cart
+					a.no-mrg.btn-hover.cart-btn-style(href='checkout.html') checkout
+	// Mobile menu start
+	.mobile-menu-active.clickalbe-sidebar-wrapper-style-1
+		.clickalbe-sidebar-wrap
+			a.sidebar-close
+				i.icofont-close-line
+			.mobile-menu-content-area.sidebar-content-100-percent
+				.mobile-search
+					form.search-form(action='#')
+						input(type='text', placeholder='Search here…')
+						button.button-search
+							i.icofont-search-1
+				.clickable-mainmenu-wrap.clickable-mainmenu-style1
+					nav
+						ul
+							li.has-sub-menu
+								a(href='#') Home
+								ul.sub-menu-2
+									li.has-sub-menu
+										a(href='#') Demo Group #01
+										ul.sub-menu-2
+											li
+												a(href='index.html') Home Multipurpose
+											li
+												a(href='index-megashop.html') Home Mega Shop
+											li
+												a(href='index-fashion.html') Home Fashion
+											li
+												a(href='index-fashion-2.html') Home Fashion 2 
+											li
+												a(href='index-automobile.html') Home Automobile
+											li
+												a(href='index-furniture.html') Home Furniture
+											li
+												a(href='index-electric.html') Home Electric
+									li.has-sub-menu
+										a(href='#') Demo Group #02
+										ul.sub-menu-2
+											li
+												a(href='index-electric-2.html') Home Electric 2
+											li
+												a(href='index-handcraft.html') Home Hand Craft
+											li
+												a(href='index-book.html') Home Book
+											li
+												a(href='index-book-2.html') Home Book 2
+											li
+												a(href='index-cake.html') Home cake
+											li
+												a(href='index-organic.html') Home Organic
+									li.has-sub-menu
+										a(href='#') Demo Group #03
+										ul.sub-menu-2
+											li
+												a(href='index-flower.html') Home Flower
+											li
+												a(href='index-treeplant.html') Home Tree plant
+											li
+												a(href='index-pet-food.html') Home Pet Food
+											li
+												a(href='index-kids.html') Home Kids
+											li
+												a(href='index-kids-2.html') Home Kids 2
+											li
+												a(href='index-kids-3.html') Home Kids 3
+							li.has-sub-menu
+								a(href='#') shop
+								ul.sub-menu-2
+									li.has-sub-menu
+										a(href='#') Shop Layout
+										ul.sub-menu-2
+											li
+												a(href='shop.html') Shop Grid Style 1
+											li
+												a(href='shop-2.html') Shop Grid Style 2
+											li
+												a(href='shop-3.html') Shop Grid Style 3
+											li
+												a(href='shop-4.html') Shop Grid Style 4
+											li
+												a(href='shop-5.html') Shop Grid Style 5
+											li
+												a(href='shop-6.html') Shop Grid Style 6
+											li
+												a(href='shop-list.html') Shop List Style 1
+											li
+												a(href='shop-list-no-sidebar.html') Shop List Style 2
+									li.has-sub-menu
+										a(href='#') Product Layout
+										ul.sub-menu-2
+											li
+												a(href='product-details.html') Product Layout 1
+											li
+												a(href='product-details-2.html') Product Layout 2
+											li
+												a(href='product-details-3.html') Product Layout 3
+											li
+												a(href='product-details-4.html') Product Layout 4
+											li
+												a(href='product-details-5.html') Product Layout 5
+											li
+												a(href='product-details-6.html') Product Layout 6
+											li
+												a(href='product-details-7.html') Product Layout 7
+											li
+												a(href='product-details-8.html') Product Layout 8
+											li
+												a(href='product-details-9.html') Product Layout 9
+									li.has-sub-menu
+										a(href='#') Shop Page
+										ul.sub-menu-2
+											li
+												a(href='my-account.html') My Account
+											li
+												a(href='checkout.html') Check Out
+											li
+												a(href='cart.html') Shopping Cart
+											li
+												a(href='wishlist.html') Wishlist
+											li
+												a(href='order-tracking.html') Order Tracking
+											li
+												a(href='compare.html') Compare
+											li
+												a(href='store.html') Store
+											li
+												a(href='empty-cart.html') Empty Cart
+											li
+												a(href='login-register.html') login / register
+							li.has-sub-menu
+								a(href='#') Pages
+								ul.sub-menu-2
+									li
+										a(href='about-us.html') About Us
+									li
+										a(href='contact-us.html') Contact Us
+									li
+										a(href='contact-us-2.html') Contact Us 2
+									li
+										a(href='404.html') 404 Page
+							li
+								a(href='shop.html') Collections
+							li.has-sub-menu
+								a(href='#') Blog
+								ul.sub-menu-2
+									li
+										a(href='blog.html') Blog Page
+									li
+										a(href='blog-no-sidebar.html') Blog No sidebar
+									li
+										a(href='blog-right-sidebar.html') Blog Right Sidebar
+									li
+										a(href='blog-details.html') Blog Details
+							li
+								a(href='contact-us.html') Contact
+				.mobile-curr-lang-wrap
+					.single-mobile-curr-lang
+						a.mobile-language-active(href='#')
+							| Language 
+							i.icofont-simple-down
+						.lang-curr-dropdown.lang-dropdown-active
+							ul
+								li
+									a(href='#') English
+								li
+									a(href='#') Spanish
+								li
+									a(href='#') Hindi 
+				.aside-contact-info
+					ul
+						li
+							i.icofont-clock-time
+							| Monday - Friday: 9:00 - 19:00
+						li
+							i.icofont-envelope
+							| Info@example.com
+						li
+							i.icofont-stock-mobile
+							| (+55) 254. 254. 254
+						li
+							i.icofont-home
+							| Helios Tower 75 Tam Trinh Hoang - Ha Noi - Viet Nam
+	.slider-area
+		.slider-active-3.dot-style-2.img-max-width
+			.single-slider.slider-height-4.bg-img.single-slider-pt-3(data-thumb='/images/slider/book-slider-thumb-1.png', style='background-image:url(/images/slider/book-slider-1.jpg);')
+				.container
+					.row
+						.col-12
+							.slider-content-3.slider-animated-1
+								h1.animated
+									| Start 
+									span Learning
+									br
+									span Build
+									|  Career
+								p.animated Interactively pursue optimal &quot;outside the box&quot; thinking and timely communities. 
+								.btn-style-3.btn-hover
+									a.btn3-ptb-3.btn3-bg-green.animated(href='shop.html')
+										| Browse Book 
+										i.icofont-long-arrow-right
+			.single-slider.slider-height-4.bg-img.single-slider-pt-3(data-thumb='/images/slider/book-slider-thumb-2.png', style='background-image:url(/images/slider/book-slider-2.jpg);')
+				.container
+					.row
+						.col-12
+							.slider-content-3.slider-animated-1
+								h1.animated
+									| Start 
+									span Learning
+									br
+									span Build
+									|  Career
+								p.animated Interactively pursue optimal &quot;outside the box&quot; thinking and timely communities. 
+								.btn-style-3.btn-hover
+									a.btn3-ptb-3.btn3-bg-green.animated(href='shop.html')
+										| Browse Book 
+										i.icofont-long-arrow-right
+			.single-slider.slider-height-4.bg-img.single-slider-pt-3(data-thumb='/images/slider/book-slider-thumb-3.png', style='background-image:url(/images/slider/book-slider-3.jpg);')
+				.container
+					.row
+						.col-12
+							.slider-content-3.slider-animated-1
+								h1.animated
+									| Start 
+									span Learning
+									br
+									span Build
+									|  Career
+								p.animated Interactively pursue optimal &quot;outside the box&quot; thinking and timely communities. 
+								.btn-style-3.btn-hover
+									a.btn3-ptb-3.btn3-bg-green.animated(href='shop.html')
+										| Browse Book 
+										i.icofont-long-arrow-right
+			.single-slider.slider-height-4.bg-img.single-slider-pt-3(data-thumb='/images/slider/book-slider-thumb-4.png', style='background-image:url(/images/slider/book-slider-4.jpg);')
+				.container
+					.row
+						.col-12
+							.slider-content-3.slider-animated-1
+								h1.animated
+									| Start 
+									span Learning
+									br
+									span Build
+									|  Career
+								p.animated Interactively pursue optimal &quot;outside the box&quot; thinking and timely communities. 
+								.btn-style-3.btn-hover
+									a.btn3-ptb-3.btn3-bg-green.animated(href='shop.html')
+										| Browse Book 
+										i.icofont-long-arrow-right
+			.single-slider.slider-height-4.bg-img.single-slider-pt-3(data-thumb='/images/slider/book-slider-thumb-5.png', style='background-image:url(/images/slider/book-slider-5.jpg);')
+				.container
+					.row
+						.col-12
+							.slider-content-3.slider-animated-1
+								h1.animated
+									| Start 
+									span Learning
+									br
+									span Build
+									|  Career
+								p.animated Interactively pursue optimal &quot;outside the box&quot; thinking and timely communities. 
+								.btn-style-3.btn-hover
+									a.btn3-ptb-3.btn3-bg-green.animated(href='shop.html')
+										| Browse Book 
+										i.icofont-long-arrow-right
+	.categoriesa-area.pt-255
+		.container
+			.row
+				.col-xl-10.col-lg-12.ml-auto.mr-auto
+					.categoriesa-top.bg-gray-6
+						.categories-search-wrap
+							.categories-dropdown-2
+								select.nice-select.nice-select-style-2
+									option Categories
+									option Azerbaijan
+									option Bahamas
+									option Bahrain
+									option Bangladesh
+									option Barbados
+							.search-wrap-4
+								form
+									.search-style-4
+										input.input-text(value='', placeholder='Type to search (Ex: Phone, Laptop)', type='search')
+										button
+											i.icofont-search-1
+						.categories-brand-tab-list-2.nav
+							a.active(href='#categories-brand-1', data-toggle='tab')
+								| Top Categories
+							a(href='#categories-brand-2', data-toggle='tab')
+								| Top Writers
+							a(href='#categories-brand-3', data-toggle='tab')
+								| Top Publications
+			.tab-content.jump.pt-95
+				#categories-brand-1.tab-pane.active
+					.row
+						.col-lg-2.col-md-3.col-sm-4.col-6
+							.single-categories-2.text-center.mb-70
+								.categories-img-2
+									a(href='#')
+										img(src='/images/categori/categori-1.jpg', alt='')
+								h4
+									a(href='#') Business
+						.col-lg-2.col-md-3.col-sm-4.col-6
+							.single-categories-2.text-center.mb-70
+								.categories-img-2
+									a(href='#')
+										img(src='/images/categori/categori-2.jpg', alt='')
+								h4
+									a(href='#') Management
+						.col-lg-2.col-md-3.col-sm-4.col-6
+							.single-categories-2.text-center.mb-70
+								.categories-img-2
+									a(href='#')
+										img(src='/images/categori/categori-3.jpg', alt='')
+								h4
+									a(href='#') Science
+						.col-lg-2.col-md-3.col-sm-4.col-6
+							.single-categories-2.text-center.mb-70
+								.categories-img-2
+									a(href='#')
+										img(src='/images/categori/categori-4.jpg', alt='')
+								h4
+									a(href='#') Mathematics
+						.col-lg-2.col-md-3.col-sm-4.col-6
+							.single-categories-2.text-center.mb-70
+								.categories-img-2
+									a(href='#')
+										img(src='/images/categori/categori-5.jpg', alt='')
+								h4
+									a(href='#') Computer
+						.col-lg-2.col-md-3.col-sm-4.col-6
+							.single-categories-2.text-center.mb-70
+								.categories-img-2
+									a(href='#')
+										img(src='/images/categori/categori-6.jpg', alt='')
+								h4
+									a(href='#') Technology
+						.col-lg-2.col-md-3.col-sm-4.col-6
+							.single-categories-2.text-center.mb-70
+								.categories-img-2
+									a(href='#')
+										img(src='/images/categori/categori-7.jpg', alt='')
+								h4
+									a(href='#') Dictionaries
+						.col-lg-2.col-md-3.col-sm-4.col-6
+							.single-categories-2.text-center.mb-70
+								.categories-img-2
+									a(href='#')
+										img(src='/images/categori/categori-8.jpg', alt='')
+								h4
+									a(href='#') Encyclopedias
+						.col-lg-2.col-md-3.col-sm-4.col-6
+							.single-categories-2.text-center.mb-70
+								.categories-img-2
+									a(href='#')
+										img(src='/images/categori/categori-9.jpg', alt='')
+								h4
+									a(href='#') Self Development
+						.col-lg-2.col-md-3.col-sm-4.col-6
+							.single-categories-2.text-center.mb-70
+								.categories-img-2
+									a(href='#')
+										img(src='/images/categori/categori-10.jpg', alt='')
+								h4
+									a(href='#') Politics
+						.col-lg-2.col-md-3.col-sm-4.col-6
+							.single-categories-2.text-center.mb-70
+								.categories-img-2
+									a(href='#')
+										img(src='/images/categori/categori-11.jpg', alt='')
+								h4
+									a(href='#') Social Sciences
+						.col-lg-2.col-md-3.col-sm-4.col-6
+							.single-categories-2.text-center.mb-70
+								.categories-img-2
+									a(href='#')
+										img(src='/images/categori/categori-12.jpg', alt='')
+								h4
+									a(href='#') Travel &amp; Maps
+					.categories-btn.btn-hover.text-center
+						a(href='shop.html') Browse All Categories
+				#categories-brand-2.tab-pane
+					.row
+						.col-lg-2.col-md-3.col-sm-4.col-6
+							.single-categories-2.text-center.mb-70
+								.categories-img-2
+									a(href='#')
+										img(src='/images/categori/categori-12.jpg', alt='')
+								h4
+									a(href='#') Business
+						.col-lg-2.col-md-3.col-sm-4.col-6
+							.single-categories-2.text-center.mb-70
+								.categories-img-2
+									a(href='#')
+										img(src='/images/categori/categori-11.jpg', alt='')
+								h4
+									a(href='#') Management
+						.col-lg-2.col-md-3.col-sm-4.col-6
+							.single-categories-2.text-center.mb-70
+								.categories-img-2
+									a(href='#')
+										img(src='/images/categori/categori-10.jpg', alt='')
+								h4
+									a(href='#') Science
+						.col-lg-2.col-md-3.col-sm-4.col-6
+							.single-categories-2.text-center.mb-70
+								.categories-img-2
+									a(href='#')
+										img(src='/images/categori/categori-9.jpg', alt='')
+								h4
+									a(href='#') Mathematics
+						.col-lg-2.col-md-3.col-sm-4.col-6
+							.single-categories-2.text-center.mb-70
+								.categories-img-2
+									a(href='#')
+										img(src='/images/categori/categori-8.jpg', alt='')
+								h4
+									a(href='#') Computer
+						.col-lg-2.col-md-3.col-sm-4.col-6
+							.single-categories-2.text-center.mb-70
+								.categories-img-2
+									a(href='#')
+										img(src='/images/categori/categori-7.jpg', alt='')
+								h4
+									a(href='#') Technology
+						.col-lg-2.col-md-3.col-sm-4.col-6
+							.single-categories-2.text-center.mb-70
+								.categories-img-2
+									a(href='#')
+										img(src='/images/categori/categori-6.jpg', alt='')
+								h4
+									a(href='#') Dictionaries
+						.col-lg-2.col-md-3.col-sm-4.col-6
+							.single-categories-2.text-center.mb-70
+								.categories-img-2
+									a(href='#')
+										img(src='/images/categori/categori-5.jpg', alt='')
+								h4
+									a(href='#') Encyclopedias
+						.col-lg-2.col-md-3.col-sm-4.col-6
+							.single-categories-2.text-center.mb-70
+								.categories-img-2
+									a(href='#')
+										img(src='/images/categori/categori-4.jpg', alt='')
+								h4
+									a(href='#') Self Development
+						.col-lg-2.col-md-3.col-sm-4.col-6
+							.single-categories-2.text-center.mb-70
+								.categories-img-2
+									a(href='#')
+										img(src='/images/categori/categori-3.jpg', alt='')
+								h4
+									a(href='#') Politics
+						.col-lg-2.col-md-3.col-sm-4.col-6
+							.single-categories-2.text-center.mb-70
+								.categories-img-2
+									a(href='#')
+										img(src='/images/categori/categori-2.jpg', alt='')
+								h4
+									a(href='#') Social Sciences
+						.col-lg-2.col-md-3.col-sm-4.col-6
+							.single-categories-2.text-center.mb-70
+								.categories-img-2
+									a(href='#')
+										img(src='/images/categori/categori-1.jpg', alt='')
+								h4
+									a(href='#') Travel &amp; Maps
+					.categories-btn.btn-hover.text-center
+						a(href='#') Browse All Categories
+				#categories-brand-3.tab-pane
+					.row
+						.col-lg-2.col-md-3.col-sm-4.col-6
+							.single-categories-2.text-center.mb-70
+								.categories-img-2
+									a(href='#')
+										img(src='/images/categori/categori-6.jpg', alt='')
+								h4
+									a(href='#') Business
+						.col-lg-2.col-md-3.col-sm-4.col-6
+							.single-categories-2.text-center.mb-70
+								.categories-img-2
+									a(href='#')
+										img(src='/images/categori/categori-5.jpg', alt='')
+								h4
+									a(href='#') Management
+						.col-lg-2.col-md-3.col-sm-4.col-6
+							.single-categories-2.text-center.mb-70
+								.categories-img-2
+									a(href='#')
+										img(src='/images/categori/categori-4.jpg', alt='')
+								h4
+									a(href='#') Science
+						.col-lg-2.col-md-3.col-sm-4.col-6
+							.single-categories-2.text-center.mb-70
+								.categories-img-2
+									a(href='#')
+										img(src='/images/categori/categori-3.jpg', alt='')
+								h4
+									a(href='#') Mathematics
+						.col-lg-2.col-md-3.col-sm-4.col-6
+							.single-categories-2.text-center.mb-70
+								.categories-img-2
+									a(href='#')
+										img(src='/images/categori/categori-2.jpg', alt='')
+								h4
+									a(href='#') Computer
+						.col-lg-2.col-md-3.col-sm-4.col-6
+							.single-categories-2.text-center.mb-70
+								.categories-img-2
+									a(href='#')
+										img(src='/images/categori/categori-1.jpg', alt='')
+								h4
+									a(href='#') Technology
+						.col-lg-2.col-md-3.col-sm-4.col-6
+							.single-categories-2.text-center.mb-70
+								.categories-img-2
+									a(href='#')
+										img(src='/images/categori/categori-12.jpg', alt='')
+								h4
+									a(href='#') Dictionaries
+						.col-lg-2.col-md-3.col-sm-4.col-6
+							.single-categories-2.text-center.mb-70
+								.categories-img-2
+									a(href='#')
+										img(src='/images/categori/categori-11.jpg', alt='')
+								h4
+									a(href='#') Encyclopedias
+						.col-lg-2.col-md-3.col-sm-4.col-6
+							.single-categories-2.text-center.mb-70
+								.categories-img-2
+									a(href='#')
+										img(src='/images/categori/categori-10.jpg', alt='')
+								h4
+									a(href='#') Self Development
+						.col-lg-2.col-md-3.col-sm-4.col-6
+							.single-categories-2.text-center.mb-70
+								.categories-img-2
+									a(href='#')
+										img(src='/images/categori/categori-9.jpg', alt='')
+								h4
+									a(href='#') Politics
+						.col-lg-2.col-md-3.col-sm-4.col-6
+							.single-categories-2.text-center.mb-70
+								.categories-img-2
+									a(href='#')
+										img(src='/images/categori/categori-8.jpg', alt='')
+								h4
+									a(href='#') Social Sciences
+						.col-lg-2.col-md-3.col-sm-4.col-6
+							.single-categories-2.text-center.mb-70
+								.categories-img-2
+									a(href='#')
+										img(src='/images/categori/categori-7.jpg', alt='')
+								h4
+									a(href='#') Travel &amp; Maps
+					.categories-btn.btn-hover.text-center
+						a(href='shop.html') Browse All Categories
+	.pre-order-area.pt-160
+		.container
+			.row.align-items-center
+				.col-lg-6.col-md-6
+					.pre-order-content.pre-order-green
+						h3
+							a(href='#') Pre Order is On
+						h4
+							span Author
+							|  Bin Sam
+						p
+							| Authoritatively matrix functionalized leadership skills after long-term high-impact channels. Monotonectally transition enterprise-wide best practices.
+						span $ 1212
+						.btn-style-3.btn-hover
+							a.btn3-ptb-2.btn3-bg-green(href='#') Browse Book
+				.col-lg-6.col-md-6
+					.pre-order-img-2
+						a(href='#')
+							img(src='/images/product/product-on-sale-2.png', alt='')
+	.product-area.pt-135.pb-100
+		.container
+			.product-tab-list-3.product-tab-list-3-green.nav.mb-60
+				a.active(href='#product-1', data-toggle='tab')
+					| Hot Deal
+				a(href='#product-2', data-toggle='tab')
+					| Featured Product
+				a(href='#product-3', data-toggle='tab')
+					| New Arrival
+			.tab-content.jump
+				#product-1.tab-pane.active
+					.row
+						.col-lg-3.col-md-6.col-sm-6.col-12
+							.product-wrap.mb-55
+								.product-img.product-img-zoom.mb-25
+									a(href='product-details.html')
+										img(src='/images/product/product-22.jpg', alt='')
+								.product-content
+									h4
+										a(href='product-details.html') Product Title
+									.product-price
+										span $ 155
+										span.old-price $ 165
+								.product-action-position-1.text-center
+									.product-content
+										h4
+											a(href='product-details.html') Product Title
+										.product-price
+											span $ 155
+											span.old-price $ 165
+									.product-action-wrap
+										.product-action-cart
+											button(title='Add to Cart') Add to cart
+										button(data-toggle='modal', data-target='#exampleModal')
+											i.icon-zoom
+										button(title='Add to Compare')
+											i.icon-compare
+										button(title='Add to Wishlist')
+											i.icon-heart-empty
+						.col-lg-3.col-md-6.col-sm-6.col-12
+							.product-wrap.mb-55
+								.product-img.product-img-zoom.mb-25
+									a(href='product-details.html')
+										img(src='/images/product/product-23.jpg', alt='')
+								.product-content
+									h4
+										a(href='product-details.html') Product Title
+									.product-price
+										span $ 145
+								.product-action-position-1.text-center
+									.product-content
+										h4
+											a(href='product-details.html') Product Title
+										.product-price
+											span $ 145
+									.product-action-wrap
+										.product-action-cart
+											button(title='Add to Cart') Add to cart
+										button(data-toggle='modal', data-target='#exampleModal')
+											i.icon-zoom
+										button(title='Add to Compare')
+											i.icon-compare
+										button(title='Add to Wishlist')
+											i.icon-heart-empty
+						.col-lg-3.col-md-6.col-sm-6.col-12
+							.product-wrap.mb-55
+								.product-img.product-img-zoom.mb-25
+									a(href='product-details.html')
+										img(src='/images/product/product-24.jpg', alt='')
+								.product-content
+									h4
+										a(href='product-details.html') Product Title
+									.product-price
+										span $ 125
+										span.old-price $ 140
+								.product-action-position-1.text-center
+									.product-content
+										h4
+											a(href='product-details.html') Product Title
+										.product-price
+											span $ 125
+											span.old-price $ 140
+									.product-action-wrap
+										.product-action-cart
+											button(title='Add to Cart') Add to cart
+										button(data-toggle='modal', data-target='#exampleModal')
+											i.icon-zoom
+										button(title='Add to Compare')
+											i.icon-compare
+										button(title='Add to Wishlist')
+											i.icon-heart-empty
+						.col-lg-3.col-md-6.col-sm-6.col-12
+							.product-wrap.mb-55
+								.product-img.product-img-zoom.mb-25
+									a(href='product-details.html')
+										img(src='/images/product/product-25.jpg', alt='')
+								.product-content
+									h4
+										a(href='product-details.html') Product Title
+									.product-price
+										span $ 124
+								.product-action-position-1.text-center
+									.product-content
+										h4
+											a(href='product-details.html') Product Title
+										.product-price
+											span $ 124
+											span.old-price $ 130
+									.product-action-wrap
+										.product-action-cart
+											button(title='Add to Cart') Add to cart
+										button(data-toggle='modal', data-target='#exampleModal')
+											i.icon-zoom
+										button(title='Add to Compare')
+											i.icon-compare
+										button(title='Add to Wishlist')
+											i.icon-heart-empty
+						.col-lg-3.col-md-6.col-sm-6.col-12
+							.product-wrap.mb-55
+								.product-img.product-img-zoom.mb-25
+									a(href='product-details.html')
+										img(src='/images/product/product-26.jpg', alt='')
+								.product-content
+									h4
+										a(href='product-details.html') Product Title
+									.product-price
+										span $ 110
+										span.old-price $ 150
+								.product-action-position-1.text-center
+									.product-content
+										h4
+											a(href='product-details.html') Product Title
+										.product-price
+											span $ 110
+											span.old-price $ 150
+									.product-action-wrap
+										.product-action-cart
+											button(title='Add to Cart') Add to cart
+										button(data-toggle='modal', data-target='#exampleModal')
+											i.icon-zoom
+										button(title='Add to Compare')
+											i.icon-compare
+										button(title='Add to Wishlist')
+											i.icon-heart-empty
+						.col-lg-3.col-md-6.col-sm-6.col-12
+							.product-wrap.mb-55
+								.product-img.product-img-zoom.mb-25
+									a(href='product-details.html')
+										img(src='/images/product/product-27.jpg', alt='')
+								.product-content
+									h4
+										a(href='product-details.html') Product Title
+									.product-price
+										span $ 200
+								.product-action-position-1.text-center
+									.product-content
+										h4
+											a(href='product-details.html') Product Title
+										.product-price
+											span $ 200
+									.product-action-wrap
+										.product-action-cart
+											button(title='Add to Cart') Add to cart
+										button(data-toggle='modal', data-target='#exampleModal')
+											i.icon-zoom
+										button(title='Add to Compare')
+											i.icon-compare
+										button(title='Add to Wishlist')
+											i.icon-heart-empty
+						.col-lg-3.col-md-6.col-sm-6.col-12
+							.product-wrap.mb-55
+								.product-img.product-img-zoom.mb-25
+									a(href='product-details.html')
+										img(src='/images/product/product-28.jpg', alt='')
+								.product-content
+									h4
+										a(href='product-details.html') Product Title
+									.product-price
+										span $ 200
+								.product-action-position-1.text-center
+									.product-content
+										h4
+											a(href='product-details.html') Product Title
+										.product-price
+											span $ 200
+									.product-action-wrap
+										.product-action-cart
+											button(title='Add to Cart') Add to cart
+										button(data-toggle='modal', data-target='#exampleModal')
+											i.icon-zoom
+										button(title='Add to Compare')
+											i.icon-compare
+										button(title='Add to Wishlist')
+											i.icon-heart-empty
+						.col-lg-3.col-md-6.col-sm-6.col-12
+							.product-wrap.mb-55
+								.product-img.product-img-zoom.mb-25
+									a(href='product-details.html')
+										img(src='/images/product/product-29.jpg', alt='')
+								.product-content
+									h4
+										a(href='product-details.html') Product Title
+									.product-price
+										span $ 200
+								.product-action-position-1.text-center
+									.product-content
+										h4
+											a(href='product-details.html') Product Title
+										.product-price
+											span $ 200
+									.product-action-wrap
+										.product-action-cart
+											button(title='Add to Cart') Add to cart
+										button(data-toggle='modal', data-target='#exampleModal')
+											i.icon-zoom
+										button(title='Add to Compare')
+											i.icon-compare
+										button(title='Add to Wishlist')
+											i.icon-heart-empty
+				#product-2.tab-pane
+					.row
+						.col-lg-3.col-md-6.col-sm-6.col-12
+							.product-wrap.mb-55
+								.product-img.product-img-zoom.mb-25
+									a(href='product-details.html')
+										img(src='/images/product/product-29.jpg', alt='')
+								.product-content
+									h4
+										a(href='product-details.html') Product Title
+									.product-price
+										span $ 155
+										span.old-price $ 165
+								.product-action-position-1.text-center
+									.product-content
+										h4
+											a(href='product-details.html') Product Title
+										.product-price
+											span $ 155
+											span.old-price $ 165
+									.product-action-wrap
+										.product-action-cart
+											button(title='Add to Cart') Add to cart
+										button(data-toggle='modal', data-target='#exampleModal')
+											i.icon-zoom
+										button(title='Add to Compare')
+											i.icon-compare
+										button(title='Add to Wishlist')
+											i.icon-heart-empty
+						.col-lg-3.col-md-6.col-sm-6.col-12
+							.product-wrap.mb-55
+								.product-img.product-img-zoom.mb-25
+									a(href='product-details.html')
+										img(src='/images/product/product-28.jpg', alt='')
+								.product-content
+									h4
+										a(href='product-details.html') Product Title
+									.product-price
+										span $ 145
+								.product-action-position-1.text-center
+									.product-content
+										h4
+											a(href='product-details.html') Product Title
+										.product-price
+											span $ 145
+									.product-action-wrap
+										.product-action-cart
+											button(title='Add to Cart') Add to cart
+										button(data-toggle='modal', data-target='#exampleModal')
+											i.icon-zoom
+										button(title='Add to Compare')
+											i.icon-compare
+										button(title='Add to Wishlist')
+											i.icon-heart-empty
+						.col-lg-3.col-md-6.col-sm-6.col-12
+							.product-wrap.mb-55
+								.product-img.product-img-zoom.mb-25
+									a(href='product-details.html')
+										img(src='/images/product/product-27.jpg', alt='')
+								.product-content
+									h4
+										a(href='product-details.html') Product Title
+									.product-price
+										span $ 125
+										span.old-price $ 140
+								.product-action-position-1.text-center
+									.product-content
+										h4
+											a(href='product-details.html') Product Title
+										.product-price
+											span $ 125
+											span.old-price $ 140
+									.product-action-wrap
+										.product-action-cart
+											button(title='Add to Cart') Add to cart
+										button(data-toggle='modal', data-target='#exampleModal')
+											i.icon-zoom
+										button(title='Add to Compare')
+											i.icon-compare
+										button(title='Add to Wishlist')
+											i.icon-heart-empty
+						.col-lg-3.col-md-6.col-sm-6.col-12
+							.product-wrap.mb-55
+								.product-img.product-img-zoom.mb-25
+									a(href='product-details.html')
+										img(src='/images/product/product-26.jpg', alt='')
+								.product-content
+									h4
+										a(href='product-details.html') Product Title
+									.product-price
+										span $ 124
+								.product-action-position-1.text-center
+									.product-content
+										h4
+											a(href='product-details.html') Product Title
+										.product-price
+											span $ 124
+											span.old-price $ 130
+									.product-action-wrap
+										.product-action-cart
+											button(title='Add to Cart') Add to cart
+										button(data-toggle='modal', data-target='#exampleModal')
+											i.icon-zoom
+										button(title='Add to Compare')
+											i.icon-compare
+										button(title='Add to Wishlist')
+											i.icon-heart-empty
+						.col-lg-3.col-md-6.col-sm-6.col-12
+							.product-wrap.mb-55
+								.product-img.product-img-zoom.mb-25
+									a(href='product-details.html')
+										img(src='/images/product/product-25.jpg', alt='')
+								.product-content
+									h4
+										a(href='product-details.html') Product Title
+									.product-price
+										span $ 110
+										span.old-price $ 150
+								.product-action-position-1.text-center
+									.product-content
+										h4
+											a(href='product-details.html') Product Title
+										.product-price
+											span $ 110
+											span.old-price $ 150
+									.product-action-wrap
+										.product-action-cart
+											button(title='Add to Cart') Add to cart
+										button(data-toggle='modal', data-target='#exampleModal')
+											i.icon-zoom
+										button(title='Add to Compare')
+											i.icon-compare
+										button(title='Add to Wishlist')
+											i.icon-heart-empty
+						.col-lg-3.col-md-6.col-sm-6.col-12
+							.product-wrap.mb-55
+								.product-img.product-img-zoom.mb-25
+									a(href='product-details.html')
+										img(src='/images/product/product-24.jpg', alt='')
+								.product-content
+									h4
+										a(href='product-details.html') Product Title
+									.product-price
+										span $ 200
+								.product-action-position-1.text-center
+									.product-content
+										h4
+											a(href='product-details.html') Product Title
+										.product-price
+											span $ 200
+									.product-action-wrap
+										.product-action-cart
+											button(title='Add to Cart') Add to cart
+										button(data-toggle='modal', data-target='#exampleModal')
+											i.icon-zoom
+										button(title='Add to Compare')
+											i.icon-compare
+										button(title='Add to Wishlist')
+											i.icon-heart-empty
+						.col-lg-3.col-md-6.col-sm-6.col-12
+							.product-wrap.mb-55
+								.product-img.product-img-zoom.mb-25
+									a(href='product-details.html')
+										img(src='/images/product/product-23.jpg', alt='')
+								.product-content
+									h4
+										a(href='product-details.html') Product Title
+									.product-price
+										span $ 200
+								.product-action-position-1.text-center
+									.product-content
+										h4
+											a(href='product-details.html') Product Title
+										.product-price
+											span $ 200
+									.product-action-wrap
+										.product-action-cart
+											button(title='Add to Cart') Add to cart
+										button(data-toggle='modal', data-target='#exampleModal')
+											i.icon-zoom
+										button(title='Add to Compare')
+											i.icon-compare
+										button(title='Add to Wishlist')
+											i.icon-heart-empty
+						.col-lg-3.col-md-6.col-sm-6.col-12
+							.product-wrap.mb-55
+								.product-img.product-img-zoom.mb-25
+									a(href='product-details.html')
+										img(src='/images/product/product-22.jpg', alt='')
+								.product-content
+									h4
+										a(href='product-details.html') Product Title
+									.product-price
+										span $ 200
+								.product-action-position-1.text-center
+									.product-content
+										h4
+											a(href='product-details.html') Product Title
+										.product-price
+											span $ 200
+									.product-action-wrap
+										.product-action-cart
+											button(title='Add to Cart') Add to cart
+										button(data-toggle='modal', data-target='#exampleModal')
+											i.icon-zoom
+										button(title='Add to Compare')
+											i.icon-compare
+										button(title='Add to Wishlist')
+											i.icon-heart-empty
+				#product-3.tab-pane
+					.row
+						.col-lg-3.col-md-6.col-sm-6.col-12
+							.product-wrap.mb-55
+								.product-img.product-img-zoom.mb-25
+									a(href='product-details.html')
+										img(src='/images/product/product-25.jpg', alt='')
+								.product-content
+									h4
+										a(href='product-details.html') Product Title
+									.product-price
+										span $ 155
+										span.old-price $ 165
+								.product-action-position-1.text-center
+									.product-content
+										h4
+											a(href='product-details.html') Product Title
+										.product-price
+											span $ 155
+											span.old-price $ 165
+									.product-action-wrap
+										.product-action-cart
+											button(title='Add to Cart') Add to cart
+										button(data-toggle='modal', data-target='#exampleModal')
+											i.icon-zoom
+										button(title='Add to Compare')
+											i.icon-compare
+										button(title='Add to Wishlist')
+											i.icon-heart-empty
+						.col-lg-3.col-md-6.col-sm-6.col-12
+							.product-wrap.mb-55
+								.product-img.product-img-zoom.mb-25
+									a(href='product-details.html')
+										img(src='/images/product/product-24.jpg', alt='')
+								.product-content
+									h4
+										a(href='product-details.html') Product Title
+									.product-price
+										span $ 145
+								.product-action-position-1.text-center
+									.product-content
+										h4
+											a(href='product-details.html') Product Title
+										.product-price
+											span $ 145
+									.product-action-wrap
+										.product-action-cart
+											button(title='Add to Cart') Add to cart
+										button(data-toggle='modal', data-target='#exampleModal')
+											i.icon-zoom
+										button(title='Add to Compare')
+											i.icon-compare
+										button(title='Add to Wishlist')
+											i.icon-heart-empty
+						.col-lg-3.col-md-6.col-sm-6.col-12
+							.product-wrap.mb-55
+								.product-img.product-img-zoom.mb-25
+									a(href='product-details.html')
+										img(src='/images/product/product-23.jpg', alt='')
+								.product-content
+									h4
+										a(href='product-details.html') Product Title
+									.product-price
+										span $ 125
+										span.old-price $ 140
+								.product-action-position-1.text-center
+									.product-content
+										h4
+											a(href='product-details.html') Product Title
+										.product-price
+											span $ 125
+											span.old-price $ 140
+									.product-action-wrap
+										.product-action-cart
+											button(title='Add to Cart') Add to cart
+										button(data-toggle='modal', data-target='#exampleModal')
+											i.icon-zoom
+										button(title='Add to Compare')
+											i.icon-compare
+										button(title='Add to Wishlist')
+											i.icon-heart-empty
+						.col-lg-3.col-md-6.col-sm-6.col-12
+							.product-wrap.mb-55
+								.product-img.product-img-zoom.mb-25
+									a(href='product-details.html')
+										img(src='/images/product/product-22.jpg', alt='')
+								.product-content
+									h4
+										a(href='product-details.html') Product Title
+									.product-price
+										span $ 124
+								.product-action-position-1.text-center
+									.product-content
+										h4
+											a(href='product-details.html') Product Title
+										.product-price
+											span $ 124
+											span.old-price $ 130
+									.product-action-wrap
+										.product-action-cart
+											button(title='Add to Cart') Add to cart
+										button(data-toggle='modal', data-target='#exampleModal')
+											i.icon-zoom
+										button(title='Add to Compare')
+											i.icon-compare
+										button(title='Add to Wishlist')
+											i.icon-heart-empty
+						.col-lg-3.col-md-6.col-sm-6.col-12
+							.product-wrap.mb-55
+								.product-img.product-img-zoom.mb-25
+									a(href='product-details.html')
+										img(src='/images/product/product-29.jpg', alt='')
+								.product-content
+									h4
+										a(href='product-details.html') Product Title
+									.product-price
+										span $ 110
+										span.old-price $ 150
+								.product-action-position-1.text-center
+									.product-content
+										h4
+											a(href='product-details.html') Product Title
+										.product-price
+											span $ 110
+											span.old-price $ 150
+									.product-action-wrap
+										.product-action-cart
+											button(title='Add to Cart') Add to cart
+										button(data-toggle='modal', data-target='#exampleModal')
+											i.icon-zoom
+										button(title='Add to Compare')
+											i.icon-compare
+										button(title='Add to Wishlist')
+											i.icon-heart-empty
+						.col-lg-3.col-md-6.col-sm-6.col-12
+							.product-wrap.mb-55
+								.product-img.product-img-zoom.mb-25
+									a(href='product-details.html')
+										img(src='/images/product/product-28.jpg', alt='')
+								.product-content
+									h4
+										a(href='product-details.html') Product Title
+									.product-price
+										span $ 200
+								.product-action-position-1.text-center
+									.product-content
+										h4
+											a(href='product-details.html') Product Title
+										.product-price
+											span $ 200
+									.product-action-wrap
+										.product-action-cart
+											button(title='Add to Cart') Add to cart
+										button(data-toggle='modal', data-target='#exampleModal')
+											i.icon-zoom
+										button(title='Add to Compare')
+											i.icon-compare
+										button(title='Add to Wishlist')
+											i.icon-heart-empty
+						.col-lg-3.col-md-6.col-sm-6.col-12
+							.product-wrap.mb-55
+								.product-img.product-img-zoom.mb-25
+									a(href='product-details.html')
+										img(src='/images/product/product-27.jpg', alt='')
+								.product-content
+									h4
+										a(href='product-details.html') Product Title
+									.product-price
+										span $ 200
+								.product-action-position-1.text-center
+									.product-content
+										h4
+											a(href='product-details.html') Product Title
+										.product-price
+											span $ 200
+									.product-action-wrap
+										.product-action-cart
+											button(title='Add to Cart') Add to cart
+										button(data-toggle='modal', data-target='#exampleModal')
+											i.icon-zoom
+										button(title='Add to Compare')
+											i.icon-compare
+										button(title='Add to Wishlist')
+											i.icon-heart-empty
+						.col-lg-3.col-md-6.col-sm-6.col-12
+							.product-wrap.mb-55
+								.product-img.product-img-zoom.mb-25
+									a(href='product-details.html')
+										img(src='/images/product/product-26.jpg', alt='')
+								.product-content
+									h4
+										a(href='product-details.html') Product Title
+									.product-price
+										span $ 200
+								.product-action-position-1.text-center
+									.product-content
+										h4
+											a(href='product-details.html') Product Title
+										.product-price
+											span $ 200
+									.product-action-wrap
+										.product-action-cart
+											button(title='Add to Cart') Add to cart
+										button(data-toggle='modal', data-target='#exampleModal')
+											i.icon-zoom
+										button(title='Add to Compare')
+											i.icon-compare
+										button(title='Add to Wishlist')
+											i.icon-heart-empty
+	.service-area.pb-110
+		.container
+			.row
+				.col-lg-3.col-md-6.col-sm-6.col-12
+					.service-wrap.mb-30
+						img.inject-me(src='/images/icon-img/headphones.svg', alt='')
+						h3 Happiness 
+						p Free Shipping for any product and it&apos;s world wide
+				.col-lg-3.col-md-6.col-sm-6.col-12
+					.service-wrap.mb-30
+						img.inject-me(src='/images/icon-img/shipping-car.svg', alt='')
+						h3 Free Shipping 
+						p Free Shipping for any product and it&apos;s world wide
+				.col-lg-3.col-md-6.col-sm-6.col-12
+					.service-wrap.mb-30
+						img.inject-me(src='/images/icon-img/trusty.svg', alt='')
+						h3 All Trusty Brand 
+						p Free Shipping for any product and it&apos;s world wide
+				.col-lg-3.col-md-6.col-sm-6.col-12
+					.service-wrap.mb-30
+						img.inject-me(src='/images/icon-img/support-expart.svg', alt='')
+						h3 24/7 Support Expert 
+						p Free Shipping for any product and it&apos;s world wide
+	.banner-area
+		.container
+			.row
+				.col-lg-6.col-md-6
+					.banner-wrap.mb-30
+						.banner-img
+							a(href='product-details.html')
+								img(src='/images/banner/banner-9.jpg', alt='')
+						.banner-content-wrap
+							.banner-content-6
+								h2 KIDS BOOK
+								h4 50% off
+				.col-lg-6.col-md-6
+					.banner-wrap.mb-30
+						.banner-img
+							a(href='product-details.html')
+								img(src='/images/banner/banner-10.jpg', alt='')
+						.banner-content-wrap
+							.banner-content-6
+								h2 ROMANTIC BOOK
+								h4 50% off
+	.testimonial-area.fix.pt-110.pb-150
+		.container
+			.row.flex-row-reverse
+				.col-lg-8.col-md-12.col-12
+					.testimonial-3-content-area
+						.testimonial-title-wrap
+							.row
+								.col-lg-7.col-md-7.col-12.col-sm-7
+									.testimonial-title
+										h3
+											| We Love Our Client They 
+											br
+											| Love Us
+								.col-lg-5.col-md-5.col-12.col-sm-5
+									.testimonial-title-img
+										img(src='/images/testimonial/testimonial-img-2.png', alt='')
+						.testimonial-active-3.dot-style-3.dot-style-3-position
+							.single-testimonial-2
+								h4 The team was always polite
+								p
+									| Intrinsically seize effective synergy for e-business best practices. Completely reconceptualize quality platforms after proactive relationships. Appropriately negotiate leading-edge e-tailers after technically sound leadership. Conveniently architect.
+								.client-info-2
+									.testi-rating-2
+										i.icon-rating
+										i.icon-rating
+										i.icon-rating
+										i.icon-rating
+										i.icon-rating
+									h3 James Fernandez
+							.single-testimonial-2
+								h4 The team was always polite
+								p
+									| Intrinsically seize effective synergy for e-business best practices. Completely reconceptualize quality platforms after proactive relationships. Appropriately negotiate leading-edge e-tailers after technically sound leadership. Conveniently architect for e-business best practices.
+								.client-info-2
+									.testi-rating-2
+										i.icon-rating
+										i.icon-rating
+										i.icon-rating
+										i.icon-rating
+										i.icon-rating
+									h3 Binte Chuka
+							.single-testimonial-2
+								h4 The team was always polite
+								p
+									| Completely reconceptualize quality platforms after proactive relationships. Appropriately negotiate leading-edge e-tailers after technically sound leadership. Conveniently architect.
+								.client-info-2
+									.testi-rating-2
+										i.icon-rating
+										i.icon-rating
+										i.icon-rating
+										i.icon-rating
+										i.icon-rating
+									h3 Binte Chuka
+						.testimonials-3-btn
+							a(href='product-details.html')
+								| All Testimonials 
+								img.inject-me(src='/images/icon-img/arrow-right.svg', alt='')
+				.col-lg-4.col-md-7.col-sm-12.col-12.mr-auto
+					.testimonial-img-slider-active
+						.testimonial-img-slider
+							img(src='/images/testimonial/testimonial-img-1.jpg', alt='')
+							.testimonial-img-slider-icon
+								img.inject-me(src='/images/icon-img/quotes-icon-2.svg', alt='')
+						.testimonial-img-slider
+							img(src='/images/testimonial/testimonial-img-1.jpg', alt='')
+							.testimonial-img-slider-icon
+								img.inject-me(src='/images/icon-img/quotes-icon-2.svg', alt='')
+						.testimonial-img-slider
+							img(src='/images/testimonial/testimonial-img-1.jpg', alt='')
+							.testimonial-img-slider-icon
+								img.inject-me(src='/images/icon-img/quotes-icon-2.svg', alt='')
+	.blog-area.pb-125
+		.container
+			.section-title.st-peragraph-width.st-peragraph-auto.text-center.mb-75
+				h2 Pres Release 
+				p
+					| Proactively drive collaborative value and reliable mindshare. Distinctively negotiate superior users via economically sound models. Energistically underwhelm.
+			.row
+				.col-lg-4.col-md-6.col-sm-6
+					.blog-wrap.mb-30
+						.blog-img.mb-35
+							a(href='blog-details.html')
+								img(src='/images/blog/blog-4.jpg', alt='')
+						.blog-content
+							h3
+								a(href='blog-details.html') Professionally e-enable high payoff data before sticky opportunities. 
+							span.mrg-top-inc on April 24, 2019
+							p Seamlessly administrate client centered technology without optimal.
+				.col-lg-4.col-md-6.col-sm-6
+					.blog-wrap.mb-30
+						.blog-img.mb-35
+							a(href='blog-details.html')
+								img(src='/images/blog/blog-5.jpg', alt='')
+						.blog-content
+							h3
+								a(href='blog-details.html') Designers matched perfectly to you on Envato Studio
+							span.mrg-top-inc on April 24, 2019
+							p Compellingly fabricate optimal bandwidth for inter-mandated deliverables. 
+				.col-lg-4.col-md-6.col-sm-6
+					.blog-wrap.mb-30
+						.blog-img.mb-35
+							a(href='blog-details.html')
+								img(src='/images/blog/blog-6.jpg', alt='')
+						.blog-content
+							h3
+								a(href='blog-details.html') Phos fluorescently leverage existing client-based technologies.
+							span.mrg-top-inc on April 24, 2019
+							p Progressively transform fully tested markets after covalent sources.
+
+	// Modal
+	#exampleModal.modal.fade(tabindex='-1', role='dialog')
+		.modal-dialog(role='document')
+			.modal-content
+				.modal-header
+					button.close(type='button', data-dismiss='modal', aria-label='Close')
+						span(aria-hidden='true') x
+				.modal-body
+					.row
+						.col-lg-5.col-md-5.col-12.col-sm-6
+							.quickview-img
+								img(src='/images/product/product-3.jpg', alt='')
+						.col-lg-7.col-md-7.col-12.col-sm-6
+							.product-details-content.quickview-content
+								h2 Electronic Shop
+								.product-ratting-review-wrap
+									.product-ratting-digit-wrap
+										.product-ratting
+											i.icon-rating
+											i.icon-rating
+											i.icon-rating
+											i.icon-rating
+											i.icon-star-empty
+										.product-digit
+											span 4.0
+									.product-review-order
+										span 62 Reviews
+										span 242 orders
+								p
+									| Seamlessly predominate enterprise metrics without performance based process improvements.
+								.pro-details-price
+									span US $75.72
+									span.old-price US $95.72
+								.pro-details-color-wrap
+									span Color:
+									.pro-details-color-content
+										ul
+											li
+												a.white(href='#') Black
+											li
+												a.azalea(href='#') Blue
+											li
+												a.dolly(href='#') Green
+											li
+												a.peach-orange(href='#') Orange
+											li
+												a.mona-lisa.active(href='#') Pink
+											li
+												a.cupid(href='#') gray
+								.pro-details-size
+									span Size:
+									.pro-details-size-content
+										ul
+											li
+												a(href='#') XS
+											li
+												a(href='#') S
+											li
+												a(href='#') M
+											li
+												a(href='#') L
+											li
+												a(href='#') XL
+											li
+												a(href='#') XXL
+								.pro-details-quality
+									span Quantity:
+									.cart-plus-minus
+										input.cart-plus-minus-box(type='text', name='qtybutton', value='1')
+								.product-details-meta
+									ul
+										li
+											span Model:
+											a(href='#') Odsy-1000
+										li
+											span Ship To
+											a(href='#') 2834 Laurel Lane
+											| , 
+											a(href='#') Mentone
+											|  , 
+											a(href='#') Texas
+								.pro-details-action-wrap
+									.pro-details-buy-now
+										a(href='#') Buy Now
+									.pro-details-action
+										a(title='Add to Cart', href='#')
+											i.icon-basket
+										a(title='Add to Wishlist', href='#')
+											i.icon-heart
+										a.social(title='Social', href='#')
+											i.icon-share
+										.product-dec-social
+											a.facebook(title='Facebook', href='#')
+												i.icon-social-facebook-square
+											a.twitter(title='Twitter', href='#')
+												i.icon-social-twitter
+											a.instagram(title='Instagram', href='#')
+												i.icon-social-instagram
+											a.pinterest(title='Pinterest', href='#')
+												i.icon-social-pinterest
+

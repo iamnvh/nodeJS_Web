@@ -1,0 +1,29 @@
+doctype html 
+html 
+html(lang="en")
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='x-ua-compatible', content='ie=edge')
+        title Dking - Multipurpose eCommerce HTML Template
+        meta(name='robots', content='noindex, follow')
+        meta(name='description', content='')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        // Favicon
+        link(rel='shortcut icon', type='image/x-icon', href='/images/favicon.png')
+        //
+            All CSS is here
+            ============================================
+        // Use the minified version files listed below for better performance and remove the files listed above
+        link(rel='stylesheet', href='/css/vendor/icofont.min.css')
+        link(rel='stylesheet', href='/css/vendor/icofont.css')
+        link(rel='stylesheet', href='/css/vendor/vendor.min.css')
+        link(rel='stylesheet', href='/css/plugins/plugins.min.css')
+        link(rel='stylesheet', href='/css/style.min.css')
+    body.main-wrapper.main-wrapper-3
+        include ../blocks/header.pug
+        block content
+        include ../blocks/footer.pug
+        script(src='/js/vendor/vendor.min.js')
+        script(src='/js/plugins/plugins.min.js')
+        // Main JS
+        script(src='/js/main.js')

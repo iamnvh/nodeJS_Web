@@ -105,11 +105,11 @@ block content
 							.col-lg-3.col-md-6.col-sm-6.col-12
 								.product-wrap.mb-55
 									.product-img.product-img-zoom.mb-25
-										a(href='')
+										a(href='/book/'+product._id)
 											img(src='/upload/images/'+product.photo, alt='')
 									.product-content
 										h4
-											a(href='')=product.name
+											a(href='/book/'+product._id)=product.name
 										.product-price
 											if product.discount > 0
 												span=new Intl.NumberFormat('vn-IN', { maximumSignificantDigits: 3 }).format(((product.price)-(product.price*product.discount)/100).toFixed()) + ' đ'
@@ -119,7 +119,7 @@ block content
 									.product-action-position-1.text-center
 										.product-content
 											h4
-												a(href='')=product.name
+												a(href='/book/'+product._id)=product.name
 											.product-price
 												if product.discount > 0
 													span=new Intl.NumberFormat('vn-IN', { maximumSignificantDigits: 3 }).format(((product.price)-(product.price*product.discount)/100).toFixed()) + ' đ'
@@ -156,11 +156,11 @@ block content
 							.col-lg-3.col-md-6.col-sm-6.col-12
 								.product-wrap.mb-55
 									.product-img.product-img-zoom.mb-25
-										a(href='product-details.html')
+										a(href='/book/'+product._id)
 											img(src='upload/images/'+product.photo, alt='')
 									.product-content
 										h4
-											a(href='product-details.html')=product.name
+											a(href='/book/'+product._id)=product.name
 										.product-price
 											if product.discount > 0
 												span=new Intl.NumberFormat('vn-IN', { maximumSignificantDigits: 3 }).format(((product.price)-(product.price*product.discount)/100).toFixed()) + ' đ'
@@ -170,7 +170,7 @@ block content
 									.product-action-position-1.text-center
 										.product-content
 											h4
-												a(href='product-details.html')=product.name
+												a(href='/book/'+product._id)=product.name
 											.product-price
 												if product.discount > 0
 													span=new Intl.NumberFormat('vn-IN', { maximumSignificantDigits: 3 }).format(((product.price)-(product.price*product.discount)/100).toFixed()) + ' đ'

@@ -6,6 +6,7 @@ const login = require('../../controllers/frontend/login.controller')
 const register = require('../../controllers/frontend/register.controller')
 const shop = require('../../controllers/frontend/shop.controller')
 const acc = require('../../controllers/frontend/acc.controller')
+const book = require('../../controllers/frontend/product.controller')
 
 //home
 router.get('/', home.index);
@@ -24,8 +25,14 @@ router.get('/account',auth.authUser,acc.index)
 
 // shop
 router.get('/shop',shop.index);
-router.get('/:id',home.searchbyid);
+router.get('/search/:id',home.searchbyid);
+
 
 //shopdetai
+router.get('/book/:id',book.index)
+
+
+
+
 
 module.exports = router;

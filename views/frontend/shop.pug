@@ -33,11 +33,11 @@ block content
 											.col-lg-4.col-md-6.col-sm-6.col-12
 												.product-wrap.mb-50
 													.product-img.product-img-zoom.mb-25
-														a(href='')
+														a(href='/book/'+product._id)
 															img(src='upload/images/'+product.photo, alt='')
 													.product-content
 														h4
-															a(href='')=product.name
+															a(href='/book/'+product._id)=product.name
 														.product-price
 															if product.discount > 0
 																span=new Intl.NumberFormat('vn-IN', { maximumSignificantDigits: 3 }).format(((product.price)-(product.price*product.discount)/100).toFixed()) + ' đ'
@@ -47,7 +47,7 @@ block content
 													.product-action-position-1.text-center
 														.product-content
 															h4
-																a(href='')=product.name
+																a(href='/book/'+product._id)=product.name
 															.product-price
 																if product.discount > 0
 																	span=new Intl.NumberFormat('vn-IN', { maximumSignificantDigits: 3 }).format(((product.price)-(product.price*product.discount)/100).toFixed()) + ' đ'
@@ -92,7 +92,7 @@ block content
 									else
 										each i in danhmuc
 											li
-												a(href='/'+i._id)=i.name
+												a(href='/search/'+i._id)=i.name
 						.sidebar-widget
 							h4.pro-sidebar-title Danh mục tác giả
 							.sidebar-widget-categori.mt-45.mb-70

@@ -1,0 +1,97 @@
+[{
+  "_id": {
+    "$oid": "626819379c78506d38f73b64"
+  },
+  "name": "Nuôi Dạy Con",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1650989367788"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1650989367788"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "626819409c78506d38f73b81"
+  },
+  "name": "Kinh Tế",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1650989376725"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1650989376725"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "626819459c78506d38f73b96"
+  },
+  "name": "Tiểu Sử - Hồi Ký",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1650989381032"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1650989381032"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6268194a9c78506d38f73bab"
+  },
+  "name": "Tâm Lý - Kỹ Năng Sống",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1650989386044"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1650989386044"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6268c65e22a8c84dbe6da9b2"
+  },
+  "name": "Sách Thiếu Nhi",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1651033694771"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1651033694771"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6268cdea8edaf872be2445a3"
+  },
+  "name": "Tiểu thuyết",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1651035626277"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1651035626277"
+    }
+  },
+  "__v": 0
+}]

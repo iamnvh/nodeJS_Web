@@ -36,40 +36,22 @@ block content
 					a.no-mrg.btn-hover.cart-btn-style(href='checkout.html') checkout
 	.slider-area
 		.slider-active-3.dot-style-2.img-max-width
-			.single-slider.slider-height-4.bg-img.single-slider-pt-3(data-thumb='/images/slider/book-slider-thumb-1.png', style='background-image:url(/images/slider/book-slider-1.jpg);')
+			.single-slider.slider-height-4.bg-img.single-slider-pt-3(data-thumb='/upload/images/bia1.png', style='background-image:url(/upload/images/bia1.jpg)')
 				.container
 					.row
 						.col-12
 							.slider-content-3.slider-animated-1
 								h1.animated
-									| Start 
-									span Learning
+									| Chào mừng 
+									span Đến với 
 									br
-									span Build
-									|  Career
-								p.animated Interactively pursue optimal &quot;outside the box&quot; thinking and timely communities. 
+									span Dking
+									|  Tri thức
+								p.animated Mua sắm tri thức không bao giờ nỗ
 								.btn-style-3.btn-hover
-									a.btn3-ptb-3.btn3-bg-green.animated(href='shop.html')
-										| Browse Book 
+									a.btn3-ptb-3.btn3-bg-green.animated(href='/shop')
+										| Chọn sách
 										i.icofont-long-arrow-right
-	.categoriesa-area.pt-255
-		.container
-			.row
-				.col-xl-10.col-lg-12.ml-auto.mr-auto
-					.categoriesa-top.bg-gray-6
-						.categories-search-wrap
-							.search-wrap-4
-								form
-									.search-style-4
-										input.input-text(value='', placeholder='Type to search (Ex: Phone, Laptop)', type='search')
-										button
-											i.icofont-search-1
-						.categories-brand-tab-list-2.nav
-							
-			.tab-content.jump.pt-95
-				
-					.categories-btn.btn-hover.text-center
-						a(href='shop.html') Browse All Categories
 	.pre-order-area.pt-160
 		.container
 			.row.align-items-center
@@ -94,8 +76,6 @@ block content
 			.product-tab-list-3.product-tab-list-3-green.nav.mb-60
 				a.active(href='#product-1', data-toggle='tab')
 					| Sách giảm giá
-				a(href='#product-2', data-toggle='tab')
-					| Sách
 				a(href='#product-3', data-toggle='tab')
 					| Sách mới
 			.tab-content.jump
@@ -129,27 +109,6 @@ block content
 										.product-action-wrap
 											.product-action-cart
 												button(title='Add to Cart') Thêm vào giỏ 
-				#product-2.tab-pane
-					.row
-						.col-lg-3.col-md-6.col-sm-6.col-12
-							.product-wrap.mb-55
-								.product-img.product-img-zoom.mb-25
-									a(href='product-details.html')
-										img(src='/images/product/product-22.jpg', alt='')
-								.product-content
-									h4
-										a(href='product-details.html') Product Title
-									.product-price
-										span $ 200
-								.product-action-position-1.text-center
-									.product-content
-										h4
-											a(href='product-details.html') Product Title
-										.product-price
-											span $ 200
-									.product-action-wrap
-										.product-action-cart
-											button(title='Add to Cart') Add to cart
 				#product-3.tab-pane
 					.row
 						each product in productnew
@@ -185,82 +144,78 @@ block content
 			.row
 				.col-lg-3.col-md-6.col-sm-6.col-12
 					.service-wrap.mb-30
-						img.inject-me(src='/images/icon-img/headphones.svg', alt='')
-						h3 Happiness 
-						p Free Shipping for any product and it&apos;s world wide
+						h3 Niềm hạnh phúc
+						p Là món quà vô giá cho bạn
 				.col-lg-3.col-md-6.col-sm-6.col-12
 					.service-wrap.mb-30
-						img.inject-me(src='/images/icon-img/shipping-car.svg', alt='')
-						h3 Free Shipping 
-						p Free Shipping for any product and it&apos;s world wide
+						h3 Miễn phí vận chuyển
+						p Miễn phí vận chuyển trên toàn quốc cho đơn hàng trên 200,000đ
 				.col-lg-3.col-md-6.col-sm-6.col-12
 					.service-wrap.mb-30
-						img.inject-me(src='/images/icon-img/trusty.svg', alt='')
-						h3 All Trusty Brand 
-						p Free Shipping for any product and it&apos;s world wide
+						h3 Thương hiệu được kiểm định 
+						p Thương hiệu Dking được kiểm duyệt hàng năm
 				.col-lg-3.col-md-6.col-sm-6.col-12
 					.service-wrap.mb-30
-						img.inject-me(src='/images/icon-img/support-expart.svg', alt='')
-						h3 24/7 Support Expert 
-						p Free Shipping for any product and it&apos;s world wide
+						h3 Vận chuyển nhanh 24/7
+						p Hình thức vận chuyển nhanh 24/7 toàn quốc 
 	.banner-area
 		.container
 			.row
 				.col-lg-6.col-md-6
 					.banner-wrap.mb-30
 						.banner-img
-							a(href='product-details.html')
-								img(src='/images/banner/banner-9.jpg', alt='')
+							a(href='')
+								img(src='/upload/images/banner-9.jpg', alt='')
 						.banner-content-wrap
 							.banner-content-6
-								h2 KIDS BOOK
-								h4 50% off
+								h2 Giảm giá khi mua tại của hàng
+								h4 lên đến 50%
 				.col-lg-6.col-md-6
 					.banner-wrap.mb-30
 						.banner-img
-							a(href='product-details.html')
-								img(src='/images/banner/banner-10.jpg', alt='')
+							a(href='')
+								img(src='/upload/images/banner-10.jpg', alt='')
 						.banner-content-wrap
 							.banner-content-6
-								h2 ROMANTIC BOOK
-								h4 50% off
+								h2 Mua một tặng một
+								h4 khi mua sách có giá trị trên 200,000đ
 	.blog-area.pb-125
 		.container
 			.section-title.st-peragraph-width.st-peragraph-auto.text-center.mb-75
-				h2 Pres Release 
+				h2 Bản phát hành trước
 				p
-					| Proactively drive collaborative value and reliable mindshare. Distinctively negotiate superior users via economically sound models. Energistically underwhelm.
+					| Chủ động thúc đẩy giá trị cộng tác và chia sẻ tư duy đáng tin cậy. Thỏa thuận khác biệt với người dùng cấp cao thông qua các mô hình âm thanh tiết kiệm. Năng lượng tràn trề.
 			.row
 				.col-lg-4.col-md-6.col-sm-6
 					.blog-wrap.mb-30
 						.blog-img.mb-35
 							a(href='blog-details.html')
-								img(src='/images/blog/blog-4.jpg', alt='')
+								img(src='/upload/images/blog-4.jpg', alt='')
 						.blog-content
 							h3
-								a(href='blog-details.html') Professionally e-enable high payoff data before sticky opportunities. 
-							span.mrg-top-inc on April 24, 2019
-							p Seamlessly administrate client centered technology without optimal.
+								a(href='blog-details.html') Bật điện tử chuyên nghiệp dữ liệu trả thưởng cao trước khi có cơ hội hấp dẫn.
+							span.mrg-top-inc vào ngày 24 tháng 4 năm 2019
+							p Quản trị liền mạch công nghệ lấy khách hàng làm trung tâm mà không cần tối ưu.
 				.col-lg-4.col-md-6.col-sm-6
 					.blog-wrap.mb-30
 						.blog-img.mb-35
 							a(href='blog-details.html')
-								img(src='/images/blog/blog-5.jpg', alt='')
+								img(src='/upload/images/blog-5.jpg', alt='')
 						.blog-content
 							h3
-								a(href='blog-details.html') Designers matched perfectly to you on Envato Studio
-							span.mrg-top-inc on April 24, 2019
-							p Compellingly fabricate optimal bandwidth for inter-mandated deliverables. 
+								a(href='blog-details.html') Các nhà thiết kế hoàn toàn phù hợp với bạn trên Envato Studio
+							span.mrg-top-inc vào ngày 24 tháng 4 năm 2019
+							p Chế tạo một cách bắt buộc băng thông tối ưu cho các sản phẩm được phân phối liên hợp.
 				.col-lg-4.col-md-6.col-sm-6
 					.blog-wrap.mb-30
 						.blog-img.mb-35
 							a(href='blog-details.html')
-								img(src='/images/blog/blog-6.jpg', alt='')
+								img(src='/upload/images/blog-6.jpg', alt='')
 						.blog-content
 							h3
-								a(href='blog-details.html') Phos fluorescently leverage existing client-based technologies.
-							span.mrg-top-inc on April 24, 2019
-							p Progressively transform fully tested markets after covalent sources.
+								a(href='blog-details.html') Tận dụng một cách rõ ràng các công nghệ dựa trên khách hàng hiện có.
+							span.mrg-top-inc vào ngày 24 tháng 4 năm 2019
+							p Chuyển đổi dần các thị trường đã được kiểm tra đầy đủ sau các nguồn cộng hóa trị.
 
 	// Modal
 	#exampleModal.modal.fade(tabindex='-1', role='dialog')

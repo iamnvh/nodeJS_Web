@@ -10,86 +10,85 @@ block content
 							.card-header
 								strong Th&ecirc;m s&#x1EA3;n ph&#x1EA9;m
 							.card-body.card-block
-								form.form-horizontal(action='', method='post', enctype='multipart/form-data')
+								form.form-horizontal(action='/admin/product/creat', method='post', enctype='multipart/form-data')
 									.row.form-group
 										.col.col-md-3
 											label.form-control-label(for='text-input') T&ecirc;n s&aacute;ch
 										.col-12.col-md-9
-											input#text-input.form-control(type='text', name='', placeholder='')
+											input#text-input.form-control(type='text', name='book', placeholder='')
 											small.form-text.text-muted Tr&#x1EE3; gi&uacute;p
 									.row.form-group
 										.col.col-md-3
 											label.form-control-label(for='select') Danh m&#x1EE5;c s&aacute;ch
 										.col-12.col-md-9
-											select#select.form-control(name='select')
-												option(value='0') Ti&#x1EC3;u thuy&#x1EBF;t
-												option(value='1') Truy&#x1EC7;n tranh
-												option(value='2') Ho&#x1EA1;t h&igrave;nh
+											select#select.form-control(name='category_id')
+												each categories in category
+													option(value=categories._id)=categories.name
 											small.form-text.text-muted Tr&#x1EE3; gi&uacute;p
 									.row.form-group
 										.col.col-md-3
 											label.form-control-label(for='text-input') Nh&agrave; cung c&#x1EA5;p
 										.col-12.col-md-9
-											input#text-input.form-control(type='text', name='', placeholder='')
+											input#text-input.form-control(type='text', name='supplier', placeholder='')
 											small.form-text.text-muted Tr&#x1EE3; gi&uacute;p
 									.row.form-group
 										.col.col-md-3
 											label.form-control-label(for='text-input') Nh&agrave; xu&#x1EA5;t b&#x1EA3;n
 										.col-12.col-md-9
-											input#password-input.form-control(type='text', name='', placeholder='')
+											input#password-input.form-control(type='text', name='publishingcompany', placeholder='')
 											small.help-block.form-text Tr&#x1EE3; gi&uacute;p
 									.row.form-group
 										.col.col-md-3
 											label.form-control-label(for='text-input') N&abreve;m xu&#x1EA5;t b&#x1EA3;n
 										.col-12.col-md-9
-											input#password-input.form-control(type='text', name='', placeholder='')
+											input#password-input.form-control(type='text', name='publishingyear', placeholder='')
 											small.help-block.form-text Tr&#x1EE3; gi&uacute;p
 									.row.form-group
 										.col.col-md-3
 											label.form-control-label(for='text-input') T&aacute;c gi&#x1EA3;
 										.col-12.col-md-9
-											input#password-input.form-control(type='text', name='', placeholder='')
+											input#password-input.form-control(type='text', name='author', placeholder='')
 											small.help-block.form-text Tr&#x1EE3; gi&uacute;p
 									.row.form-group
 										.col.col-md-3
 											label.form-control-label(for='text-input') S&#x1ED1; trang
 										.col-12.col-md-9
-											input#password-input.form-control(type='text', name='', placeholder='')
+											input#password-input.form-control(type='text', name='numberofpages', placeholder='')
 											small.help-block.form-text Tr&#x1EE3; gi&uacute;p
 									.row.form-group
 										.col.col-md-3
 											label.form-control-label(for='text-input') S&#x1ED1; lượng
 										.col-12.col-md-9
-											input#password-input.form-control(type='text', name='', placeholder='')
+											input#password-input.form-control(type='text', name='amount', placeholder='')
 											small.help-block.form-text Tr&#x1EE3; gi&uacute;p
 									.row.form-group
 										.col.col-md-3
 											label.form-control-label(for='text-input') Gi&aacute; ti&#x1EC1;n
 										.col-12.col-md-9
-											input#password-input.form-control(type='text', name='', placeholder='')
+											input#password-input.form-control(type='text', name='price', placeholder='')
 											small.help-block.form-text Tr&#x1EE3; gi&uacute;p
 									.row.form-group
 										.col.col-md-3
 											label.form-control-label(for='text-input') Gi&#x1EA3;m gi&aacute;
 										.col-12.col-md-9
-											input#password-input.form-control(type='text', name='', placeholder='')
+											input#password-input.form-control(type='text', name='discount', placeholder='')
 											small.help-block.form-text Tr&#x1EE3; gi&uacute;p
 									.row.form-group
 										.col.col-md-3
 											label.form-control-label(for='textarea-input') Chi ti&#x1EBF;t s&aacute;ch
 										.col-12.col-md-9
-											textarea#textarea-input.form-control(name='textarea-input', rows='9', placeholder='...')
+											textarea#textarea-input.form-control(name='bookdetails', rows='9', placeholder='...')
 									.row.form-group
 										.col.col-md-3
 											label.form-control-label(for='file-input') Th&ecirc;m h&igrave;nh &#x1EA3;nh
 										.col-12.col-md-9
-											input#file-input.form-control-file(type='file', name='')
-							.card-footer
-								button.btn.btn-primary.btn-sm(type='submit')
-									i.fa.fa-dot-circle-o
-									|  Th&ecirc;m s&aacute;ch
-								button.btn.btn-danger.btn-sm(type='reset')
-									i.fa.fa-ban
-									|  L&agrave;m m&#x1EDB;i
+											input#file-input.form-control-file(type='file', name='photo')
+									.card-footer
+										button.btn.btn-primary.btn-sm(type='submit')
+											i.fa.fa-dot-circle-o
+											|  Th&ecirc;m s&aacute;ch
+										button.btn.btn-danger.btn-sm(type='reset')
+											i.fa.fa-ban
+											|  L&agrave;m m&#x1EDB;i
 
 

@@ -7,7 +7,7 @@ const userSchema = new Schema({
     email: {type: 'string', required: true},
     password: {type: 'string', required: true},
     role: {type: 'string', required: true},
-  },{collection: 'users', timestamp: true});
+  },{collection: 'users', timestamps: true});
 
 
 

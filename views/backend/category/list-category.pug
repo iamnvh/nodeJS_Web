@@ -1,105 +1,75 @@
 extend ../layout/layout.pug
 block content
-    // MAIN CONTENT
-    .main-content
-      .section__content.section__content--p30
-        .container-fluid
-          .row
-            .col-md-12
-              // DATA TABLE
-              h3.title-5.m-b-35 Danh s&aacute;ch danh m&#x1EE5;c
-              .table-data__tool
-                .table-data__tool-left
-                  .rs-select2--light.rs-select2--md
-                    select.js-select2(name='property')
-                      option(selected='selected') All Properties
-                      option(value='') Option 1
-                      option(value='') Option 2
-                    .dropDownSelect2
-                  .rs-select2--light.rs-select2--sm
-                    select.js-select2(name='time')
-                      option(selected='selected') Today
-                      option(value='') 3 Days
-                      option(value='') 1 Week
-                    .dropDownSelect2
-                  button.au-btn-filter
-                    i.zmdi.zmdi-filter-list
-                    | filters
-                .table-data__tool-right
-                  button.au-btn.au-btn-icon.au-btn--green.au-btn--small
-                    a(href='/admin/add-product')
-                      i.zmdi.zmdi-plus
-                      | add item
-                  .rs-select2--dark.rs-select2--sm.rs-select2--dark2
-                    select.js-select2(name='type')
-                      option(selected='selected') Export
-                      option(value='') Option 1
-                      option(value='') Option 2
-                    .dropDownSelect2
-              .table-responsive.table-responsive-data2
-                table.table.table-data2
-                  thead
-                    tr
-                      th
-                        label.au-checkbox
-                          input(type='checkbox')
-                          span.au-checkmark
-                      th T&ecirc;n Danh m&#x1EE5;c
-                      th Ng&agrave;y t&#x1EA1;o
-                      th Chi ti&#x1EBF;t
-                      th
-                  tbody
-                    tr.tr-shadow
-                      td
-                        label.au-checkbox
-                          input(type='checkbox')
-                          span.au-checkmark
-                      td
-                        span.block-email Tiểu thuyết
-                      td 2018-09-27 02:12
-                      td.desc
-                        a(href='/admin/details-product') Chi ti&#x1EBF;t
-                      td
-                        .table-data-feature
-                          button.item(data-toggle='tooltip', data-placement='top', title='Edit')
-                            a(href='/admin/add-product')
-                              i.zmdi.zmdi-edit
-                          button.item(data-toggle='tooltip', data-placement='top', title='Delete')
-                            i.zmdi.zmdi-delete
-                    tr.spacer
-                    tr.tr-shadow
-                      td
-                        label.au-checkbox
-                          input(type='checkbox')
-                          span.au-checkmark
-                      td
-                        span.block-email Tiểu thuyết
-                      td 2018-09-27 02:12
-                      td.desc
-                        a(href='/admin/details-product') Chi ti&#x1EBF;t
-                      td
-                        .table-data-feature
-                          button.item(data-toggle='tooltip', data-placement='top', title='Edit')
-                            a(href='/admin/add-product')
-                              i.zmdi.zmdi-edit
-                          button.item(data-toggle='tooltip', data-placement='top', title='Delete')
-                            i.zmdi.zmdi-delete
-                    tr.spacer
-                    tr.tr-shadow
-                      td
-                        label.au-checkbox
-                          input(type='checkbox')
-                          span.au-checkmark
-                      td
-                        span.block-email Tiểu thuyết
-                      td 2018-09-27 02:12
-                      td.desc
-                        a(href='/admin/details-product') Chi ti&#x1EBF;t
-                      td
-                        .table-data-feature
-                          button.item(data-toggle='tooltip', data-placement='top', title='Edit')
-                            a(href='/admin/add-product')
-                              i.zmdi.zmdi-edit
-                          button.item(data-toggle='tooltip', data-placement='top', title='Delete')
-                            i.zmdi.zmdi-delete
-                    tr.spacer
+	// MAIN CONTENT
+	.main-content
+		.section__content.section__content--p30
+			.container-fluid
+				.row
+					.col-md-12
+						// DATA TABLE
+						h3.title-5.m-b-35 Danh s&aacute;ch danh m&#x1EE5;c
+						.table-data__tool
+							.table-data__tool-left
+								.rs-select2--light.rs-select2--md
+									select.js-select2(name='property')
+										option(selected='selected') All Properties
+										option(value='') Option 1
+										option(value='') Option 2
+									.dropDownSelect2
+								.rs-select2--light.rs-select2--sm
+									select.js-select2(name='time')
+										option(selected='selected') Today
+										option(value='') 3 Days
+										option(value='') 1 Week
+									.dropDownSelect2
+								button.au-btn-filter
+									i.zmdi.zmdi-filter-list
+									| filters
+							.table-data__tool-right
+								button.au-btn.au-btn-icon.au-btn--green.au-btn--small
+									a(href='./category/creat')
+										i.zmdi.zmdi-plus
+										| add item
+								.rs-select2--dark.rs-select2--sm.rs-select2--dark2
+									select.js-select2(name='type')
+										option(selected='selected') Export
+										option(value='') Option 1
+										option(value='') Option 2
+									.dropDownSelect2
+						.table-responsive.table-responsive-data2
+							table.table.table-data2
+								thead
+									tr
+										th
+											label.au-checkbox
+												input(type='checkbox')
+												span.au-checkmark
+										th T&ecirc;n Danh m&#x1EE5;c
+										th Ng&agrave;y t&#x1EA1;o
+										th
+								tbody
+									each category, index in datas
+										tr.tr-shadow
+											td
+												label.au-checkbox
+													input(type='checkbox')
+													span.au-checkmark
+											td
+												span.block-email=category.name
+											td=category.createdAt.toDateString()
+											td
+												.table-data-feature
+													button.item(data-toggle='tooltip', data-placement='top', title='Edit')
+														a(href='./category/edit/'+category._id)
+															i.zmdi.zmdi-edit
+													form(method='POST', action='./category/delete/' + category._id + '?_method=DELETE')    
+														button.item(data-toggle='tooltip', data-placement='top', title='Delete', type='submit')
+															i.zmdi.zmdi-delete
+										tr.spacer
+							if pages
+								nav(aria-label='Page navigation example')
+								ul.pagination.justify-content-end
+									each page in pages
+										li.page-item
+											a.page-link(href='?page='+page)=page
+

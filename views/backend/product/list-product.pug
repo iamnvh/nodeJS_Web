@@ -1,144 +1,85 @@
 extend ../layout/layout.pug
 block content
-    // MAIN CONTENT
-    .main-content
-      .section__content.section__content--p30
-        .container-fluid
-          .row
-            .col-md-12
-              // DATA TABLE
-              h3.title-5.m-b-35 Danh s&aacute;ch s&#x1EA3;n ph&#x1EA9;m
-              .table-data__tool
-                .table-data__tool-left
-                  .rs-select2--light.rs-select2--md
-                    select.js-select2(name='property')
-                      option(selected='selected') All Properties
-                      option(value='') Option 1
-                      option(value='') Option 2
-                    .dropDownSelect2
-                  .rs-select2--light.rs-select2--sm
-                    select.js-select2(name='time')
-                      option(selected='selected') Today
-                      option(value='') 3 Days
-                      option(value='') 1 Week
-                    .dropDownSelect2
-                  button.au-btn-filter
-                    i.zmdi.zmdi-filter-list
-                    | filters
-                .table-data__tool-right
-                  button.au-btn.au-btn-icon.au-btn--green.au-btn--small
-                    a(href='/admin/add-product')
-                      i.zmdi.zmdi-plus
-                      | add item
-                  .rs-select2--dark.rs-select2--sm.rs-select2--dark2
-                    select.js-select2(name='type')
-                      option(selected='selected') Export
-                      option(value='') Option 1
-                      option(value='') Option 2
-                    .dropDownSelect2
-              .table-responsive.table-responsive-data2
-                table.table.table-data2
-                  thead
-                    tr
-                      th
-                        label.au-checkbox
-                          input(type='checkbox')
-                          span.au-checkmark
-                      th T&ecirc;n s&aacute;ch
-                      th Danh m&#x1EE5;c
-                      th Nh&agrave; xu&#x1EA5;t b&#x1EA3;n
-                      th T&aacute;c gi&#x1EA3;
-                      th Tr&#x1EA1;ng th&aacute;i
-                      th Gi&aacute; ti&#x1EC1;n
-                      th Chi ti&#x1EBF;t
-                      th
-                  tbody
-                    tr.tr-shadow
-                      td
-                        label.au-checkbox
-                          input(type='checkbox')
-                          span.au-checkmark
-                      td Lori Lynch
-                      td
-                        span.block-email lori@example.com
-                      td.desc Samsung S8 Black
-                      td 2018-09-27 02:12
-                      td
-                        span.status--process Processed
-                      td $679.00
-                      td.desc
-                        a(href='/admin/product/details/') Chi ti&#x1EBF;t
-                      td
-                        .table-data-feature
-                          button.item(data-toggle='tooltip', data-placement='top', title='Edit')
-                            a(href='/admin/product/creat')
-                              i.zmdi.zmdi-edit
-                          button.item(data-toggle='tooltip', data-placement='top', title='Delete')
-                            i.zmdi.zmdi-delete
-                    tr.spacer
-                    tr.tr-shadow
-                      td
-                        label.au-checkbox
-                          input(type='checkbox')
-                          span.au-checkmark
-                      td Lori Lynch
-                      td
-                        span.block-email john@example.com
-                      td.desc iPhone X 64Gb Grey
-                      td 2018-09-29 05:57
-                      td
-                        span.status--process Processed
-                      td $999.00
-                      td.desc
-                        a(href='#') Chi ti&#x1EBF;t
-                      td
-                        .table-data-feature
-                          button.item(data-toggle='tooltip', data-placement='top', title='Edit')
-                            a(href='')
-                              i.zmdi.zmdi-edit
-                          button.item(data-toggle='tooltip', data-placement='top', title='Delete')
-                            i.zmdi.zmdi-delete
-                    tr.spacer
-                    tr.tr-shadow
-                      td
-                        label.au-checkbox
-                          input(type='checkbox')
-                          span.au-checkmark
-                      td Lori Lynch
-                      td
-                        span.block-email lyn@example.com
-                      td.desc iPhone X 256Gb Black
-                      td 2018-09-25 19:03
-                      td
-                        span.status--denied Denied
-                      td $1199.00
-                      td.desc
-                        a(href='/admin/details-product') Chi ti&#x1EBF;t
-                      td
-                        .table-data-feature
-                          button.item(data-toggle='tooltip', data-placement='top', title='Edit')
-                            i.zmdi.zmdi-edit
-                          button.item(data-toggle='tooltip', data-placement='top', title='Delete')
-                            i.zmdi.zmdi-delete
-                    tr.spacer
-                    tr.tr-shadow
-                      td
-                        label.au-checkbox
-                          input(type='checkbox')
-                          span.au-checkmark
-                      td Lori Lynch
-                      td
-                        span.block-email doe@example.com
-                      td.desc Camera C430W 4k
-                      td 2018-09-24 19:10
-                      td
-                        span.status--process Processed
-                      td $699.00
-                      td.desc
-                        a(href='#') Chi ti&#x1EBF;t
-                      td
-                        .table-data-feature
-                          button.item(data-toggle='tooltip', data-placement='top', title='Edit')
-                            i.zmdi.zmdi-edit
-                          button.item(data-toggle='tooltip', data-placement='top', title='Delete')
-                            i.zmdi.zmdi-delete
+	// MAIN CONTENT
+	.main-content
+		.section__content.section__content--p30
+			.container-fluid
+				.row
+					.col-md-12
+						// DATA TABLE
+						h3.title-5.m-b-35 Danh s&aacute;ch s&#x1EA3;n ph&#x1EA9;m
+						.table-data__tool
+							.table-data__tool-left
+								.rs-select2--light.rs-select2--md
+									select.js-select2(name='property')
+										option(selected='selected') All Properties
+										option(value='') Option 1
+										option(value='') Option 2
+									.dropDownSelect2
+								.rs-select2--light.rs-select2--sm
+									select.js-select2(name='time')
+										option(selected='selected') Today
+										option(value='') 3 Days
+										option(value='') 1 Week
+									.dropDownSelect2
+								button.au-btn-filter
+									i.zmdi.zmdi-filter-list
+									| filters
+							.table-data__tool-right
+								button.au-btn.au-btn-icon.au-btn--green.au-btn--small
+									a(href='/admin/product/creat')
+										i.zmdi.zmdi-plus
+										| Thêm sản phẩm
+								.rs-select2--dark.rs-select2--sm.rs-select2--dark2
+									select.js-select2(name='type')
+										option(selected='selected') Export
+										option(value='') Option 1
+										option(value='') Option 2
+									.dropDownSelect2
+						.table-responsive.table-responsive-data2
+							table.table.table-data2
+								thead
+									tr
+										th
+											label.au-checkbox
+												input(type='checkbox')
+												span.au-checkmark
+										th T&ecirc;n s&aacute;ch
+										th Danh m&#x1EE5;c
+										th Nh&agrave; xu&#x1EA5;t b&#x1EA3;n
+										th T&aacute;c gi&#x1EA3;
+										th S&#x1ED1; l&#x1B0;&#x1EE3;ng
+										th Gi&aacute; ti&#x1EC1;n
+										th Chi ti&#x1EBF;t
+										th
+								tbody
+									each product, index in datas
+										tr.tr-shadow
+											td
+												label.au-checkbox
+													input(type='checkbox')
+													span.au-checkmark
+											td=product.name
+											td
+												span.block-email=product.categories.name
+											td=product.publishingcompany
+											td=product.author
+											td=product.amount
+											td=product.price
+											td.desc
+												a(href='/admin/product/details/'+product._id) Chi ti&#x1EBF;t
+											td
+												.table-data-feature
+													button.item(data-toggle='tooltip', data-placement='top', title='Edit')
+														a(href='/admin/product/edit/'+product._id)  
+															i.zmdi.zmdi-edit
+													form(method='POST', action='/admin/product/delete/' + product._id + '?_method=DELETE')    
+														button.item(data-toggle='tooltip', data-placement='top', title='Delete')
+															i.zmdi.zmdi-delete
+										tr.spacer
+							if pages
+								nav(aria-label='Page navigation example')
+									ul.pagination.justify-content-end
+										each page in pages
+											li.page-item
+												a.page-link(href='?page='+page)=page

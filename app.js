@@ -5,6 +5,7 @@ var logger = require('morgan');
 var Router = require('./routes/index')
 var Connect = require('./connect/connect')
 var dotenv = require('dotenv')
+const methodOverride = require('method-override');
 
 
 
@@ -17,6 +18,7 @@ const PORT = process.env.PORT || 5000;
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
+app.use(methodOverride('_method'));
 
 app.use(logger('dev'));
 app.use(express.json());

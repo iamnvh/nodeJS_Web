@@ -1,13 +1,11 @@
 const express = require('express');
 const router = express.Router();
+const auth = require('../../middleware/auth.middleware')
 const home = require('../../controllers/frontend/home.controller')
 const login = require('../../controllers/frontend/login.controller')
 const register = require('../../controllers/frontend/register.controller')
-/* shopls = require('../../controllers/frontend/shop.controller')
-shopdt = require('../../controllers/frontend/product.controller')
-contact = require('../../controllers/frontend/contact.controller')
-cart = require('../../controllers/frontend/cart.controller')
-checkout = require('../../controllers/frontend/checkout.controller') */
+const shop = require('../../controllers/frontend/shop.controller')
+const acc = require('../../controllers/frontend/acc.controller')
 
 //home
 router.get('/', home.index);
@@ -21,19 +19,13 @@ router.post('/login',login.login);
 router.get('/register', register.registerview);
 router.post('/register',register.register);
 
-/* // shop
-router.get('/shop', shopls.shoplist);
+//acc
+router.get('/account',auth.authUser,acc.index)
 
-//shopdetail
-router.get('/product', shopdt.productdetail)
+// shop
+router.get('/shop',shop.index);
+router.get('/:id',home.searchbyid);
 
-//contact
-router.get('/contact', contact.contact)
-
-//cart
-router.get('/cart', cart.cart)
-
-//checkout
-router.get('/checkout', checkout.checkout) */
+//shopdetai
 
 module.exports = router;

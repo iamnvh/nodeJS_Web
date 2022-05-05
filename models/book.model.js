@@ -16,7 +16,7 @@ const bookSchema = new Schema({
     categories: {type: mongoose.Schema.Types.ObjectId,
       ref: 'categories'
     }
-  },{collection: 'books', timestamp: true});
+  },{collection: 'books', timestamps: true});
 
 
 

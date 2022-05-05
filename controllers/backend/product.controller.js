@@ -1,24 +1,131 @@
+const Product_Model = require('../../models/book.model')
+const Category_Model = require('../../models/category.model')
+const { mutipleMongooseToObject, mongooseToObject } = require('../../utli/convertDataToObject');
+
 class ProductController {
-  index(req, res) {
-    return res.render('./backend/product/list-product')
+  async index(req, res) {
+    try {
+      const pageNumber = req.query.page;
+      const perPage = 2;
+      const [products, totalProducts] = await Promise.all([
+        Product_Model.find().limit(perPage).skip((pageNumber - 1)* perPage).populate({path: 'categories'}),
+        Product_Model.countDocuments()
+      ]);
+      const pages = [];
+      const totalPages = Math.ceil(totalProducts / perPage);
+      for(let i = 1; i <= totalPages; i++) {
+        pages.push(i);
+      }
+      return res.render('./backend/product/list-product',{
+        datas: mutipleMongooseToObject(products),
+        pages: pages
+      })
+    } catch (error) {
+      throw error;
+    }
   }
-  creat(req, res) {
-    return res.render('./backend/product/add-product')
+  async creat(req, res) {
+    try {
+      const category = await Category_Model.find({});
+      return res.render('./backend/product/add-product',{
+        category: mutipleMongooseToObject(category)
+      })
+    } catch (error) {
+      throw error;
+    }
   }
-  details(req, res) {
-    return res.render('./backend/product/details-product')
+  async store(req, res) {
+    try {
+      await Product_Model.create({
+        name: req.body.book,
+        supplier: req.body.supplier,
+        publishingcompany: req.body.publishingcompany,
+        publishingyear: req.body.publishingyear,
+        author: req.body.author,
+        numberofpages: req.body.numberofpages,
+        amount: req.body.amount,
+        price: req.body.price,
+        discount: req.body.discount,
+        bookdetails: req.body.bookdetails,
+        photo: req.file.filename,
+        categories: req.body.category_id,
+      })
+      return res.redirect('/admin/product/')
+    } catch (error) {
+      throw error;
+    }
   }
-  store(req, res) {
-    
+  async details(req, res) {
+    try {
+      const data = await Product_Model.findById(req.params.id).populate({path: 'categories'})
+      return res.render('./backend/product/details-product', {
+        datas: mongooseToObject(data)
+      })
+    } catch (error) {
+      throw error;
+    }
   }
-  edit(req, res) {
-    return res.render('./backend/add-product')
+  async edit(req, res) {
+    try {
+      const [product, category] = await Promise.all([
+        Product_Model.findById(req.params.id).populate({path: 'categories'}),
+        Category_Model.find({})
+      ])
+      return res.render('./backend/product/update-product', {
+        datas: mongooseToObject(product),
+        category: mutipleMongooseToObject(category)
+      })
+    } catch (error) {
+      throw error;
+    }
   }
-  update(req, res) {
-    
+  async update(req, res) {
+    try {
+      let data;
+      if(req.file) {
+        data = {
+          name: req.body.book,
+          supplier: req.body.supplier,
+          publishingcompany: req.body.publishingcompany,
+          publishingyear: req.body.publishingyear,
+          author: req.body.author,
+          numberofpages: req.body.numberofpages,
+          amount: req.body.amount,
+          price: req.body.price,
+          discount: req.body.discount,
+          bookdetails: req.body.bookdetails,
+          photo: req.file.filename,
+          categories: req.body.category_id,
+        }
+      } else {
+        data = {
+          name: req.body.book,
+          supplier: req.body.supplier,
+          publishingcompany: req.body.publishingcompany,
+          publishingyear: req.body.publishingyear,
+          author: req.body.author,
+          numberofpages: req.body.numberofpages,
+          amount: req.body.amount,
+          price: req.body.price,
+          discount: req.body.discount,
+          bookdetails: req.body.bookdetails,
+          categories: req.body.category_id,
+        }
+      }
+      console.log(data)
+      await Product_Model.updateOne({_id: req.params.id}, data)
+      return res.redirect('/admin/product');
+    } catch (error) {
+      throw error;
+    }
   }
-  delete(req, res) {
-    
+  async delete(req, res) {
+    try {
+      await Product_Model.deleteOne({_id: req.params.id})
+      return res.redirect('/admin/product');
+    } catch (error) {
+      throw error;
+    }
   }
 }
 

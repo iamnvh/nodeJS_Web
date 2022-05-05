@@ -36,73 +36,27 @@ block content
 											td Quy&#x1EC1;n h&#x1EA1;n
 											td
 									tbody
-										tr
-											td
-												label.au-checkbox
-													input(type='checkbox')
-													span.au-checkmark
-											td
-												.table-data__info
-													h6 lori lynch
-											td
-												span
-													| johndoe@gmail.com
-											td
-												span.role.admin admin
-											td
-												.table-data-feature(style='width: 50px;')
-													button.item(data-toggle='tooltip', data-placement='top', title='Delete')
-														i.zmdi.zmdi-delete
-										tr
-											td
-												label.au-checkbox
-													input(type='checkbox')
-													span.au-checkmark
-											td
-												.table-data__info
-													h6 lori lynch
-											td
-												span
-													| johndoe@gmail.com
-											td
-												span.role.admin admin
-											td
-												.table-data-feature(style='width: 50px;')
-													button.item(data-toggle='tooltip', data-placement='top', title='Delete')
-														i.zmdi.zmdi-delete
-										tr
-											td
-												label.au-checkbox
-													input(type='checkbox')
-													span.au-checkmark
-											td
-												.table-data__info
-													h6 lori lynch
-											td
-												span
-													| johndoe@gmail.com
-											td
-												span.role.admin admin
-											td
-												.table-data-feature(style='width: 50px;')
-													button.item(data-toggle='tooltip', data-placement='top', title='Delete')
-														i.zmdi.zmdi-delete
-										tr
-											td
-												label.au-checkbox
-													input(type='checkbox')
-													span.au-checkmark
-											td
-												.table-data__info
-													h6 lori lynch
-											td
-												span
-													| johndoe@gmail.com
-											td
-												span.role.admin admin
-											td
-												.table-data-feature(style='width: 50px;')
-													button.item(data-toggle='tooltip', data-placement='top', title='Delete')
-														i.zmdi.zmdi-delete
-							.user-data__footer
-								button.au-btn.au-btn-load load more
+										each users, index in datas
+											tr
+												td
+													label.au-checkbox
+														input(type='checkbox')
+														span.au-checkmark
+												td
+													.table-data__info
+														h6=users.name
+												td
+													span=users.email
+												td
+													span.role.admin=users.role
+												td
+													.table-data-feature(style='width: 50px;')
+														form(method='POST', action='/admin/user/delete/' + users._id + '?_method=DELETE')   
+															button.item(data-toggle='tooltip', data-placement='top', title='Delete')
+																i.zmdi.zmdi-delete
+								if pages
+									nav(aria-label='Page navigation example')
+									ul.pagination.justify-content-end
+										each page in pages
+											li.page-item
+												a.page-link(href='?page='+page)=page

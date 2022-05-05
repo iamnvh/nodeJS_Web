@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 const categorySchema = new Schema({
     name: {type: 'string', required: true},
-  },{collection: 'categories', timestamp: true});
+  },{collection: 'categories', timestamps: true});
 
 
 module.exports = mongoose.model('categories',categorySchema);

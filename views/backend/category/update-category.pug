@@ -1,0 +1,30 @@
+extend ../layout/layout.pug
+block content
+	// MAIN CONTENT
+	.main-content
+		.section__content.section__content--p30
+			.container-fluid
+				.row
+					.col-lg-12
+						.card
+							.card-header
+								strong Th&ecirc;m danh m&#x1EE5;c
+							.card-body.card-block
+								form.form-horizontal(method='POST',action='?_method=PUT')
+									.row.form-group
+										.col.col-md-3
+											label.form-control-label(for='text-input') T&ecirc;n danh m&#x1EE5;c
+										.col-12.col-md-9
+											input#text-input.form-control(type='text', name='category_name', placeholder='',value=datas.name ? datas.name : '')
+											small.form-text.text-muted Tr&#x1EE3; gi&uacute;p
+											if errorcategory
+												p=errorcategory
+									.card-footer
+										button.btn.btn-primary.btn-sm(type='submit')
+											i.fa.fa-dot-circle-o
+											|  Th&ecirc;m s&aacute;ch
+										button.btn.btn-danger.btn-sm(type='reset')
+											i.fa.fa-ban
+											|  L&agrave;m m&#x1EDB;i
+
+

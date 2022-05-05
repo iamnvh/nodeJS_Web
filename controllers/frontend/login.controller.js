@@ -17,7 +17,7 @@ class LoginController {
         if(match){
           const tokenUser = await createToken(user._id)
           res.cookie('tokenUser',tokenUser)
-          return res.redirect('/list-product')
+          return res.redirect('/account')
         }
         else {
           res.render('./frontend/login',{errormatkhau: 'Mật khẩu không đúng.',email: req.body.email_name})

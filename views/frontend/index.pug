@@ -112,20 +112,20 @@ block content
 											a(href='')=product.name
 										.product-price
 											if product.discount > 0
-												span=product.price - (product.price)*(product.discount)/100 + 'đ'
-												span.old-price=product.price + 'đ'
+												span=new Intl.NumberFormat('vn-IN', { maximumSignificantDigits: 3 }).format(((product.price)-(product.price*product.discount)/100).toFixed()) + ' đ'
+												span.old-price=new Intl.NumberFormat('vn-IN', { maximumSignificantDig: 3}).format((product.price).toFixed()) + ' đ'
 											else
-												span.price=product.price + 'đ'
+												span.price=new Intl.NumberFormat('vn-IN', { maximumSignificantDig: 3}).format((product.price).toFixed()) + ' đ'
 									.product-action-position-1.text-center
 										.product-content
 											h4
 												a(href='')=product.name
 											.product-price
 												if product.discount > 0
-													span=product.price - (product.price)*(product.discount)/100 + 'đ'
-													span.old-price=product.price + 'đ'
+													span=new Intl.NumberFormat('vn-IN', { maximumSignificantDigits: 3 }).format(((product.price)-(product.price*product.discount)/100).toFixed()) + ' đ'
+													span.old-price=new Intl.NumberFormat('vn-IN', { maximumSignificantDig: 3}).format((product.price).toFixed()) + ' đ'
 												else
-													span.price=product.price + 'đ'
+													span.price=new Intl.NumberFormat('vn-IN', { maximumSignificantDig: 3}).format((product.price).toFixed()) + ' đ'
 										.product-action-wrap
 											.product-action-cart
 												button(title='Add to Cart') Thêm vào giỏ 
@@ -163,20 +163,20 @@ block content
 											a(href='product-details.html')=product.name
 										.product-price
 											if product.discount > 0
-												span=product.price - (product.price)*(product.discount)/100
-												span.old-price=product.price
+												span=new Intl.NumberFormat('vn-IN', { maximumSignificantDigits: 3 }).format(((product.price)-(product.price*product.discount)/100).toFixed()) + ' đ'
+												span.old-price=new Intl.NumberFormat('vn-IN', { maximumSignificantDig: 3}).format((product.price).toFixed()) + ' đ'
 											else
-												span.old-price=product.price
+												span.price=new Intl.NumberFormat('vn-IN', { maximumSignificantDig: 3}).format((product.price).toFixed()) + ' đ'
 									.product-action-position-1.text-center
 										.product-content
 											h4
 												a(href='product-details.html')=product.name
 											.product-price
 												if product.discount > 0
-													span=product.price - (product.price)*(product.discount)/100
-													span.old-price=product.price
+													span=new Intl.NumberFormat('vn-IN', { maximumSignificantDigits: 3 }).format(((product.price)-(product.price*product.discount)/100).toFixed()) + ' đ'
+													span.old-price=new Intl.NumberFormat('vn-IN', { maximumSignificantDig: 3}).format((product.price).toFixed()) + ' đ'
 												else
-													span.old-price=product.price
+													span.price=new Intl.NumberFormat('vn-IN', { maximumSignificantDig: 3}).format((product.price).toFixed()) + ' đ'
 										.product-action-wrap
 											.product-action-cart
 												button(title='Add to Cart') Thêm vào giỏ

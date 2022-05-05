@@ -65,7 +65,7 @@ block content
 											td=product.publishingcompany
 											td=product.author
 											td=product.amount
-											td=product.price
+											td=new Intl.NumberFormat('vn-IN', { maximumSignificantDig: 3}).format((product.price).toFixed()) +" đ"
 											td.desc
 												a(href='/admin/product/details/'+product._id) Chi ti&#x1EBF;t
 											td
@@ -77,9 +77,26 @@ block content
 														button.item(data-toggle='tooltip', data-placement='top', title='Delete')
 															i.zmdi.zmdi-delete
 										tr.spacer
-							if pages
-								nav(aria-label='Page navigation example')
-									ul.pagination.justify-content-end
-										each page in pages
+							nav(aria-label='Page navigation example')
+							ul.pagination.justify-content-end
+								if pages > 0
+									-var i = current > 3 ? current - 2 : 1
+									if i!==1
+										li.page-item
+											a.page-link(href='#') ...
+									- for(;i<= current +2  && i< pages; i++)
+										if i== current
 											li.page-item
-												a.page-link(href='?page='+page)=page
+												a.page-link(href='?page='+i)=i
+										else 
+											li.page-item
+												a.page-link(href='?page='+i)=i
+										if (i==current+2 && i< pages)
+											li.page-item
+												a.page-link(href='#') ...
+									if current == pages
+										li.page-item
+											a.page-link(href='#')=pages
+									else
+										li.page-item
+											a.page-link(href='?page='+pages)=pages

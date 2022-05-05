@@ -5,20 +5,17 @@ const { mutipleMongooseToObject, mongooseToObject } = require('../../utli/conver
 class ProductController {
   async index(req, res) {
     try {
-      const pageNumber = req.query.page;
-      const perPage = 2;
+      const pageNumber = req.query.page || 1;
+      const perPage = 5;
       const [products, totalProducts] = await Promise.all([
         Product_Model.find().limit(perPage).skip((pageNumber - 1)* perPage).populate({path: 'categories'}),
         Product_Model.countDocuments()
       ]);
-      const pages = [];
-      const totalPages = Math.ceil(totalProducts / perPage);
-      for(let i = 1; i <= totalPages; i++) {
-        pages.push(i);
-      }
+
       return res.render('./backend/product/list-product',{
         datas: mutipleMongooseToObject(products),
-        pages: pages
+        current: pageNumber,
+        pages: Math.ceil(totalProducts / perPage),
       })
     } catch (error) {
       throw error;

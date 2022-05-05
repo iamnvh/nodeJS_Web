@@ -4,20 +4,16 @@ const Category_Model = require('../../models/category.model')
 class CategoryController {
     async index(req, res) {
       try {
-        const pageNumber = req.query.page;
+        const pageNumber = req.query.page || 1;
         const perPage = 5;
         const [categories, totalCategories] = await Promise.all([
           Category_Model.find({}).limit(perPage).skip((pageNumber - 1) * perPage),
           Category_Model.countDocuments()
         ]);
-        const pages = [];
-        const totalPages = Math.ceil(totalCategories / perPage);
-        for (let i = 1; i <= totalPages; i++) {
-          pages.push(i)
-        }
         return res.render('./backend/category/list-category', {
           datas: mutipleMongooseToObject(categories),
-          pages: pages
+          current: pageNumber,
+          pages: Math.ceil(totalCategories / perPage),
         });
       } catch (error) {
         throw error;

@@ -40,20 +40,20 @@ block content
 															a(href='')=product.name
 														.product-price
 															if product.discount > 0
-																span=product.price - (product.price)*(product.discount)/100 + 'đ'
-																span.old-price=product.price + 'đ'
+																span=new Intl.NumberFormat('vn-IN', { maximumSignificantDigits: 3 }).format(((product.price)-(product.price*product.discount)/100).toFixed()) + ' đ'
+																span.old-price=new Intl.NumberFormat('vn-IN', { maximumSignificantDig: 3}).format((product.price).toFixed()) + ' đ'
 															else
-																span.price=product.price + 'đ'
+																span.price=new Intl.NumberFormat('vn-IN', { maximumSignificantDig: 3}).format((product.price).toFixed()) + ' đ'
 													.product-action-position-1.text-center
 														.product-content
 															h4
 																a(href='')=product.name
 															.product-price
 																if product.discount > 0
-																	span=product.price - (product.price)*(product.discount)/100 + 'đ'
-																	span.old-price=product.price + 'đ'
+																	span=new Intl.NumberFormat('vn-IN', { maximumSignificantDigits: 3 }).format(((product.price)-(product.price*product.discount)/100).toFixed()) + ' đ'
+																	span.old-price=new Intl.NumberFormat('vn-IN', { maximumSignificantDig: 3}).format((product.price).toFixed()) + ' đ'
 																else
-																	span.price=product.price + 'đ'
+																	span.price=new Intl.NumberFormat('vn-IN', { maximumSignificantDig: 3}).format((product.price).toFixed()) + ' đ'
 														.product-action-wrap
 															.product-action-cart
 																button(title='Add to Cart') Thêm vào giỏ
@@ -61,32 +61,38 @@ block content
 								
 								.pro-pagination-style.text-center.mt-50
 									ul
-										if pages
-											each page in pages
+										if pages > 0
+											-var i = current > 3 ? current - 2 : 1
+											if i!==1
 												li
-													a(href='?page='+page)=page
+													a.page-link(href='#') ...
+											- for(;i<= current +2  && i< pages; i++)
+												if i== current
+													li
+														a.page-link(href='?page='+i)=i
+												else 
+													li
+														a.page-link(href='?page='+i)=i
+												if (i==current+2 && i< pages)
+													li
+														a.page-link(href='#') ...
+											if current == pages
+												li
+													a.page-link(href='#')=pages
+											else
+												li
+													a.page-link(href='?page='+pages)=pages
 				.col-lg-3
 					.shop-sidebar-style
 						.sidebar-widget
 							h4.pro-sidebar-title Danh mục sách
 							.sidebar-widget-categori.mt-45.mb-70
 								ul
-									li
-										a(href='#') All
-									li
-										a(href='#') Clothing
-									li
-										a(href='#') Shoes
-									li
-										a(href='#') Watches
-									li
-										a(href='#') Jewelry
-									li
-										a(href='#') Accessories
-									li
-										a(href='#')  Big &amp; Tall 
-									li
-										a(href='#') Contemporary
+									if !danhmuc || danhmuc===null
+									else
+										each i in danhmuc
+											li
+												a(href='/'+i._id)=i.name
 						.sidebar-widget
 							h4.pro-sidebar-title Danh mục tác giả
 							.sidebar-widget-categori.mt-45.mb-70

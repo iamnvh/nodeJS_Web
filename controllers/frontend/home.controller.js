@@ -1,6 +1,7 @@
 const Category_Model = require('../../models/category.model')
 const Product_Model = require('../../models/book.model')
 const { mutipleMongooseToObject, mongooseToObject } = require('../../utli/convertDataToObject');
+const mongoose = require('mongoose');
 
 class HomeController {
   async index(req, res) {
@@ -21,22 +22,18 @@ class HomeController {
   }
   async searchbyid(req, res) {
     try {
-      const id = req.params.id;
-      console.log('id', id)
-      const pageNumber = req.query.page;
-      const perPage = 5;
-      const [product,totalProduct] = await Promise.all([
-        Product_Model.find({categories: id}).skip((pageNumber - 1) * perPage),
-        Product_Model.countDocuments()
+      const pageNumber = req.query.page || 1;
+      const perPage = 9;
+      const [category,product,totalProduct] = await Promise.all([
+        Category_Model.find({}),
+        Product_Model.find({categories: req.params.id}).limit(perPage).skip((pageNumber - 1) * perPage),
+        Product_Model.find({categories: req.params.id})
       ])
-      console.log(product)
-      const pages = [];
-      const totalPages = Math.ceil(totalProduct / perPage);
-      for (let i = 1; i <= totalPages; i++) {
-        pages.push(i)
-      }
+      res.locals.danhmuc =  mutipleMongooseToObject(category)
       return res.render('./frontend/shop', {
-        datas: mutipleMongooseToObject(product)
+        datas: mutipleMongooseToObject(product),
+        current: pageNumber,
+        pages: Math.ceil(totalProduct.length / perPage),
       })
     } catch (error) {
       throw error;

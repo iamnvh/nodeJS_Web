@@ -34,7 +34,7 @@ block content
 												.product-wrap.mb-50
 													.product-img.product-img-zoom.mb-25
 														a(href='/book/'+product._id)
-															img(src='upload/images/'+product.photo, alt='')
+															img(src='/upload/images/'+product.photo, alt='')
 													.product-content
 														h4
 															a(href='/book/'+product._id)=product.name
@@ -55,8 +55,8 @@ block content
 																else
 																	span.price=new Intl.NumberFormat('vn-IN', { maximumSignificantDig: 3}).format((product.price).toFixed()) + ' đ'
 														.product-action-wrap
-															.product-action-cart
-																button(title='Add to Cart') Thêm vào giỏ
+															form(method='post', action='/add/'+product._id)
+																button(title='Add to Cart', style="background-color: #0A1039;color: #fff;padding: 7px 32px 7px;") Thêm vào giỏ
 															
 								
 								.pro-pagination-style.text-center.mt-50

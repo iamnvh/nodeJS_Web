@@ -24,19 +24,23 @@ block content
 								
 							.pro-details-size
 								
-							.pro-details-quality
-								span Số lượng:
-								.cart-plus-minus
-									input.cart-plus-minus-box(type='text', name='qtybutton', value='1')
-							.product-details-meta
-								ul
-									li
-										span Số lượng còn : 
-										a(href='#')=""+datas.amount
-							.pro-details-action-wrap
-								.pro-details-buy-now
-									a(href='#') Mua sách
-								.pro-details-action
+							form(action='', method='POST')
+								.pro-details-quality
+									span Số lượng:
+									.buttons_added
+										input.minus.is-form(type='button', value='-', style="background-color: black;color: white; width: 30px;")
+										input.input-qty(aria-label='quantity', max=datas.amount, min='1', name='add_product', type='number', value='1', style="width: 50px;")
+										input.plus.is-form(type='button', value='+',style="background-color: black;color: white;width: 30px;")
+								.product-details-meta
+									ul
+										li
+											span Có sẵn : 
+											a(href='')=datas.amount + ""
+									if datas.amount > 0
+										.pro-details-action-wrap
+											.pro-details-buy-now
+												button(style="background-color: black;color: white; height: 70px; width: 180px;") Thêm vào giỏ hàng
+											.pro-details-action
 									
 										
 	.description-review-wrapper.pb-155
@@ -44,13 +48,13 @@ block content
 			.row
 				.col-lg-12
 					.dec-review-topbar.nav.mb-65
-						a.active(data-toggle='tab', href='#des-details1') Chi tiết sách
-						a(data-toggle='tab', href='#des-details2') Thông số
+						a.active(data-toggle='tab', href='#des-details2') Thông số 
+						a(data-toggle='tab', href='#des-details1') Chi tiết sách
 					.tab-content.dec-review-bottom
-						#des-details1.tab-pane.active
+						#des-details1.tab-pane
 							.description-wrap
 								p=datas.bookdetails
-						#des-details2.tab-pane
+						#des-details2.tab-pane.active
 							.specification-wrap.table-responsive
 								table
 									tbody

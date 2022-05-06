@@ -108,7 +108,8 @@ block content
 													span.price=new Intl.NumberFormat('vn-IN', { maximumSignificantDig: 3}).format((product.price).toFixed()) + ' đ'
 										.product-action-wrap
 											.product-action-cart
-												button(title='Add to Cart') Thêm vào giỏ 
+												form(method='post', action='/add/'+product._id)
+													button(title='Add to Cart', style="background-color: #0A1039;color: #fff;padding: 7px 32px 7px;") Thêm vào giỏ
 				#product-3.tab-pane
 					.row
 						each product in productnew
@@ -138,7 +139,8 @@ block content
 													span.price=new Intl.NumberFormat('vn-IN', { maximumSignificantDig: 3}).format((product.price).toFixed()) + ' đ'
 										.product-action-wrap
 											.product-action-cart
-												button(title='Add to Cart') Thêm vào giỏ
+												form(method='post', action='/add/'+product._id)
+													button(title='Add to Cart', style="background-color: #0A1039;color: #fff;padding: 7px 32px 7px;") Thêm vào giỏ
 	.service-area.pb-110
 		.container
 			.row

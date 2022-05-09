@@ -1,180 +1,94 @@
 extend ./layout/layout.pug
 block content
-	.breadcrumb-area.breadcrumb-mt.breadcrumb-ptb-2
-		.container
-			.breadcrumb-content
-				h2 Tải khoản của
-				ul
-					li
-						a(href='/index') Trang Chủ
-					li
-						span  &gt; 
-					li
-						a(href='index.html') Product 
-					li
-						span  &gt; 
-					li.active  My Account 
-	// my account wrapper start
-	.my-account-wrapper.bg-gray.pt-160.pb-160
-		.container
-			.row
-				.col-lg-12
-					// My Account Page Start
-					.myaccount-page-wrapper
-						// My Account Tab Menu Start
-						.row
-							.col-lg-3.col-md-4
-								.myaccount-tab-menu.nav(role='tablist')
-									a.active(href='#dashboad', data-toggle='tab') Dashboard
-									a(href='#orders', data-toggle='tab')  Orders
-									a(href='#download', data-toggle='tab') Download
-									a(href='#payment-method', data-toggle='tab')
-										| Payment
-										| Method
-									a(href='#address-edit', data-toggle='tab') address
-									a(href='#account-info', data-toggle='tab') Account Details
-									a(href='login-register.html') Logout
-							// My Account Tab Menu End
-							// My Account Tab Content Start
-							.col-lg-9.col-md-8
-								#myaccountContent.tab-content
-									// Single Tab Content Start
-									#dashboad.tab-pane.fade.show.active(role='tabpanel')
-										.myaccount-content
-											h3 Dashboard
-											.welcome
-												p
-													| Hello, 
-													strong Alex Tuntuni
-													|  (If Not 
-													strong Tuntuni !
-													a.logout(href='login-register.html')  Logout
-													| )
-											p.mb-0
-												| From your account dashboard. you can easily check &amp; view your recent orders, manage your shipping and billing addresses and edit your password and account details.
-									// Single Tab Content End
-									// Single Tab Content Start
-									#orders.tab-pane.fade(role='tabpanel')
-										.myaccount-content
-											h3 Orders
-											.myaccount-table.table-responsive.text-center
-												table.table.table-bordered
-													thead.thead-light
-														tr
-															th Order
-															th Date
-															th Status
-															th Total
-															th Action
-													tbody
-														tr
-															td 1
-															td Aug 22, 2018
-															td Pending
-															td $3000
-															td
-																a.check-btn.sqr-btn(href='cart.html') View
-														tr
-															td 2
-															td July 22, 2018
-															td Approved
-															td $200
-															td
-																a.check-btn.sqr-btn(href='cart.html') View
-														tr
-															td 3
-															td June 12, 2017
-															td On Hold
-															td $990
-															td
-																a.check-btn.sqr-btn(href='cart.html') View
-									// Single Tab Content End
-									// Single Tab Content Start
-									#download.tab-pane.fade(role='tabpanel')
-										.myaccount-content
-											h3 Downloads
-											.myaccount-table.table-responsive.text-center
-												table.table.table-bordered
-													thead.thead-light
-														tr
-															th Product
-															th Date
-															th Expire
-															th Download
-													tbody
-														tr
-															td Haven - Free Real Estate PSD Template
-															td Aug 22, 2018
-															td Yes
-															td
-																a.check-btn.sqr-btn(href='#')
-																	i.fa.fa-cloud-download
-																	|  Download File
-														tr
-															td HasTech - Profolio Business Template
-															td Sep 12, 2018
-															td Never
-															td
-																a.check-btn.sqr-btn(href='#')
-																	i.fa.fa-cloud-download
-																	|  Download File
-									// Single Tab Content End
-									// Single Tab Content Start
-									#payment-method.tab-pane.fade(role='tabpanel')
-										.myaccount-content
-											h3 Payment Method
-											p.saved-message You Can&apos;t Saved Your Payment Method yet.
-									// Single Tab Content End
-									// Single Tab Content Start
-									#address-edit.tab-pane.fade(role='tabpanel')
-										.myaccount-content
-											h3 Billing Address
-											address
-												p
-													strong Alex Tuntuni
-												p
-													| 1355 Market St, Suite 900 
-													br
-													|                                                 San Francisco, CA 94103
-												p Mobile: (123) 456-7890
-											a.check-btn.sqr-btn(href='#')
-												i.fa.fa-edit
-												|  Edit Address
-									// Single Tab Content End
-									// Single Tab Content Start
-									#account-info.tab-pane.fade(role='tabpanel')
-										.myaccount-content
-											h3 Account Details
-											.account-details-form
-												form(action='#')
-													.row
-														.col-lg-6
-															.single-input-item
-																label.required(for='first-name') First Name
-																input#first-name(type='text')
-														.col-lg-6
-															.single-input-item
-																label.required(for='last-name') Last Name
-																input#last-name(type='text')
-													.single-input-item
-														label.required(for='display-name') Display Name
-														input#display-name(type='text')
-													.single-input-item
-														label.required(for='email') Email Addres
-														input#email(type='email')
-													fieldset
-														legend Password change
-														.single-input-item
-															label.required(for='current-pwd') Current Password
-															input#current-pwd(type='password')
-														.row
-															.col-lg-6
-																.single-input-item
-																	label.required(for='new-pwd') New Password
-																	input#new-pwd(type='password')
-															.col-lg-6
-																.single-input-item
-																	label.required(for='confirm-pwd') Confirm Password
-																	input#confirm-pwd(type='password')
-													.single-input-item
-														button.check-btn.sqr-btn Save Changes
+  .breadcrumb-area.breadcrumb-mt.breadcrumb-ptb-2
+    .container
+      .breadcrumb-content
+        h2 Tải khoản cá nhân
+        ul
+          li
+            a(href='/') Trang Chủ
+          li
+            span  &gt; 
+          li
+            a(href='/shop') Danh mục
+          li
+            span  &gt; 
+          li.active  Tài khoản 
+  // my account wrapper start
+  .my-account-wrapper.bg-gray.pt-160.pb-160
+    .container
+      .row
+        .col-lg-12
+          // My Account Page Start
+          .myaccount-page-wrapper
+            // My Account Tab Menu Start
+            .row
+              .col-lg-3.col-md-4
+                .myaccount-tab-menu.nav(role='tablist')
+                  a.active(href='#dashboad', data-toggle='tab') Tài khoản
+                  a(href='#orders', data-toggle='tab')  Đặt Hàng
+                  a(href='#address-edit', data-toggle='tab') Thông tin
+                  a(href='/logout') Logout
+              // My Account Tab Menu End
+              // My Account Tab Content Start
+              .col-lg-9.col-md-8
+                #myaccountContent.tab-content
+                  // Single Tab Content Start
+                  #dashboad.tab-pane.fade.show.active(role='tabpanel')
+                    .myaccount-content
+                      h3="Xin chào : "+datas.name
+                      .welcome
+                        p
+                          | Hello, 
+                          strong=datas.name
+                      p.mb-0
+                        | Từ trang tổng quan tài khoản của bạn. bạn có thể dễ dàng kiểm tra và xem các đơn đặt hàng gần đây của bạn, quản lý địa chỉ giao hàng và thanh toán cũng như chỉnh sửa mật khẩu và chi tiết tài khoản của bạn.
+                  // Single Tab Content End
+                  // Single Tab Content Start
+                  #orders.tab-pane.fade(role='tabpanel')
+                    .myaccount-content
+                      h3 Đơn hàng
+                      .myaccount-table.table-responsive.text-center
+                        table.table.table-bordered
+                          thead.thead-light
+                            tr
+                              th Tên người nhận
+                              th Số điện thoại
+                              th Ngày đặt
+                              th Trạng thái
+                              th Tổng tiền
+                              th Xác nhận
+                          tbody
+                            if orders
+                              each i in orders
+                                tr
+                                  td=i.name
+                                  td=i.phone
+                                  td=i.createdAt.toDateString()
+                                  if (i.status == 0)
+                                    td Chờ xác nhận chuyển hàng
+                                  else if (i.status == 1)
+                                    td Xác nhận đã nhận hàng
+                                  else 
+                                    td Đơn hàng đã hoàn tất
+                                  td=new Intl.NumberFormat('vn-IN', { maximumSignificantDig: 3}).format((i.totalPrice).toFixed()) + ' đ'
+                                  if (i.status == 1)
+                                    td
+                                      form(action='/confirm/'+i._id,method='post',style='padding-top:20px;')
+                                        button.btn.btn-primary.btn-sm(type='submit', value='',) Xác nhận
+                                  else if (i.status == 2)
+                                    td
+                            else 
+                              tr
+                                td
+                                td
+                                td
+                                td
+                                td
+                  #address-edit.tab-pane.fade(role='tabpanel')
+                    .myaccount-content
+                      h3="Thông tin của : "+datas.name 
+                      address
+                        p="Email : "+datas.email
+                        p="Quyền hạn : "+datas.role
+                        p="Ngày đăng ký : "+datas.createdAt.toDateString()

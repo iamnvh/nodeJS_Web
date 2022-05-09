@@ -6,9 +6,8 @@ class ProductDetailController {
   async index(req, res) {
     const id = req.params.id;
     const product = await Product_Model.findById(id)
-    console.log(product)
     return res.render('./frontend/productdetail', {
-      datas: mongooseToObject(product)
+      datas: mongooseToObject(product),
     })
   }
 }

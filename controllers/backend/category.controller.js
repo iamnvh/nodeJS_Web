@@ -1,9 +1,14 @@
 const { mutipleMongooseToObject, mongooseToObject } = require('../../utli/convertDataToObject');
 const Category_Model = require('../../models/category.model')
+const Admin_Model = require('../../models/admin.model')
+const { verifyToken } = require('../../utli/verifyToken');
 
 class CategoryController {
     async index(req, res) {
       try {
+        const decodedToken = await verifyToken(req.cookies.tokenAdmin);
+        const admin = await Admin_Model.findOne({ _id: decodedToken.id });
+        res.locals.admin = (admin)
         const pageNumber = req.query.page || 1;
         const perPage = 5;
         const [categories, totalCategories] = await Promise.all([

@@ -1,352 +1,54 @@
 extend ./layout/layout.pug
 block content
-	// mini cart start
-	.sidebar-cart-active
-		.sidebar-cart-all
-			a.cart-close(href='#')
-				i.icofont-close-line
-			.cart-content
-				h3 Shopping Cart
-				ul
-					li.single-product-cart
-						.cart-img
-							a(href='#')
-								img(src='/images/cart/cart-1.jpg', alt='')
-						.cart-title
-							h4
-								a(href='#') Awesome Mobile
-							span  1 &times; $49.00&#x9;
-						.cart-delete
-							a(href='#') &times;
-					li.single-product-cart
-						.cart-img
-							a(href='#')
-								img(src='/images/cart/cart-2.jpg', alt='')
-						.cart-title
-							h4
-								a(href='#') Smart Watch
-							span  1 &times; $49.00&#x9;
-						.cart-delete
-							a(href='#') &times;
-				.cart-total
-					h4
-						| Subtotal: 
-						span $170.00
-				.cart-checkout-btn
-					a.btn-hover.cart-btn-style(href='cart.html') view cart
-					a.no-mrg.btn-hover.cart-btn-style(href='checkout.html') checkout
-	// Mobile menu start
-	.mobile-menu-active.clickalbe-sidebar-wrapper-style-1
-		.clickalbe-sidebar-wrap
-			a.sidebar-close
-				i.icofont-close-line
-			.mobile-menu-content-area.sidebar-content-100-percent
-				.mobile-search
-					form.search-form(action='#')
-						input(type='text', placeholder='Search here…')
-						button.button-search
-							i.icofont-search-1
-				.clickable-mainmenu-wrap.clickable-mainmenu-style1
-					nav
-						ul
-							li.has-sub-menu
-								a(href='#') Home
-								ul.sub-menu-2
-									li.has-sub-menu
-										a(href='#') Demo Group #01
-										ul.sub-menu-2
-											li
-												a(href='index.html') Home Multipurpose
-											li
-												a(href='index-megashop.html') Home Mega Shop
-											li
-												a(href='index-fashion.html') Home Fashion
-											li
-												a(href='index-fashion-2.html') Home Fashion 2 
-											li
-												a(href='index-automobile.html') Home Automobile
-											li
-												a(href='index-furniture.html') Home Furniture
-											li
-												a(href='index-electric.html') Home Electric
-									li.has-sub-menu
-										a(href='#') Demo Group #02
-										ul.sub-menu-2
-											li
-												a(href='index-electric-2.html') Home Electric 2
-											li
-												a(href='index-handcraft.html') Home Hand Craft
-											li
-												a(href='index-book.html') Home Book
-											li
-												a(href='index-book-2.html') Home Book 2
-											li
-												a(href='index-cake.html') Home cake
-											li
-												a(href='index-organic.html') Home Organic
-									li.has-sub-menu
-										a(href='#') Demo Group #03
-										ul.sub-menu-2
-											li
-												a(href='index-flower.html') Home Flower
-											li
-												a(href='index-treeplant.html') Home Tree plant
-											li
-												a(href='index-pet-food.html') Home Pet Food
-											li
-												a(href='index-kids.html') Home Kids
-											li
-												a(href='index-kids-2.html') Home Kids 2
-											li
-												a(href='index-kids-3.html') Home Kids 3
-							li.has-sub-menu
-								a(href='#') shop
-								ul.sub-menu-2
-									li.has-sub-menu
-										a(href='#') Shop Layout
-										ul.sub-menu-2
-											li
-												a(href='shop.html') Shop Grid Style 1
-											li
-												a(href='shop-2.html') Shop Grid Style 2
-											li
-												a(href='shop-3.html') Shop Grid Style 3
-											li
-												a(href='shop-4.html') Shop Grid Style 4
-											li
-												a(href='shop-5.html') Shop Grid Style 5
-											li
-												a(href='shop-6.html') Shop Grid Style 6
-											li
-												a(href='shop-list.html') Shop List Style 1
-											li
-												a(href='shop-list-no-sidebar.html') Shop List Style 2
-									li.has-sub-menu
-										a(href='#') Product Layout
-										ul.sub-menu-2
-											li
-												a(href='product-details.html') Product Layout 1
-											li
-												a(href='product-details-2.html') Product Layout 2
-											li
-												a(href='product-details-3.html') Product Layout 3
-											li
-												a(href='product-details-4.html') Product Layout 4
-											li
-												a(href='product-details-5.html') Product Layout 5
-											li
-												a(href='product-details-6.html') Product Layout 6
-											li
-												a(href='product-details-7.html') Product Layout 7
-											li
-												a(href='product-details-8.html') Product Layout 8
-											li
-												a(href='product-details-9.html') Product Layout 9
-									li.has-sub-menu
-										a(href='#') Shop Page
-										ul.sub-menu-2
-											li
-												a(href='my-account.html') My Account
-											li
-												a(href='checkout.html') Check Out
-											li
-												a(href='cart.html') Shopping Cart
-											li
-												a(href='wishlist.html') Wishlist
-											li
-												a(href='order-tracking.html') Order Tracking
-											li
-												a(href='compare.html') Compare
-											li
-												a(href='store.html') Store
-											li
-												a(href='empty-cart.html') Empty Cart
-											li
-												a(href='login-register.html') login / register
-							li.has-sub-menu
-								a(href='#') Pages
-								ul.sub-menu-2
-									li
-										a(href='about-us.html') About Us
-									li
-										a(href='contact-us.html') Contact Us
-									li
-										a(href='contact-us-2.html') Contact Us 2
-									li
-										a(href='404.html') 404 Page
-							li
-								a(href='shop.html') Collections
-							li.has-sub-menu
-								a(href='#') Blog
-								ul.sub-menu-2
-									li
-										a(href='blog.html') Blog Page
-									li
-										a(href='blog-no-sidebar.html') Blog No sidebar
-									li
-										a(href='blog-right-sidebar.html') Blog Right Sidebar
-									li
-										a(href='blog-details.html') Blog Details
-							li
-								a(href='contact-us.html') Contact
-				.mobile-curr-lang-wrap
-					.single-mobile-curr-lang
-						a.mobile-language-active(href='#')
-							| Language 
-							i.icofont-simple-down
-						.lang-curr-dropdown.lang-dropdown-active
-							ul
-								li
-									a(href='#') English
-								li
-									a(href='#') Spanish
-								li
-									a(href='#') Hindi 
-				.aside-contact-info
-					ul
-						li
-							i.icofont-clock-time
-							| Monday - Friday: 9:00 - 19:00
-						li
-							i.icofont-envelope
-							| Info@example.com
-						li
-							i.icofont-stock-mobile
-							| (+55) 254. 254. 254
-						li
-							i.icofont-home
-							| Helios Tower 75 Tam Trinh Hoang - Ha Noi - Viet Nam
 	.breadcrumb-area.breadcrumb-mt.breadcrumb-ptb-2
 		.container
 			.breadcrumb-content
-				h2 Cart
+				h2 Giỏ Hàng
 				ul
 					li
-						a(href='index.html') Home 
+						a(href='/') Trang chủ
 					li
 						span  &gt; 
 					li
-						a(href='index.html') Product 
+						a(href='/shop') Danh mục
 					li
 						span  &gt; 
-					li.active  Cart 
-	.cart-check-order-link-area
-		.container
-			.row
-				.col-lg-10.ml-auto.mr-auto
-					.cart-check-order-link
-						a.active(href='cart.html') Shopping Cart
-						a(href='checkout.html') Check Out
-						a(href='order-complete.html') Order Complete
+					li.active  Giỏ hàng
 	.cart-area.bg-gray.pt-160.pb-160
 		.container
 			form(action='#')
 				.proceed-btn
-					a(href='#') Proceed to Checkout
+					a(href='/shop') Tiếp tục chọn sách
 				.cart-table-content
 					.table-content.table-responsive
 						table
 							thead
 								tr
-									th Product
-									th.th-text-center  Price
-									th.th-text-center Quantity
-									th.th-text-center Total Prce
-									th.th-text-center Remove
+									th Tên sách
+									th.th-text-center  Giá tiền
+									th.th-text-center Số lượng
+									th.th-text-center Tổng tiền
+									th.th-text-center Xóa
 							tbody
-								tr
-									td.cart-product
-										.product-img-info-wrap
-											.product-img
-												a(href='#')
-													img(src='/images/cart/cart-1.jpg', alt='')
-											.product-info
-												h4
-													a(href='#') Demo Product Title
-												span Color :  Black
-												span Size :     SL
-									td.product-price
-										span.amount $56.00
-									td.cart-quality
-										.pro-details-quality
-											.cart-plus-minus
-												input.cart-plus-minus-box.plus-minus-width-inc(type='text', name='qtybutton', value='02')
-									td.product-total
-										span $112.00
-									td.product-remove
-										a(href='#')
-											img.inject-me(src='/images/icon-img/close.svg', alt='')
-								tr
-									td.cart-product
-										.product-img-info-wrap
-											.product-img
-												a(href='#')
-													img(src='/images/cart/cart-2.jpg', alt='')
-											.product-info
-												h4
-													a(href='#') Demo Product Title
-												span Color :  Black
-												span Size :     SL
-									td.product-price
-										span.amount $56.00
-									td.cart-quality
-										.pro-details-quality
-											.cart-plus-minus
-												input.cart-plus-minus-box.plus-minus-width-inc(type='text', name='qtybutton', value='02')
-									td.product-total
-										span $112.00
-									td.product-remove
-										a(href='#')
-											img.inject-me(src='/images/icon-img/close.svg', alt='')
-								tr
-									td.cart-product
-										.product-img-info-wrap
-											.product-img
-												a(href='#')
-													img(src='/images/cart/cart-1.jpg', alt='')
-											.product-info
-												h4
-													a(href='#') Demo Product Title
-												span Color :  Black
-												span Size :     SL
-									td.product-price
-										span.amount $56.00
-									td.cart-quality
-										.pro-details-quality
-											.cart-plus-minus
-												input.cart-plus-minus-box.plus-minus-width-inc(type='text', name='qtybutton', value='02')
-									td.product-total
-										span $112.00
-									td.product-remove
-										a(href='#')
-											img.inject-me(src='/images/icon-img/close.svg', alt='')
-					.cart-shiping-update-wrapper
-						a(href='#') Continure Shopping
-						a(href='#') Update Cart
-						a(href='#') Clear Cart
-			.row
-				.col-lg-6.col-md-6
-					.discount-code-wrapper.discount-tax-wrap
-						h4 Coupon Code 
-						.discount-code
-							p Enter your coupon code if you have one!
-							form
-								input(type='text', required='', placeholder='Enter your code here.', name='name')
-								button(type='submit') Apply Coupon 
-				.col-lg-6.col-md-6
-					.tax-wrapper.discount-tax-wrap
-						h4 Get shipping estimatesss
-						.discount-code
-							p Enter your coupon code if you have one!
-							.row
-								.col-lg-6
-									select.nice-select.nice-select-style-3.cart-tax-select
-										option Select Country 
-										option Bangladesh
-										option Bahamas
-										option Bahrain
-										option Bangladesh
-										option Barbados
-								.col-lg-6
-									input(type='text', required='', placeholder='Zip Code', name='name')
-							button(type='submit') Apply Coupon 
+								if datas
+									each product in datas
+										tr
+											td.cart-product
+												.product-img-info-wrap
+													.product-img
+														a(href='')
+															img(src='/upload/images/'+product.photo, alt='')
+													.product-info
+														h4
+															a(href='#')=product.name
+											td.product-price
+												span.amount=product.price
+											td.cart-quality
+												span=product.quantity	
+											td.product-total
+												span=(product.quantity)*(product.price)
+											td.product-remove
+												a(href='/remove-product-cart/' + product._id, style="color:white; background-color:black;") X
+						.cart-shiping-update-wrapper
+							a(href='/checkout') Tiến hành thanh toán
+				

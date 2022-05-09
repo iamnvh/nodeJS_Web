@@ -9,15 +9,15 @@ class CheckoutController {
   async index(req, res) {
     try {
       const category = await Category_Model.find({});
-      res.locals.danhmuc =  mutipleMongooseToObject(category)
+      res.locals.danhmuc = mutipleMongooseToObject(category)
       const decodedToken = await verifyToken(req.cookies.tokenUser);
       const cart = await Cart_Model.findOne({ user_id: decodedToken.id });
-      if(cart) {
-        if(cart.products.length > 0)
-        return res.render('./frontend/checkout', {
-          datas: mutipleMongooseToObject(cart.products) ? mutipleMongooseToObject(cart.products) : {},
-          cart: cart
-        })
+      if (cart) {
+        if (cart.products.length > 0)
+          return res.render('./frontend/checkout', {
+            datas: mutipleMongooseToObject(cart.products) ? mutipleMongooseToObject(cart.products) : {},
+            cart: cart
+          })
       } else {
         return res.redirect('/cart')
       }
@@ -36,14 +36,14 @@ class CheckoutController {
           totalPrice: cart.totalPrice,
           name: req.body.name,
           address: req.body.address,
-          phone: req.body.phone
+          phone: req.body.phone,
+          status: '0',
         })
-        const order = await Cart_Model.findOne({user_id: decodedToken.id});
+        const order = await Cart_Model.findOne({ user_id: decodedToken.id });
         if (order.products.length > 0) {
-          for( let i = 0; i < order.products.length; i++) {
+          for (let i = 0; i < order.products.length; i++) {
             const amountProduct = await Product_Model.findById(order.products[i].productID)
-            await Product_Model.updateOne({_id: amountProduct._id},
-              {amount: amountProduct.amount - order.products[i].quantity})
+            await Product_Model.updateOne({ _id: amountProduct._id }, { amount: amountProduct.amount - order.products[i].quantity })
           }
         }
         await Cart_Model.deleteOne({ user_id: decodedToken.id });

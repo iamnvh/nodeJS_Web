@@ -31,13 +31,16 @@ const orderSchema = new Schema({
     type: 'number'
   },
   name: {
-      type: 'string'
+    type: 'string'
   },
   address: {
-      type: 'string'
+    type: 'string'
   },
   phone: {
-      type: 'number'
+    type: 'number'
+  },
+  status: {
+    type: 'string'
   }
 }, {
   collection: 'orders',

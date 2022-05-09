@@ -8,6 +8,7 @@ const logout = require('../../controllers/backend/logout.controller')
 const auth = require('../../middleware/auth.middleware')
 const category = require('../../controllers/backend/category.controller')
 const upload = require('../../utli/uploadImage')
+const order = require('../../controllers/backend/order.controller')
 
 
 //login
@@ -43,7 +44,8 @@ router.get('/admin',auth.authAdmin,admin.index);
 router.get('/admin/creat',auth.authAdmin, admin.creat);
 router.post('/admin/creat',auth.authAdmin, admin.store);
 
-
+//order
+router.get('/order',auth.authAdmin,order.index)
 
 
 //logout router

@@ -85,19 +85,17 @@ header.header-desktop
 									a(href='#') All notifications
 					.account-wrap
 						.account-item.clearfix.js-item-menu
-							.image
-								img(src='images/icon/avatar-01.jpg', alt='John Doe')
 							.content
-								a.js-acc-btn(href='#')
+								a.js-acc-btn(href='#')=admin.name
 							.account-dropdown.js-dropdown
 								.info.clearfix
 									.image
 										a(href='#')
-											img(src='images/icon/avatar-01.jpg', alt='John Doe')
+											img(src='images/icon/avatar-01.jpg', alt='Avarta de')
 									.content
-										h5.name
+										h5.name=admin.name
 											a(href='#')
-										span.email johndoe@example.com
+										span.email=admin.email
 								.account-dropdown__body
 									.account-dropdown__item
 										a(href='#')

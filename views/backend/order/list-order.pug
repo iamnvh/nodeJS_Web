@@ -1,0 +1,60 @@
+extend ../layout/layout.pug
+block content
+	.main-content
+		.section__content.section__content--p30
+			.container-fluid
+				.row.m-t-30
+					.col-md-12
+						// DATA TABLE
+						.table-responsive.m-b-40
+							table.table.table-borderless.table-data3
+									thead
+										tr
+											th Tên Người nhận
+											th Số điện thoại
+											th Địa chỉ
+											th Sản phẩm
+											th Ngày tạo
+											th Tổng tiền
+											th Trạng thái
+									tbody
+										each i in datas
+											tr
+												td=i.name
+												td=i.phone
+												td=i.address
+												td
+												td=i.createdAt.toDateString()
+												td=i.totalPrice
+												td.process ss
+						// END DATA TABLE
+				nav(aria-label='Page navigation example')
+				ul.pagination.justify-content-end
+					if pages > 0
+						-var i = current > 3 ? current - 2 : 1
+						if i!==1
+							li.page-item
+								a.page-link(href='#') ...
+						- for(;i<= current +2  && i< pages; i++)
+							if i== current
+								li.page-item
+									a.page-link(href='?page='+i)=i
+							else 
+								li.page-item
+									a.page-link(href='?page='+i)=i
+							if (i==current+2 && i< pages)
+								li.page-item
+									a.page-link(href='#') ...
+						if current == pages
+							li.page-item
+								a.page-link(href='#')=pages
+						else
+							li.page-item
+								a.page-link(href='?page='+pages)=pages
+	.row
+		.col-md-12
+			.copyright
+				p
+					| Copyright &copy; 2018 Colorlib. All rights reserved. Template by 
+					a(href='https://colorlib.com') Colorlib
+					| .

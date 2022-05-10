@@ -22,8 +22,7 @@ block content
 											label.form-control-label(for='select') Danh m&#x1EE5;c s&aacute;ch
 										.col-12.col-md-9
 											select#select.form-control(name='category_id')
-												each categories in category
-													option(value=categories._id)=categories.name
+												option(value=datas.categories._id,checked)=datas.categories.name
 											small.form-text.text-muted Tr&#x1EE3; gi&uacute;p
 									.row.form-group
 										.col.col-md-3

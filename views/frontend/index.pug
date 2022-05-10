@@ -1,39 +1,5 @@
 extend ./layout/layout.pug
 block content
-	.sidebar-cart-active
-		.sidebar-cart-all
-			a.cart-close(href='#')
-				i.icofont-close-line
-			.cart-content
-				h3 Shopping Cart
-				ul
-					li.single-product-cart
-						.cart-img
-							a(href='#')
-								img(src='/images/cart/cart-1.jpg', alt='')
-						.cart-title
-							h4
-								a(href='#') Awesome Mobile
-							span  1 &times; $49.00&#x9;
-						.cart-delete
-							a(href='#') &times;
-					li.single-product-cart
-						.cart-img
-							a(href='#')
-								img(src='/images/cart/cart-2.jpg', alt='')
-						.cart-title
-							h4
-								a(href='#') Smart Watch
-							span  1 &times; $49.00&#x9;
-						.cart-delete
-							a(href='#') &times;
-				.cart-total
-					h4
-						| Subtotal: 
-						span $170.00
-				.cart-checkout-btn
-					a.btn-hover.cart-btn-style(href='cart.html') view cart
-					a.no-mrg.btn-hover.cart-btn-style(href='checkout.html') checkout
 	.slider-area
 		.slider-active-3.dot-style-2.img-max-width
 			.single-slider.slider-height-4.bg-img.single-slider-pt-3(data-thumb='/upload/images/bia1.png', style='background-image:url(/upload/images/bia1.jpg)')
@@ -108,8 +74,11 @@ block content
 													span.price=new Intl.NumberFormat('vn-IN', { maximumSignificantDig: 3}).format((product.price).toFixed()) + ' đ'
 										.product-action-wrap
 											.product-action-cart
-												form(method='post', action='/add/'+product._id)
-													button(title='Add to Cart', style="background-color: #0A1039;color: #fff;padding: 7px 32px 7px;") Thêm vào giỏ
+												if product.amount > 0
+													form(method='post', action='/add/'+product._id)
+														button(title='Add to Cart', style="background-color: #0A1039;color: #fff;padding: 7px 32px 7px;") Thêm vào giỏ
+												else
+													span(style="color: red;") Hết hàng
 				#product-3.tab-pane
 					.row
 						each product in productnew
@@ -139,8 +108,11 @@ block content
 													span.price=new Intl.NumberFormat('vn-IN', { maximumSignificantDig: 3}).format((product.price).toFixed()) + ' đ'
 										.product-action-wrap
 											.product-action-cart
-												form(method='post', action='/add/'+product._id)
-													button(title='Add to Cart', style="background-color: #0A1039;color: #fff;padding: 7px 32px 7px;") Thêm vào giỏ
+												if product.amount > 0
+													form(method='post', action='/add/'+product._id)
+														button(title='Add to Cart', style="background-color: #0A1039;color: #fff;padding: 7px 32px 7px;") Thêm vào giỏ
+												else
+													span(style="color: red;") Hết hàng
 	.service-area.pb-110
 		.container
 			.row

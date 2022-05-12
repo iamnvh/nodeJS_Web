@@ -38,6 +38,8 @@ block content
                         td
                           form(action='/admin/delete/'+i._id +'?_method=DELETE', method='post')
                             button.btn.btn-danger.btn-sm(type='submit', value='') Xóa
+                      else
+                        td
             // END DATA TABLE
         nav(aria-label='Page navigation example')
         ul.pagination.justify-content-end

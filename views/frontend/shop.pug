@@ -55,10 +55,12 @@ block content
 																else
 																	span.price=new Intl.NumberFormat('vn-IN', { maximumSignificantDig: 3}).format((product.price).toFixed()) + ' đ'
 														.product-action-wrap
-															form(method='post', action='/add/'+product._id)
-																button(title='Add to Cart', style="background-color: #0A1039;color: #fff;padding: 7px 32px 7px;") Thêm vào giỏ
-															
-								
+															.product-action-cart
+																if product.amount > 0
+																	form(method='post', action='/add/'+product._id)
+																		button(title='Add to Cart', style="background-color: #0A1039;color: #fff;padding: 7px 32px 7px;") Thêm vào giỏ
+																else
+																	span(style="color: red;") Hết hàng
 								.pro-pagination-style.text-center.mt-50
 									ul
 										if pages > 0
@@ -93,4 +95,3 @@ block content
 										each i in danhmuc
 											li
 												a(href='/search/'+i._id)=i.name
-						

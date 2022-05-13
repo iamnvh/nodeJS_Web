@@ -18,8 +18,11 @@ block content
 					.col-lg-5.col-md-6
 						.product-details-content.product-details-content-6
 							.pro-details-price.pro-details-price-4
-								span=new Intl.NumberFormat('vn-IN', { maximumSignificantDigits: 3 }).format(((datas.price)-(datas.price*datas.discount)/100).toFixed()) + ' đ'
-								span.old-price=new Intl.NumberFormat('vn-IN', { maximumSignificantDig: 3}).format((datas.price).toFixed()) + ' đ'
+								if datas.discount > 0
+									span=new Intl.NumberFormat('vn-IN', { maximumSignificantDigits: 3 }).format(((datas.price)-(datas.price*datas.discount)/100).toFixed()) + ' đ'
+									span.old-price=new Intl.NumberFormat('vn-IN', { maximumSignificantDig: 3}).format((datas.price).toFixed()) + ' đ'
+								else
+									span.price=new Intl.NumberFormat('vn-IN', { maximumSignificantDig: 3}).format((datas.price).toFixed()) + ' đ'
 							.pro-details-color-wrap
 								
 							.pro-details-size

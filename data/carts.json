@@ -1,0 +1,35 @@
+[{
+  "_id": {
+    "$oid": "62761c5defd9526d59976283"
+  },
+  "user_id": {
+    "$oid": "627600fcefd9526d599761c5"
+  },
+  "products": [
+    {
+      "productID": {
+        "$oid": "626a23beb211aebf2b15f069"
+      },
+      "quantity": 1,
+      "name": "Cây Cam Ngọt Của Tôi",
+      "photo": "1651123134834image_217480.jpg",
+      "price": 87.21,
+      "discount": 5,
+      "_id": {
+        "$oid": "62761c5defd9526d59976284"
+      }
+    }
+  ],
+  "totalPrice": 87.21,
+  "__v": 0,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1651907677391"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1651907677391"
+    }
+  }
+}]

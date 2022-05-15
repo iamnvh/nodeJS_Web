@@ -1,0 +1,77 @@
+[{
+  "_id": {
+    "$oid": "62794d9c706c65362d86a450"
+  },
+  "user_id": {
+    "$oid": "6269787381d302d3b97807cc"
+  },
+  "products": [
+    {
+      "productID": {
+        "$oid": "62713d0a046cb3b3b312d4a9"
+      },
+      "quantity": 1,
+      "name": "Nguyên Lý Marketing",
+      "photo": "1651588362687z3191421803753_d34be7758308b8ee74572ebf885cbf9a.jpg",
+      "price": 999000,
+      "discount": 0,
+      "_id": {
+        "$oid": "62794d93706c65362d86a446"
+      }
+    }
+  ],
+  "totalPrice": 999000,
+  "name": "Thành",
+  "address": "Chính Tâm",
+  "phone": 376732661,
+  "status": "1",
+  "__v": 0,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1652116892856"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1652116957423"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "627cd9edf75394e0ac1e88ec"
+  },
+  "user_id": {
+    "$oid": "6269787381d302d3b97807cc"
+  },
+  "products": [
+    {
+      "productID": {
+        "$oid": "62693ce497a2f3d4b5919cd0"
+      },
+      "quantity": 20,
+      "name": "Chuyện Kể Rằng Có Nàng Và Tôi",
+      "photo": "1651064036739bia_chuyen-ke-rang-co-nang-va-toi_final.jpg",
+      "price": 50.112,
+      "discount": 20,
+      "_id": {
+        "$oid": "627cd9e6f75394e0ac1e88e2"
+      }
+    }
+  ],
+  "totalPrice": 1002.24,
+  "name": "Công",
+  "address": "Hà Nam",
+  "phone": 376732661,
+  "status": "1",
+  "__v": 0,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1652349421564"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1652412546552"
+    }
+  }
+}]

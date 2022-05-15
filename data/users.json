@@ -93,4 +93,23 @@
     }
   },
   "__v": 0
+},{
+  "_id": {
+    "$oid": "627600fcefd9526d599761c5"
+  },
+  "name": "Haui",
+  "email": "haui@gmail.com",
+  "password": "$2b$10$dPADXBcSH/lLUurr9PBFC.RiS4bdErDTNpSeTOvdtb.kQ3gveJ3wm",
+  "role": "user",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1651900668083"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1651900668083"
+    }
+  },
+  "__v": 0
 }]

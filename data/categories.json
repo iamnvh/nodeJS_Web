@@ -82,7 +82,7 @@
   "_id": {
     "$oid": "6268cdea8edaf872be2445a3"
   },
-  "name": "Tiểu thuyết",
+  "name": "Văn Học",
   "createdAt": {
     "$date": {
       "$numberLong": "1651035626277"
@@ -90,7 +90,7 @@
   },
   "updatedAt": {
     "$date": {
-      "$numberLong": "1651035626277"
+      "$numberLong": "1652381165116"
     }
   },
   "__v": 0

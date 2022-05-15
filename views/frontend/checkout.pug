@@ -45,15 +45,17 @@ block content
 							if datas
 								each data in datas
 									ul
-										li
+										li(style="width: 600px")
 											=data.name
-											span="x	"+data.price
+											
+											span="x	"+new Intl.NumberFormat('vn-IN', { maximumSignificantDig: 3}).format((data.price).toFixed()) + ' đ'
 											span=data.quantity
+											
 							.total-order
 								ul
 									li
 										| Tổng tiền cần thanh toán	
-										span=cart.totalPrice
+										span=new Intl.NumberFormat('vn-IN', { maximumSignificantDig: 3}).format((cart.totalPrice).toFixed()) + ' đ'
 						.payment-details
 							h4.checkout-title Hình thức thanh toán
 							.payment-method
@@ -64,7 +66,7 @@ block content
 										p
 											| Thanh toán cho người chuyển hàng, được phép xem hàng trước khi thanh toán.
 								
-								
+					
 				.back-continue-wrap
 					a(href='/cart') Quay lại giỏ hàng
 					button(for='back-continue') Xác nhận thanh toán

@@ -37,7 +37,7 @@ block content
                       else if (i.status == 2)
                         td
                           form(action='/admin/delete/'+i._id +'?_method=DELETE', method='post')
-                            button.btn.btn-danger.btn-sm(type='submit', value='') Xóa
+                            button.btn.btn-danger.btn-sm(type='submit', value='',onclick="return confirm('Bạn có muốn xóa không ?')") Xóa
                       else
                         td
             // END DATA TABLE

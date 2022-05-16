@@ -1,7 +1,6 @@
 const Category_Model = require('../../models/category.model')
 const Product_Model = require('../../models/book.model')
 const { mutipleMongooseToObject, mongooseToObject } = require('../../utli/convertDataToObject');
-const mongoose = require('mongoose');
 
 class HomeController {
   async index(req, res) {

@@ -74,7 +74,7 @@ block content
 														a(href='/admin/product/edit/'+product._id)  
 															i.zmdi.zmdi-edit
 													form(method='POST', action='/admin/product/delete/' + product._id + '?_method=DELETE')    
-														button.item(data-toggle='tooltip', data-placement='top', title='Delete')
+														button.item(data-toggle='tooltip', data-placement='top', title='Delete',onclick="return confirm('Bạn có muốn xóa không ?')")
 															i.zmdi.zmdi-delete
 										tr.spacer
 							nav(aria-label='Page navigation example')

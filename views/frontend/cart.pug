@@ -42,13 +42,13 @@ block content
 														h4
 															a(href='#')=product.name
 											td.product-price
-												span.amount=product.price
+												span.amount=new Intl.NumberFormat('vn-IN', { maximumSignificantDig: 3}).format((product.price).toFixed()) + ' đ'
 											td.cart-quality
 												span=product.quantity	
 											td.product-total
-												span=(product.quantity)*(product.price)
+												span=new Intl.NumberFormat('vn-IN', { maximumSignificantDig: 3}).format(((product.quantity)*(product.price)).toFixed()) + ' đ'
 											td.product-remove
-												a(href='/remove-product-cart/' + product._id, style="color:white; background-color:black;") X
+												a(href='/remove-product-cart/' + product._id, style="color:white; background-color:black;",onclick="return confirm('Bạn có muốn xóa không ?')") X
 						.cart-shiping-update-wrapper
 							a(href='/checkout') Tiến hành thanh toán
 				

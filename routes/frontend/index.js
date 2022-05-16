@@ -11,6 +11,7 @@ const contact = require('../../controllers/frontend/contact.controller')
 const cart = require('../../controllers/frontend/cart.controller')
 const logout = require('../../controllers/frontend/logout.controller')
 const checkout = require('../../controllers/frontend/checkout.controller')
+const forgot = require('../../controllers/frontend/forgotpassword.controller')
 
 //home
 router.get('/', home.index);
@@ -52,6 +53,17 @@ router.get('/remove-product-cart/:id', auth.authUser, cart.removeProductCart);
 
 router.get('/checkout', auth.authUser, checkout.index)
 router.post('/checkout', auth.authUser, checkout.checkout)
+
+//forgot password
+
+router.get('/forgot',forgot.index)
+router.post('/forgot',forgot.forgotpassword)
+router.get('/wait-forgot',forgot.wait)
+
+
+router.get('/forgot-password/:id',forgot.checkemail)
+//router.get('/reset-password',forgot.repassword)
+router.post('/forgot-password/:id',forgot.resetpassword)
 
 
 

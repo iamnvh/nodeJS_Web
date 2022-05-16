@@ -63,10 +63,9 @@ block content
 														a(href='./category/edit/'+category._id)
 															i.zmdi.zmdi-edit
 													form(method='POST', action='./category/delete/' + category._id + '?_method=DELETE')    
-														button.item(data-toggle='tooltip', data-placement='top', title='Delete', type='submit')
+														button.item(data-toggle='tooltip', data-placement='top', title='Delete', type='submit', onclick="return confirm('Bạn có muốn xóa không ?')")
 															i.zmdi.zmdi-delete
 										tr.spacer
-							
 							nav(aria-label='Page navigation example')
 							ul.pagination.justify-content-end
 								if pages > 0

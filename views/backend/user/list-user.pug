@@ -52,7 +52,7 @@ block content
 												td
 													.table-data-feature(style='width: 50px;')
 														form(method='POST', action='/admin/user/delete/' + users._id + '?_method=DELETE')   
-															button.item(data-toggle='tooltip', data-placement='top', title='Delete')
+															button.item(data-toggle='tooltip', data-placement='top', title='Delete',onclick="return confirm('Bạn có muốn xóa không ?')")
 																i.zmdi.zmdi-delete
 								if pages
 									nav(aria-label='Page navigation example')

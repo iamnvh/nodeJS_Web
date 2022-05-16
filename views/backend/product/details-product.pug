@@ -37,7 +37,7 @@ block content
 										td(style='text-align: left; font-size: 18px;')=datas.numberofpages
 									tr
 										td(style='width: 500px; padding-left: 100px;font-size: 18px;') Gi&aacute; ti&#x1EC1;n 
-										td(style='text-align: left; font-size: 18px;')=datas.price
+										td(style='text-align: left; font-size: 18px;')=new Intl.NumberFormat('vn-IN', { maximumSignificantDig: 3}).format((datas.price).toFixed()) +" đ"
 									tr
 										td(style='width: 500px; padding-left: 100px;font-size: 18px;') Gi&#x1EA3;m gi&aacute; 
 										td(style='text-align: left; font-size: 18px;')=datas.discount +"%"

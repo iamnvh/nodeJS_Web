@@ -35,5 +35,40 @@ header.header-area.section-padding-1.transparent-bar
 							a(href='/account')
 								i.icofont-user-alt-3
 						.same-style.header-cart
-							a(href='/cart')
+							a.cart-active(href='#')
 								i.icofont-shopping-cart
+							if (giohang1)
+								span=giohang1.products.length
+							span 
+
+.sidebar-cart-active
+	.sidebar-cart-all
+		a.cart-close(href='#')
+			i.icofont-close-line
+		.cart-content
+			h3 Giỏ hàng
+			ul
+				if giohang
+					each i in giohang
+						li.single-product-cart
+							.cart-img
+								a(href='#')
+								img(src='/upload/images/'+i.photo, alt='', style="width:50px;")
+							.cart-title
+								h4
+									a(href='#')=i.name
+								span=i.quantity + " x "
+								span=new Intl.NumberFormat('vn-IN', { maximumSignificantDig: 3}).format((i.price).toFixed()) + ' đ'
+							.cart-delete
+								a(href='/remove-product-cart/' + i._id,onclick="return confirm('Bạn có muốn xóa không ?')") &times;
+				else
+			.cart-total
+				h4
+				| Tổng tiền: 
+				if giohang1
+					span=new Intl.NumberFormat('vn-IN', { maximumSignificantDig: 3}).format((giohang1.totalPrice).toFixed()) + ' đ'
+				else
+					span 
+			.cart-checkout-btn
+				a.btn-hover.cart-btn-style(href='/cart') Chuyển đến giỏ hàng
+				a.no-mrg.btn-hover.cart-btn-style(href='/checkout') Thanh toán

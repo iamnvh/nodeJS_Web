@@ -12,8 +12,16 @@ class CheckoutController {
     try {
       const category = await Category_Model.find({});
       res.locals.danhmuc = mutipleMongooseToObject(category)
-      const decodedToken = await verifyToken(req.cookies.tokenUser);
-      const cart = await Cart_Model.findOne({ user_id: decodedToken.id });
+      if (req.cookies.tokenUser) {
+        const decodedToken = await verifyToken(req.cookies.tokenUser)
+        const cart = await Cart_Model.findOne({ user_id: decodedToken.id });
+        if (cart == null) {
+          res.locals.giohang = ""
+        } else {
+          res.locals.giohang = (mutipleMongooseToObject(cart.products) ? mutipleMongooseToObject(cart.products) : "")
+        }
+        res.locals.giohang1 = cart
+      }
       if (cart) {
         if (cart.products.length > 0)
           return res.render('./frontend/checkout', {

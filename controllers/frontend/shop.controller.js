@@ -1,11 +1,23 @@
 const Category_Model = require('../../models/category.model')
 const Product_Model = require('../../models/book.model')
+const Cart_Model = require('../../models/cart.model')
 const { escapeRegex } = require('../../utli/escapeRegex');
+const {verifyToken } = require("../../utli/verifyToken");
 const { mutipleMongooseToObject, mongooseToObject } = require('../../utli/convertDataToObject');
 
 class ShopListController {
   async index(req, res) {
     try {
+      if (req.cookies.tokenUser) {
+        const decodedToken = await verifyToken(req.cookies.tokenUser)
+        const cart = await Cart_Model.findOne({ user_id: decodedToken.id });
+        if (cart == null) {
+          res.locals.giohang = ""
+        } else {
+          res.locals.giohang = (mutipleMongooseToObject(cart.products) ? mutipleMongooseToObject(cart.products) : "")
+        }
+        res.locals.giohang1 = cart
+      }
       const pageNumber = req.query.page || 1;
       const perPage = 9;
       const [category,product,totalProduct] = await Promise.all([

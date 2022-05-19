@@ -15,7 +15,6 @@ class RegisterController {
 				email: req.body.user_email,
 				password: hash,
 				role: "user",
-				token: "",
 			})
 		});
 		return res.redirect("/login");

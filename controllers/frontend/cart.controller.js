@@ -8,6 +8,16 @@ const { verifyToken } = require('../../utli/verifyToken');
 class CartController {
   async index(req, res) {
     try {
+      if (req.cookies.tokenUser) {
+        const decodedToken = await verifyToken(req.cookies.tokenUser)
+        const cart = await Cart_Model.findOne({ user_id: decodedToken.id });
+        if (cart == null) {
+          res.locals.giohang = ""
+        } else {
+          res.locals.giohang = (mutipleMongooseToObject(cart.products) ? mutipleMongooseToObject(cart.products) : "")
+        }
+        res.locals.giohang1 = cart
+      }
       const category = await Category_Model.find({});
       res.locals.danhmuc =  mutipleMongooseToObject(category)
       const decodedToken = await verifyToken(req.cookies.tokenUser);
@@ -15,20 +25,22 @@ class CartController {
       if (req.cookies.token) {
         const decodedToken = await verifyToken(req.cookies.tokenUser);
         const cartProduct = await Cart_Model.find({ user_id: decodedToken.id });
-       
+        
         if (cartProduct) {
           res.locals.cart = cartProduct[0];
           res.locals.cartProduct = cartProduct[0].products
         }
       }
+      
       if(cart) {
         return res.render('./frontend/cart', {
           datas: mutipleMongooseToObject(cart.products) ? mutipleMongooseToObject(cart.products) : {},
-          cart: cart
+          cart: cart,
         })
       } else {
         return res.render('./frontend/cart')
       }
+      
     } catch (error) {
       console.log(error)
     }

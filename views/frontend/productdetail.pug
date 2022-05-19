@@ -90,48 +90,46 @@ block content
 											td=datas.discount+" %"
 						#des-details4.tab-pane
 							.review-wrapper
-								h2 1 review for Sleeve Button Cowl Neck
+								h2 Đánh giá
 								.single-review
-									.review-img
-										img(src='assets/images/product-details/client-1.png', alt='')
 									.review-content
 										.review-top-wrap
-										.review-name
-											h5
-											span John Snow
-											|  - March 14, 2019	
-										p
-										| Donec accumsan auctor iaculis. Sed suscipit arcu ligula, at egestas magna molestie a. Proin ac ex maximus, ultrices justo eget, sodales orci. Aliquam egestas libero ac turpis pharetra, in vehicula lacus scelerisque
+										if (review)
+											each i in review
+												.review-name
+													h5
+													span(style="font-weight: bold")=i.name
+													span=" | " +i.createdAt.toDateString()
+												p(style="font-size: 14px")=i.review
 							.ratting-form-wrapper
-								span Add a Review
+								span Thêm một bài đánh giá
 								p
-									| Your email address will not be published. Required fields are marked 
+									| Địa chỉ email của bạn sẽ không được công bố. Các trường bắt buộc được đánh dấu *
 									span *
 								.ratting-form
-									form(action='#')
-										.row
-											.col-lg-3.col-md-6
-												.rating-form-style.mb-20
-													label
-														| Name 
+									if user
+										form(action='', method='post')
+											.row
+												.col-lg-3.col-md-6
+													.rating-form-style.mb-20
+														label
+														| Tên 
 														span *
-													input(type='text')
-											.col-lg-3.col-md-6
-												.rating-form-style.mb-20
-													label
-														| Email 
-														span *
-													input(type='email')
-											
-											.col-md-12
-												.rating-form-style.mb-20
-													label
-														| Your review 
-														span *
-													textarea(name='Your Review')
-											.col-lg-12
-												.form-submit
-													input(type='submit', value='Submit')
+														input(type='text', name="name")
+												.col-md-12
+													.rating-form-style.mb-20
+														label
+															| Đánh giá của bạn
+															span *
+														textarea(name='review')
+												.col-lg-12
+													.form-submit
+														input(type='submit', value='Gửi')
+									else 
+										.col-lg-12
+											.form-submit
+												a(href='/login', style="background-color: black; display: block; width: 150px; text-align: center;line-height: 50px; color: white; font-size:14px") Đăng Nhập
+													
 
 	.product-area.pb-155
 		.container

@@ -39,8 +39,6 @@ router.get('/search/:id', home.searchbyid);
 //shopdetai
 router.get('/book/:id', book.index)
 
-// review
-router.post('/book/:id',book.creat)
 
 //contact
 router.get('/contact', contact.index)
@@ -68,7 +66,8 @@ router.get('/forgot-password/:id',forgot.checkemail)
 router.post('/forgot-password/:id',forgot.resetpassword)
 
 
-
+// review
+router.post('/book/:id',book.creat)
 
 
 

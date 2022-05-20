@@ -35,7 +35,7 @@ class HomeController {
   async searchbyid(req, res) {
     try {
       const pageNumber = req.query.page || 1;
-      const perPage = 9;
+      const perPage = 6;
       const [category,product,totalProduct] = await Promise.all([
         Category_Model.find({}),
         Product_Model.find({categories: req.params.id}).limit(perPage).skip((pageNumber - 1) * perPage),

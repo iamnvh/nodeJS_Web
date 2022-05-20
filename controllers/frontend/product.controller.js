@@ -32,11 +32,18 @@ class ProductDetailController {
         user: user,
         review: review
       })
+    } else {
+      const id = req.params.id;
+      const product = await Product_Model.findById(id)
+      const review = await  Review_Model.find({product_id: product})
+      const releaseproduct = await Product_Model.find({categories: product.categories}).limit(4)
+      return res.render('./frontend/productdetail', {
+        datas: mongooseToObject(product),
+        datasres : mutipleMongooseToObject(releaseproduct),
+        review: review
+      })
     }
-    return res.render('./frontend/productdetail', {
-      datas: mongooseToObject(product),
-      datasres : mutipleMongooseToObject(releaseproduct),
-    })
+    
   }
   async creat(req, res) {
     const decodedToken = await verifyToken(req.cookies.tokenUser)

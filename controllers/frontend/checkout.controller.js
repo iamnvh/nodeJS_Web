@@ -12,6 +12,8 @@ class CheckoutController {
     try {
       const category = await Category_Model.find({});
       res.locals.danhmuc = mutipleMongooseToObject(category)
+      const decodedToken = await verifyToken(req.cookies.tokenUser)
+      const cart = await Cart_Model.findOne({ user_id: decodedToken.id });
       if (req.cookies.tokenUser) {
         const decodedToken = await verifyToken(req.cookies.tokenUser)
         const cart = await Cart_Model.findOne({ user_id: decodedToken.id });
@@ -22,12 +24,16 @@ class CheckoutController {
         }
         res.locals.giohang1 = cart
       }
-      if (cart) {
-        if (cart.products.length > 0)
+      if(cart) {
+        if (cart.products.length > 0) {
           return res.render('./frontend/checkout', {
             datas: mutipleMongooseToObject(cart.products) ? mutipleMongooseToObject(cart.products) : {},
             cart: cart
           })
+        } else {
+          return res.redirect('/cart')
+        }
+          
       } else {
         return res.redirect('/cart')
       }
@@ -63,6 +69,7 @@ class CheckoutController {
           for(let i = 0; i <productOrder.products.length; i++) {
             name += ""+productOrder.products[i].name+" - đơn giá: "+productOrder.products[i].price+"đ - số lượng : "+ productOrder.products[i].quantity+"<br>";
           }
+          const price = new Intl.NumberFormat('vn-IN', { maximumSignificantDig: 3}).format((productOrder.totalPrice).toFixed())
           console.log(name)
           const email = await User_Model.findOne({ _id: decodedToken.id})
           let transporter = nodemailer.createTransport( {
@@ -78,17 +85,16 @@ class CheckoutController {
               to: `${email.email}`,
               subject: "Xin chào khách hàng",
               html: "<h3>Xin chào</h3><p>Lời đầu tiên Dking xin cảm ơn quý khách hàng đã tin tưởng lựa chọn sản phẩm của chúng tôi.</p>" +
-                    "<p>Thông tin về đơn hàng của quý khách: </p>" + name +"Tổng giá trị đơn hàng: "+productOrder.totalPrice+ "đ <br>Địa chỉ nhận hàng: "+productOrder.address+
+                    "<p>Thông tin về đơn hàng của quý khách: </p>" + name +"Tổng giá trị đơn hàng: "+price+ "đ <br>Địa chỉ nhận hàng: "+productOrder.address+
                     "<br>Số điện thoại nhận hàng: "+ productOrder.phone+
                     "<p>Vui lòng kiểm tra đơn hàng của quý khách.</p>" + "Có thắc mắc vui lòng liên hệ email: " +email.email
-                    
           },(err) => {
-              if(err) {
-                  console.error(err);
-              }
-              else {
-                  console.log("Gửi mail thành công")
-              }
+            if(err) {
+                console.error(err);
+            }
+            else {
+                console.log("Gửi mail thành công")
+            }
           })
         } catch (error) {
           console.log(error)

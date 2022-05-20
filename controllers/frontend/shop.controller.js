@@ -19,7 +19,7 @@ class ShopListController {
         res.locals.giohang1 = cart
       }
       const pageNumber = req.query.page || 1;
-      const perPage = 9;
+      const perPage = 6;
       const [category,product,totalProduct] = await Promise.all([
         Category_Model.find({}),
         Product_Model.find({}).limit(perPage).skip((pageNumber - 1) * perPage),
@@ -28,7 +28,10 @@ class ShopListController {
       res.locals.danhmuc =  mutipleMongooseToObject(category)
       const search = req.query.search
       if (search) {
-        const findName = await Product_Model.find({name: new RegExp(escapeRegex(search), 'gi')})
+        const [findName, totalProduct] = await Promise.all([
+          Product_Model.find({name: new RegExp(escapeRegex(search), 'gi')}).limit(perPage).skip((pageNumber - 1) * perPage),
+          Product_Model.find({name: new RegExp(escapeRegex(search), 'gi')}).countDocuments()
+        ])
         return res.render('./frontend/shop',{
           datas: mutipleMongooseToObject(findName),
           current: pageNumber,

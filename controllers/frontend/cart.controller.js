@@ -107,7 +107,6 @@ class CartController {
           cart.products[itemIndex] = productItem;
           cart.totalPrice += productItem.price * Number(req.body.add_product);
         } else {
-          //product does not exists in cart, add new item
           cart.products.push({
             productID: product._id,
             quantity: Number(req.body.add_product),

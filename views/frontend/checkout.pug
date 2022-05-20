@@ -45,11 +45,11 @@ block content
 							if datas
 								each data in datas
 									ul
-										li(style="width: 600px")
-											=data.name
+										li
+											h5(style="font-size: 18px")=data.name
+											h5=data.quantity+"x	"+new Intl.NumberFormat('vn-IN', { maximumSignificantDig: 3}).format((data.price).toFixed()) + ' đ'
 											
-											span="x	"+new Intl.NumberFormat('vn-IN', { maximumSignificantDig: 3}).format((data.price).toFixed()) + ' đ'
-											span=data.quantity
+											
 											
 							.total-order
 								ul
@@ -69,4 +69,4 @@ block content
 					
 				.back-continue-wrap
 					a(href='/cart') Quay lại giỏ hàng
-					button(for='back-continue') Xác nhận thanh toán
+					button Xác nhận thanh toán

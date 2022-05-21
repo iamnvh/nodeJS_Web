@@ -42,18 +42,20 @@ router.get('/book/:id', book.index)
 
 //contact
 router.get('/contact', contact.index)
+router.post('/contact', contact.send)
 
 
 //cart
 router.post('/add/:id', auth.authUser, cart.addToCartindex)
 router.post('/book/:id', auth.authUser, cart.addToCart)
-router.get('/cart', auth.authUser, cart.index)
+router.get('/cart',auth.authUser, cart.index)
 router.get('/remove-product-cart/:id', auth.authUser, cart.removeProductCart);
 
 //checkout
 
 router.get('/checkout', auth.authUser, checkout.index)
 router.post('/checkout', auth.authUser, checkout.checkout)
+router.post('/payment', auth.authUser, checkout.payment)
 
 //forgot password
 
@@ -67,7 +69,7 @@ router.post('/forgot-password/:id',forgot.resetpassword)
 
 
 // review
-router.post('/book/:id',book.creat)
+
 
 
 

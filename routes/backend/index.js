@@ -9,6 +9,7 @@ const auth = require('../../middleware/auth.middleware')
 const category = require('../../controllers/backend/category.controller')
 const upload = require('../../utli/uploadImage')
 const order = require('../../controllers/backend/order.controller')
+const store = require('../../controllers/backend/statistacal.controller')
 
 
 //login
@@ -46,6 +47,8 @@ router.post('/admin/creat', auth.authAdmin, admin.store);
 
 //order
 router.get('/order', auth.authAdmin, order.index)
+router.get('/store', auth.authAdmin, store.index)
+router.post('/search', auth.authAdmin, store.search)
 router.post('/confirm/:id', auth.authAdmin, order.confirm)
 router.delete('/delete/:id', auth.authAdmin, order.delete)
 

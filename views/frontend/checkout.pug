@@ -26,7 +26,7 @@ block content
 									a.active(href='', data-toggle='tab')
 										| Thông tin đặt hàng
 								.tab-content
-									
+
 							.shipping-address-wrap
 								h4.checkout-title Địa chỉ người nhận
 								.row
@@ -48,9 +48,9 @@ block content
 										li
 											h5(style="font-size: 18px")=data.name
 											h5=data.quantity+"x	"+new Intl.NumberFormat('vn-IN', { maximumSignificantDig: 3}).format((data.price).toFixed()) + ' đ'
-											
-											
-											
+
+
+
 							.total-order
 								ul
 									li
@@ -65,8 +65,10 @@ block content
 									.payment-box.payment_method_bacs
 										p
 											| Thanh toán cho người chuyển hàng, được phép xem hàng trước khi thanh toán.
-								
-					
+
+
 				.back-continue-wrap
 					a(href='/cart') Quay lại giỏ hàng
 					button Xác nhận thanh toán
+	form(action='payment', method='POST',)
+		script.stripe-button(src='//checkout.stripe.com/v2/checkout.js', data-key=key, data-amount='', data-currency='vnd', data-name='Dking', data-description='Mua sản phẩm tại cửa hàng Dking', data-locale='auto')

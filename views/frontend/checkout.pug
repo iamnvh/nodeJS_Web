@@ -16,7 +16,7 @@ block content
 						span  &gt; 
 					li.active  Thanh toán
 	.checkout-area.bg-gray.pt-160.pb-160
-		form(action='', method='post')
+		form(action='payment', method='POST',)
 			.container
 				.row
 					.col-lg-6
@@ -61,14 +61,13 @@ block content
 							.payment-method
 								.pay-top.sin-payment
 									input#payment-method-3.input-radio(type='radio', value='cheque',checked='checked', name='payment_method')
-									label(for='payment-method-3') Thánh toán sau khi nhận hàng
+									label(for='payment-method-3') Thánh toán bằng thẻ tín dụng
 									.payment-box.payment_method_bacs
 										p
-											| Thanh toán cho người chuyển hàng, được phép xem hàng trước khi thanh toán.
-
-
+	
+							script.stripe-button(src='//checkout.stripe.com/v2/checkout.js', data-key=key, data-amount='', data-currency='vnd', data-name='Dking', data-description='Mua sản phẩm tại cửa hàng Dking', data-locale='auto')
 				.back-continue-wrap
 					a(href='/cart') Quay lại giỏ hàng
 					button Xác nhận thanh toán
-	form(action='payment', method='POST',)
-		script.stripe-button(src='//checkout.stripe.com/v2/checkout.js', data-key=key, data-amount='', data-currency='vnd', data-name='Dking', data-description='Mua sản phẩm tại cửa hàng Dking', data-locale='auto')
+	
+			

@@ -47,7 +47,7 @@ router.post('/admin/creat', auth.authAdmin, admin.store);
 
 //order
 router.get('/order', auth.authAdmin, order.index)
-router.get('/store', auth.authAdmin, store.index)
+router.get('/search', auth.authAdmin, store.index)
 router.post('/search', auth.authAdmin, store.search)
 router.post('/confirm/:id', auth.authAdmin, order.confirm)
 router.delete('/delete/:id', auth.authAdmin, order.delete)

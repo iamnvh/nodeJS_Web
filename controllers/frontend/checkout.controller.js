@@ -28,7 +28,8 @@ class CheckoutController {
         if (cart.products.length > 0) {
           return res.render('./frontend/checkout', {
             datas: mutipleMongooseToObject(cart.products) ? mutipleMongooseToObject(cart.products) : {},
-            cart: cart
+            cart: cart,
+            key: 'pk_test_51L1szfDeVbmizZkBlOhAzKaMVV5BuZKpPB2bPpKYlrA03KxbB1aNPXrTwueQSU1PJvwHWl2G4RUQheqR8wLFtdLP00E4Th9Thj',
           })
         } else {
           return res.redirect('/cart')
@@ -108,7 +109,9 @@ class CheckoutController {
   }
   async payment(req, res) {
     try {
+      
       const decodedToken = await verifyToken(req.cookies.tokenUser);
+      const us = await User_Model.findById(decodedToken.id)
       const [user, cart] = await Promise.all([
         User_Model.findById(decodedToken.id),
         Cart_Model.findOne({ user_id: decodedToken.id })
@@ -154,6 +157,41 @@ class CheckoutController {
           }
         }
         await Cart_Model.deleteOne({ user_id: decodedToken.id });
+        try {
+          const productOrder = await Order_Model.findOne({ user_id: decodedToken.id });
+          let name = "";
+          for(let i = 0; i <productOrder.products.length; i++) {
+            name += ""+productOrder.products[i].name+" - đơn giá: "+productOrder.products[i].price+"đ - số lượng : "+ productOrder.products[i].quantity+"<br>";
+          }
+          const price = new Intl.NumberFormat('vn-IN', { maximumSignificantDig: 3}).format((productOrder.totalPrice).toFixed())
+          const email = await User_Model.findOne({ _id: decodedToken.id})
+          let transporter = nodemailer.createTransport( {
+              host: 'smtp.gmail.com',
+              service: 'gmail',
+              auth: {
+                  user: process.env.EMAIL_AUTH,
+                  pass: process.env.EMAIL_PASSWORD,
+              }
+          });
+          await transporter.sendMail({
+              from:process.env.EMAIL_AUTH,
+              to: `${email.email}`,
+              subject: "Xin chào khách hàng",
+              html: "<h3>Xin chào</h3><p>Lời đầu tiên Dking xin cảm ơn quý khách hàng đã tin tưởng lựa chọn sản phẩm của chúng tôi.</p>" +
+                    "<p>Thông tin về đơn hàng của quý khách: </p>" + name +"Tổng giá trị đơn hàng: "+price+ "đ <br>Địa chỉ nhận hàng: "+productOrder.address+
+                    "<br>Số điện thoại nhận hàng: "+ productOrder.phone+
+                    "<p>Vui lòng kiểm tra đơn hàng của quý khách.</p>" + "Có thắc mắc vui lòng liên hệ email: " +process.env.EMAIL_AUTH
+          },(err) => {
+            if(err) {
+                console.error(err);
+            }
+            else {
+                console.log("Gửi mail thành công")
+            }
+          })
+        } catch (error) {
+          console.log(error)
+        }
       }
     } catch (error) {
       console.log(error);
